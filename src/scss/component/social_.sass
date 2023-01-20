@@ -1,0 +1,114 @@
+/* SOCIAL styles */
+
+$w_social: 24px
+$h_social: 24px
+
+$bg_google: #FFFFFF //google
+$bg_tw: #299DED //tw
+$bg_youtube: #EB0029
+$bg_fb: #3B5999 //#227BEF //fb
+$bg_inst: linear-insta_gradient(222.46deg, #9B3CBC 0.07%, #E74D5D 47.41%, #F4D55E 95.96%)
+$bg_tl: #33A9E7 //tl
+$bg_vc: #5382B6 //wc
+$bg_linkedin: #0E76A8
+$bg_medium: #202020
+$bg_pinterest: #BF1D1E
+$bg_linked: #0072b1
+
+.social-menu
+  display: flex
+  justify-content: space-between
+  +tablet
+    justify-content: flex-start
+  li:not(:last-child)
+    margin-right: 34px
+
+  &-link
+    display: inline-block
+    min-width: $w_social
+    min-height: $h_social
+    width: $w_social
+    height: $h_social
+    margin-right: -5px
+    &.ru
+      position: relative
+
+      &:before
+        content: "ru"
+        display: inline-block
+        position: absolute
+        bottom: -10px
+        right: -12px
+        color: #bcbcbc
+        transition: color .6s ease-out 0s
+  &__icon
+    width: 100%
+    height: 100%
+    fill: $grey
+    transition: fill 600ms ease-out 0ms
+
+
+.twitter:not(.btn-follow):hover
+  .social-menu__icon, svg
+    fill: $bg_tw!important
+.youtube:hover
+  .social-menu__icon, svg
+    fill: $bg_youtube!important
+.facebook:not(.btn-follow):hover
+  .social-menu__icon, svg
+    fill: $bg_fb!important
+.instagram:hover
+  .social-menu__icon, svg
+    fill: url(#insta_gradient)!important
+.telegram:hover
+  .social-menu__icon, svg
+    fill: $bg_tl!important
+.vcontacte:hover
+  .social-menu__icon, svg
+    fill: $bg_vc!important
+.linkedin:hover
+  .social-menu__icon, svg
+    fill: $bg_vc!important
+.discord:hover
+  .social-menu__icon, svg
+    fill: #5865f2 !important
+.reddit:hover
+  .social-menu__icon, svg
+    fill: rgb(255, 69, 0) !important
+a:hover
+  .menu__icon.link-icon
+    fill: $accentColor !important  
+
+.medium
+  border-radius: 50%
+  border: 3px solid #bcbcbc
+  padding: 2px
+
+  .social-menu__icon
+    fill: #bcbcbc
+    transform: translate(0.5px,-1.5px)
+
+  &:hover
+    background-color: #bcbcbc
+
+    .social-menu__icon, svg
+      fill: $bg_medium !important
+
+.pinterest:hover
+  .social-menu__icon, svg
+    fill: $bg_pinterest !important
+
+.linked:hover
+  .social-menu__icon, svg
+    fill: $bg_linked !important    
+
+.facebook:not(.btn-follow):hover:before
+  color: $bg_fb !important
+
+.instagram:hover:before
+  color: $accentColor !important
+
+.telegram:hover:before
+  color: $bg_tl !important    
+
+/* SOCIAL styles end */

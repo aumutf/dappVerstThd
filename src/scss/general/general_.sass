@@ -1,0 +1,749 @@
+//GENERAL STYLES
+*
+  &:focus, &:active
+    outline: none !important
+
+.body-wrap
+  display: flex
+  flex-direction: column
+  height: 100%
+
+
+h1, h2, h3, h4, p, ul, ol
+  margin: 0px    
+  padding: 0px
+
+a
+  display: inline-block
+  text-decoration: none
+  color: inherit
+  transition: color .5s ease-out 0s
+  &:hover, &:active
+    text-decoration: none
+    color: $accentColor
+
+ul
+  list-style: none
+
+.title
+  font-weight: $semiBold
+  word-break: break-word
+
+  &__sub
+    color: $grey15
+
+//LOGO
+.logo
+  display: flex
+  align-items: center
+  &>a
+    width: 100%
+    height: 100%
+  img
+    max-width: 100%
+    height: 100%
+    object-fit: contain  
+
+
+//BUTTON 
+.btn
+  position: relative
+  text-decoration: none
+  -webkit-appearance: none
+  border: 0
+  cursor: pointer
+  user-select: none
+  outline: none
+  background-color: transparent
+  padding: 0
+  font-size: inherit
+  &:focus, &:active, &.focus, &:hover
+    outline: none
+    box-shadow: none
+    color: inherit
+
+  .btn-icon 
+    width: $w_bicon
+    height: $w_bicon
+    min-width: $w_bicon
+    min-height: $w_bicon
+
+
+//PERCENTVAL  
+.percentVal 
+  display: inline-flex
+  align-items: center
+  column-gap: 2px
+  margin-left: 3px
+  position: relative
+  padding-left: 7px
+  font-size: 14px
+  &::after
+    content: ""
+    width: 0
+    height: 0
+    border-style: solid
+    line-height: 0
+    position: absolute
+    left: 0
+  &--up
+    color: $green
+    &::after
+      border-width: 0 3px 5px 3px
+      border-color: transparent transparent $green transparent
+  &--down
+    color: $red
+    &::after
+      border-width: 5px 3px 0 3px
+      border-color: red transparent transparent transparent
+  &--sml
+    &::after
+      display: none
+
+//FLAME ICON    
+.flame-ic
+  position: relative
+  display: inline-flex
+  align-items: center
+  line-height: 1.5
+  font-size: 12px
+  &::before
+    content: ""
+    display: inline-block
+    width: 13px
+    height: 13px
+    margin-right: 6px
+    background:
+      image: url(../img/icons/flame.svg)
+      repeat: no-repeat
+      size: contain
+      position: center    
+
+
+.btn-seemore
+  width: 100%
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  //column-gap: 5px
+  padding: 10px
+  border-radius: 0
+  &:hover
+    opacity: 0.6
+  &::after
+    content: ""
+    display: inline-block
+    width: 24px
+    height: 24px
+    min-width: 24px
+    min-height: 24px
+    transform: rotate(-90deg)
+    margin-left: 5px
+    background:
+      color: transparent
+      image: url("../img/icons/chevronLeft.svg")
+      repeat: no-repeat
+      size: auto
+      position: center
+  &--wide
+    background: rgba(48, 48, 48, 0.3)
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15)
+    color: #FFFFFF
+    font-size: inherit
+    border-radius: 0px 0px 8px 8px
+    +tablet
+        +adaptiv-value("font-size", 14, 14)    
+
+.df-3
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  grid-row-gap: 25px
+  +tablet
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+  +laptop
+    grid-template-columns: repeat(3, 1fr)
+  .post-meta
+    margin-bottom: 0!important
+
+.df-2
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  grid-row-gap: 25px
+  +tablet
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+
+  .artc-item--vert:not(.artc-item-only-title)
+    grid-row: span 2
+    order: -1
+    +tablet
+      order: unset
+
+  .artc-item--vert.r3:not(.artc-item-only-title)
+    grid-row: span 3
+    order: -1
+    +tablet
+      order: unset
+
+
+  .artc-item--vert1:nth-child(-n+5)
+    display: grid
+    grid-template-columns: $artcVertGrid
+    +adaptiv-value-imp("grid-column-gap", 40, 10)
+    grid-template-rows: $artVertGridRow
+
+    @media screen and (max-width: 767px)
+      display: grid
+    
+    +tablet
+      display: flex   
+      align-items: flex-start    
+      row-gap: unset
+      column-gap: unset
+
+    .title
+      grid-column: 2    
+      align-self: flex-start
+
+      +tablet
+        grid-column: unset
+
+    .artc-item-image
+      grid-row: span 2 
+      display: block!important
+
+
+    &.artc-item-only-title 
+      .artc-item-image
+        +tablet
+          display: none!important
+
+  .artc-item--vert1:not(.artc-item-only-title)
+    display: flex
+    row-gap: unset
+    .artc-item-image
+      display: none
+      +tablet
+        margin-bottom: 10px
+    +tablet
+      .artc-item-image
+        display: block
+
+  .artc-item--vert 
+    .artc-item-image
+      +tablet
+        +adaptiv-value("height", 140, 130)
+    .title
+      +tablet
+        +adaptiv-value("margin-bottom", 15, 0)
+
+.btn-left
+  display: inline-block
+  width: 24px
+  height: 24px
+  min-width: 24px
+  min-height: 24px
+  background:
+    color: transparent
+    image: url("../img/icons/chevronLeft.svg")
+    repeat: no-repeat
+    size: auto
+    position: center
+
+.pill-br
+  background: $grey6
+  border-radius: $br_pill
+  font-size: inherit
+  min-width: 20px
+  height: 20px
+  padding: 0 5px
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  &--green
+    background-color: $green1
+
+
+.bgDapp
+  flex-grow: 1
+  background:
+    image: url(../img/dapp_bg_mob.webp)
+    repeat-y: repeat
+    repeat-x: no-repeat
+    position-x: 50.5%
+    position-y: 1.2%
+    size: 775px
+    color: $bgcolor
+  margin-top: $headerH_mob
+
+  +tablet
+    margin-top: 0
+    background:
+      image: url(../img/dapp_bg1.webp)
+      size: 1050px
+      position-x: 97%
+      position-y: 8.8%
+
+  +laptop
+    background:
+      position-x: 50%
+      position-y: -3.5%
+      size: 1688px   
+  
+  +laptop_down
+    background:
+      image: url(../img/dapp_bg1.webp)
+      repeat-y: repeat
+      repeat-x: no-repeat
+        
+
+//.form-group
+  //margin-bottom: 50px
+
+.star
+  width: 20px
+  min-width: 20px
+  height: 20px
+  fill: $grey7
+  &--red
+    fill: $red1
+  &:hover
+    fill: $red1
+    filter: drop-shadow(0px 0px 6px rgb(255 255 255 / 0.4))
+
+.bl-grid-3
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  row-gap: 23px
+  +tablet
+    grid-template-columns: repeat(3, 1fr) 
+    column-gap: 11px
+  +laptop
+      grid-template-columns: repeat(4, 1fr) 
+      +adaptiv-value("column-gap", 27, 27)  
+
+
+.bl-grid-3.bl-grid-txt
+  +tablet
+    grid-template-columns: repeat(3,  minmax(150px, 100%))
+  +laptop
+    grid-template-columns: repeat(4, minmax(150px, 100%)) 
+  
+  .artc-item-image
+    height: 140px
+    min-height: 140px
+
+
+
+.bookmarkfilled-icon 
+  fill: $fontcolor
+  &.btn-icon
+    width: 13px
+    min-width: 13px
+    height: 16px
+    min-height: 16px
+
+
+
+.btn--transp 
+  border: 1px solid #FFFFFF
+  border-radius: 2px
+  text-align: center
+  color: #FFFFFF
+  fill: #FFFFFF
+  background-color: transparent
+  display: flex
+  align-items: center
+  
+
+.btn--transp:not(.btn--cross):not(.btn-search-filter).active, .btn--transp:not(.btn--cross):not(.btn-search-filter):hover, 
+.btn--transp:not(.btn--cross):not(.btn-search-filter):active, .btn--transp:not(.btn--cross):not(.btn-search-filter):focus 
+  border-color: #B039AE
+  color: #B039AE
+  fill: #B039AE
+
+.btn--transp:not(.btn--cross):not(.btn-search-filter).active .svg-icon, .btn--transp:not(.btn--cross):not(.btn-search-filter):hover .svg-icon, 
+.btn--transp:not(.btn--cross):not(.btn-search-filter):active .svg-icon, .btn--transp:not(.btn--cross):not(.btn-search-filter):focus .svg-icon 
+  fill: #B039AE
+
+.btn--transp 
+  .btn-icon
+    +tablet
+      +adaptiv-value("margin-right", 10, 3)
+  
+
+.btn--cross:hover 
+  background-color: #363636
+
+.following-btn
+  display: flex
+  align-items: center
+  justify-content: space-between
+  white-space: break-spaces
+  &>span
+    display: none
+    +tablet
+      display: inline-block
+  .btn-icon
+    fill: $fontcolor
+    margin-right: 0
+    
+    +tablet
+      margin-right: 8px
+
+.fs10
+  font-size: 10px
+.ml5
+  margin-left: 5px
+
+.logo-row
+  display: flex
+
+.text-break
+  white-space: break-spaces
+
+
+.icon-check::before 
+  content: '\e80d'
+
+.icon-arrow-right:before 
+  content: '\e806'
+
+.icon-arrow-left:before
+  content: '\e805'
+
+.icon-refresh:before
+  content: '\e83d'
+
+
+[class*=" icon-"]::before, [class^=icon-]::before
+  font-family: font-icon 
+  font-style: normal
+  font-weight: 400
+  speak: never
+  display: inline-block
+  text-decoration: inherit
+  width: 1em
+  text-align: center
+  font-variant: normal
+  text-transform: none
+  line-height: 1em
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.fade.in
+  opacity: 1
+
+.btn-play-again-content 
+  .btn
+    color: $fontcolor
+    font-style: $fs_body
+  .icon-refresh
+    margin-right: 5px
+
+.pill--red 
+  background-color: #80200c
+
+
+.hide-text-wrap 
+  position: relative
+  margin-bottom: 35px
+  margin-top: 25px
+
+.excerpt 
+  height: 523px
+  position: relative
+  transition-property: height
+  transition-timing-function: ease
+  transition-duration: 1s
+  overflow: hidden
+
+.hide-text-wrap .excerpt:after
+  content: ""
+  display: inline-block
+  width: 100%
+  height: 100%
+  background: linear-gradient(180deg,rgba(32,32,32,0) 0,#202020 87.83%)
+  position: absolute
+  left: 0
+  bottom: 0
+
+.hide-text-wrap .btn--more
+  position: absolute
+  bottom: -50px
+  left: 50%
+  margin-left: calc(-154px/2)
+
+.excerpt + .btn--more 
+  display: block
+
+.btn--more.btn--hide
+  display: none
+
+.btn--more.btn--show
+  display: block
+
+.w-sm
+  max-width: 795px
+  width: 100%
+  margin: 0 auto
+
+
+.unlike-ic
+  transform: scale(1, -1)
+
+.name-wrap
+  display: inline-flex
+  align-items: center
+  .dapp-img-mini
+    margin-right: 7px
+    width: 20px
+    height: 20px
+    min-width: 20px
+    min-height: 20px
+    fill: #FFFFFF
+    background-color: transparent
+    svg
+      width: 100%
+      height: 100%
+
+
+.img-ava-wrap
+  width: 40px
+  height: 40px
+  min-width: 40px
+  min-height: 40px
+  max-width: 40px
+  max-height: 40px
+  overflow: hidden
+  display: inline-flex
+  align-items: center
+  border-radius: 50%
+  background-color: #888888
+
+.dg2  
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+
+.mb20
+  margin-bottom: 20px
+
+.mb10
+  margin-bottom: 10px
+
+.gr2
+  +tablet
+    grid-row: span 2 !important
+
+.gr3
+  grid-row: span 3 !important
+
+.gr4
+  grid-row: span 4 !important
+
+
+.blPd
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  grid-row-gap: 25px
+  +tablet
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 20px
+    grid-row-gap: 20px
+
+
+.bl-head
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 10px
+
+.text-hide
+  text-overflow: ellipsis
+  height: 50px
+  overflow: hidden
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  position: relative
+
+.fullWidth
+  width: 100vw
+  background: $black3
+  padding-top: 20px
+  padding-top: 20px
+  margin-left: -$contPlMob+px
+  +cont
+    margin-left: calc((100vw - 1200px)/(-2))
+  +tablet
+    margin-left: -$contPlTablet+px
+    padding-bottom: 40px
+  +laptop
+    margin-left: -$contPl+px
+
+  &-in
+    background: $black3
+    max-width: 1240px
+    width: 100%
+    margin: 0 auto
+    padding-left: $contPlMob+px
+    padding-right: $contPlMob+px
+    +tablet
+      padding-left: $contPlTablet+px
+      padding-right: $contPlTablet+px
+    +laptop
+      padding-left: $contPl+px
+      padding-right: $contPl+px
+
+.jself-end
+  justify-self: end
+
+.bgDark
+  background-color: $black3
+  .section
+    margin-top: 0!important
+    padding-top: 20px
+    padding-bottom: 40px
+  .section__head
+    margin-bottom: 40px
+
+
+.section__head.fixedBl
+  padding: 0
+  z-index: 999
+  background: $grey19
+  +tablet
+    padding: 0
+    z-index: unset
+    background: transparent
+
+.svg-icon, .btn-icon
+  fill-rule: evenodd
+  clip-rule: evenodd
+
+.align-items-start
+  align-items: start
+
+.pt20
+  padding-top: 20px
+
+
+.news-wrap-col
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  flex: 1
+  .artc-item:not(:last-child)
+    margin-bottom: 20px
+  .artc-item-drop:not(:last-child)
+    margin-bottom: 20px
+
+
+.ext-link
+  width: 16px
+  min-width: 16px
+  height: 16px
+  min-height: 16px
+  background: black
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 0px
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.loader
+  display: flex
+  img
+    width: 20px
+    height: 18px
+
+.svg-icon-str.svg-icon
+  fill: transparent
+  stroke: #FFF
+
+.svg-icon
+  fill: #FFF
+
+$redB0: #B00F38
+$pointW: 8px
+$fontcolorN: #FFFFFF
+$bgcolorN: #0F141A
+
+ul.ulN, .post .post-text ul.ulN
+  display: flex
+  flex-direction: column
+  li
+    margin-bottom: 13px
+    position: relative
+    display: flex
+    align-items: center
+    color: $fontcolorN
+    &::before
+      content: ""
+      display: flex
+      margin-right: 23px
+      width: $pointW
+      height: $pointW
+      min-width: $pointW
+      min-height: $pointW      
+      border-radius: 50%
+      background-color: $redB0
+
+.post .post-text ul.ulN
+  list-style: none
+  margin-left: 0
+
+.lineVert
+  position: relative
+  &::after
+    content: ""
+    position: absolute
+    top: -23px
+    left: 3px
+    //width: 3px
+    height: 100%
+    border-width: 2px
+    border-style: solid
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(rgba(47, 47, 48, 1)), to(rgba(47, 47, 48, 0))) 1 100%
+    -webkit-border-image: -webkit-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    -moz-border-image: -moz-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%  
+    -o-border-image: -o-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    border-image: linear-gradient(to top, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    border-right: 0
+
+
+.btn-grad-brd
+  //background: linear-gradient(#0F141A, #0F141A) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat, linear-gradient(90deg, #df1447 0%, #5815b7 100%)
+  //background: radial-gradient(circle at 100% 100%, $bgcolorN 0, $bgcolorN 6px, transparent 6px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, $bgcolorN 0, $bgcolorN 6px, transparent 6px) 100% 0%/8px 8px no-repeat,radial-gradient(circle at 100% 0, $bgcolorN 0, $bgcolorN 6px, transparent 6px) 0% 100%/8px 8px no-repeat,radial-gradient(circle at 0 0, $bgcolorN 0, $bgcolorN 6px, transparent 6px) 100% 100%/8px 8px no-repeat, linear-gradient($bgcolorN, $bgcolorN) 50% 50%/calc(100% - 4px) calc(100% - 16px) no-repeat, linear-gradient($bgcolorN, $bgcolorN) 50% 50%/calc(100% - 16px) calc(100% - 4px) no-repeat,linear-gradient(90deg, #df1447 0%, #5815b7 100%)
+  background: radial-gradient(circle at 100% 100%, #0f141a 0, #0f141a 3px, transparent 3px) 0% 0%/5px 5px no-repeat, radial-gradient(circle at 0 100%, #0f141a 0, #0f141a 3px, transparent 3px) 100% 0%/5px 5px no-repeat, radial-gradient(circle at 100% 0, #0f141a 0, #0f141a 3px, transparent 3px) 0% 100%/5px 5px no-repeat, radial-gradient(circle at 0 0, #0f141a 0, #0f141a 3px, transparent 3px) 100% 100%/5px 5px no-repeat, linear-gradient(#0f141a, #0f141a) 50% 50%/calc(100% - 4px) calc(100% - 10px) no-repeat, linear-gradient(#0f141a, #0f141a) 50% 50%/calc(100% - 10px) calc(100% - 4px) no-repeat, linear-gradient(90deg, #df1447 0%, #5815b7 100%)
+  border-radius: 5px
+  padding: 2px
+  box-sizing: border-box
+  &-in
+    padding: 4px
+    border-radius: 4px
+    background-color: #0f141a
+  
+  span
+    display: flex
+    justify-content: center
+    padding: 5px 16px
+    background: #DF1447
+    background: linear-gradient(to right, #DF1447 0%, #3D14DF 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    text-transform: uppercase
+
+.btn-grad-bg
+  position: relative
+  .btn-grad-brd-in
+    background-color: linear-gradient(90deg, rgba(220, 21, 71, 0.2) 0%, rgba(69, 20, 215, 0.2) 100%), #202020
+    

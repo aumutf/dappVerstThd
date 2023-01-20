@@ -1,0 +1,586 @@
+
+/* ARTICLE ITEM styles */
+
+
+.artc-item
+   display: flex
+   flex-direction: column
+   position: relative
+   max-width: 100%
+   /*+tablet
+      +adaptiv-value("max-width", 380, 280)*/
+   .title
+      word-break: break-word
+      font-weight: 500
+      &--bgtransp
+         background-color: rgba(32, 32, 32, 0.5)   
+         position: absolute
+         bottom: 0
+         width: 100%
+         line-height: 1.5
+         +adaptiv-value("padding-left", 10, 0)
+         opacity: 0
+         transition: opacity .6s ease-out 0s
+
+   &:hover
+      .title--bgtransp
+         opacity: 1
+   a:not(.ext-link)
+      display: block
+
+   &--vert
+      +tablet
+         max-width: 100%
+      .artc-item-image
+         +tablet
+            height: 140px
+            margin-bottom: 10px
+
+      .post-meta
+         margin-top: auto
+         +tablet
+            margin-top: unset
+
+      h3.title
+         font-size: 16px
+         +tablet
+            font-size: 17px
+
+   &--vert:not(.artc-item-col):not(.artc-item-external):not(.artc-item--blur)
+      .artc-item-image
+         min-height: 64px
+         height: 64px
+         margin-bottom: 5px
+ 
+
+   &--vert:not(.artc-item-col)
+      .artc-item-image
+         +tablet
+            min-height: 150px
+            max-height: 150px   
+            height: 150px!important
+            
+   &--vert:not(.artc-item-only-title):not(.artc-item-col):not(.artc-item--blur):not(.artc-item-external)
+      display: grid
+      grid-template-columns: $artcVertGrid
+      +adaptiv-value-imp("grid-column-gap", 40, 7)
+      grid-template-rows: $artVertGridRow
+      //grid-row-gap: 20px
+
+      +tablet
+         display: flex   
+         align-items: flex-start
+         row-gap: unset
+         column-gap: unset         
+      .title
+         grid-column: 2    
+         align-self: flex-start
+         margin-bottom: 6px
+         
+         text-overflow: ellipsis
+         height: 40px
+         overflow: hidden
+         display: -webkit-box
+         -webkit-line-clamp: 2
+         -webkit-box-orient: vertical
+         position: relative
+         +tablet
+            grid-column: unset
+            margin-bottom: unset
+
+            text-overflow: unset
+            height: unset
+            overflow: unset
+            display: unset
+            -webkit-line-clamp: unset
+            -webkit-box-orient: unset
+            position: unset
+
+      .artc-item-image
+         grid-row: span 2  
+
+   &--row
+      display: grid
+      grid-template-columns: minmax(175px, 175px) 1fr
+      background-color: rgba(43, 43, 43, 0.3)
+      min-height: 175px
+      max-height: 175px
+      border-radius: $artcImgBr
+      overflow: hidden
+      +tablet
+         grid-template-columns: minmax(auto, 175px) 1fr
+      .artc-item-image
+         height: 100%
+         img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+      .artc-item-image>a
+         height: 175px
+            
+
+   &--rowrev
+      grid-template-columns: 1fr minmax(175px, 175px)    
+
+   &--rowsm
+      grid-template-columns: minmax(140px, 140px) 1fr
+      min-height: 140px
+      max-height: 140px
+      +tablet
+         grid-template-columns: minmax(auto, 140px) 1fr
+      .artc-item-image>a
+         height: 140px
+      .artc-item__right
+         padding-top: 8px
+         padding-bottom: 8px
+         .title
+            margin-bottom: 3px
+         p
+            margin-bottom: 3px!important
+         span.flame-ic
+            margin-bottom: 6px
+
+   &--rowrevsm
+      grid-template-columns: 1fr minmax(140px, 140px)!important
+      min-height: 140px
+      max-height: 140px  
+      .artc-item-image>a
+         height: 140px
+      .artc-item__right
+         padding-top: 8px
+         padding-bottom: 8px
+         .title
+            margin-bottom: 3px
+         p
+            margin-bottom: 3px!important
+         span.flame-ic
+            margin-bottom: 6px
+
+   &--pd, &--row
+      .artc-item__right 
+         .title, p
+            text-overflow: ellipsis
+            overflow: hidden
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            position: relative
+         
+         .title
+            +adaptiv-value("height", 42, 42) 
+            -webkit-line-clamp: 2
+         p
+            height: 35px
+            -webkit-line-clamp: 2         
+
+   &--gr
+      width: 140px
+      min-width: 140px
+      .artc-item-image
+         margin-bottom: 5px
+      .subtitle
+         display: grid
+         grid-template-columns: 1fr minmax(40px, 40px)
+         width: 100%
+         font-size: 10px
+      .dapp-img-mini
+         margin-right: 5px
+         width: 10px
+         height: 11px
+         min-width: 10px
+         min-height: 11px
+      .img-ava-wrap
+         grid-column: 2
+         grid-row: 1/3
+         justify-self: end
+         picture
+            width: 100%
+            height: 100%
+         img
+            width: 100%
+            height: 100%
+            object-fit: cover
+      .name-wrap
+         grid-column: 1
+      .title
+         color: $fontcolor
+
+   &--pd
+      display: grid
+      grid-template-columns: calc(155px + 95 * ((100vw - 320px)/ 1440)) 1fr
+      background-color: rgba(43, 43, 43, 0.3)
+      border-radius: 10px
+      overflow: hidden     
+      padding: 15px 
+      column-gap: 20px
+      width: 100%
+      +adaptiv-value("min-height", 280, 180)
+
+      +laptop
+         +adaptiv-value("width", 530, 335) 
+         grid-template-columns: calc(250px/1.4 + calc(250 - 250/1.4) * ((100vw - 768px)/ 672)) 1fr       
+      
+      +laptop_down
+         grid-template-columns: repeat(2, 1fr)
+
+      .artc-item-image
+         height: 100%
+         +adaptiv-value("width", 250, 155) 
+         +adaptiv-value("max-height", 250, 155) 
+         img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: left
+            
+      .artc-item__right
+         padding: 0
+         p
+            color: $fontcolor
+            text-overflow: ellipsis
+            height: 50px
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 3
+            -webkit-box-orient: vertical
+            position: relative
+            +laptop
+               text-overflow: unset
+               height: unset
+               overflow: unset
+               display: unset
+               -webkit-line-clamp: unset
+               -webkit-box-orient: unset
+               position: unset
+      .post-meta
+         margin-top: auto
+
+
+
+
+   &__left
+      width: auto
+      border-radius: $artcImgBr 0px 0px $artcImgBr
+      overflow: hidden
+   &__right
+      padding: 18px 20px
+      display: flex
+      flex-direction: column
+      font-size: 12px
+      word-break: break-word
+      +laptop
+         padding: 19px
+      +tablet
+         +adaptiv-value("padding", 20, 20)
+      .title
+         margin-bottom: 10px
+         word-break: break-word
+      p
+         margin-bottom: 16px
+         color: $grey3
+         line-height: 1.5
+      span.flame-ic
+         margin-top: auto
+         margin-bottom: 8px
+   &-only-title
+      .title
+         margin-bottom: 5px
+         +tablet
+            margin-bottom: 10px
+
+      .artc-item-image
+         display: none
+   &-bm
+      display: grid
+      grid-template-columns: 1fr $w_bicon
+      width: 100%
+      .title
+         grid-column: 1!important
+      .post-meta
+         grid-column: 1
+      .btn
+         grid-column: 2   
+         grid-row: 1
+
+   &--blur
+      .artc-item-image
+         margin-bottom: 5px
+         min-height: 167px
+         height: 167px
+
+         picture:first-child
+            width: 100%!important
+            height: 100%!important
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            object-fit: cover
+            filter: blur(5px)
+      .artc-item-image a
+         position: relative
+         display: flex
+         justify-content: space-between
+         align-items: center
+         width: auto
+         padding: 15px 15px 15px 20px
+
+         z-index: 3
+
+         &::before
+            content: ""
+            display: inline-block
+            width: 100%!important
+            height: 100%!important
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            object-fit: cover
+            filter: blur(5px)    
+            z-index: 0 
+         &::after
+            content: ""
+            display: inline-block
+            width: 100%!important
+            height: 100%!important
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0    
+            background: #4c0082
+            opacity: .8
+            filter: unset
+            z-index: 1
+
+
+
+      .bg-image--span 
+         background: #4c0082
+         opacity: .8
+         filter: unset
+
+      .bg-image_title 
+         position: relative
+         //display: inline-block
+         flex-grow: 1
+         +adaptiv-value("margin-left", 20, 20)
+         text-transform: uppercase
+         font-size: 17px
+         line-height: 1
+         font-weight: 700
+         z-index: 3
+         word-break: break-word
+
+         text-overflow: ellipsis
+         height: 50px
+         overflow: hidden
+         display: -webkit-box
+         -webkit-line-clamp: 3
+         -webkit-box-orient: vertical
+      
+      .artc-item-image picture
+         display: flex
+         align-items: center
+
+      .artc-item-image picture img:not(.bg-image)
+         width: 110px!important
+         height: 110px!important
+         border-radius: 10px
+         position: relative
+         object-fit: cover
+         z-index: 2
+
+      
+.artc-item-image
+   overflow: hidden
+   width: 100%
+   display: block
+   position: relative
+   background-color: transparent
+   height: $artcItemHMob+px
+   border-radius: $artcImgBr
+   +tablet
+      +adaptiv-value("height", $artcItemH, $artcItemH)
+
+   &>a, picture
+      width: 100%
+      height: 100%
+   img
+      width: 100%!important
+      height: 100%!important
+      object-fit: cover
+      border-radius: $artcImgBr
+
+   &--br
+      border-radius: $artcImgBr
+      img
+         border-radius: $artcImgBr
+   picture:nth-child(2)
+      width: fit-content
+
+.post-meta
+   display: flex
+   align-items: center
+   margin-top: 5px
+   column-gap: 5px
+   font-size: 12px   
+   +tablet
+      +adaptiv-value("font-size", 12, 12)
+      +adaptiv-value("margin-top", 10, 10)
+   span
+      display: flex
+      align-items: center
+      color: $grey3
+   //&--dots
+      //position: relative
+      //&::after
+         //content: ""
+         //width: 3px
+         //height: 3px
+         //border-radius: 50%
+         //background-color: $grey3
+         //display: inline-block
+         //margin-left: 7px   
+
+   .post-comment-pageviews
+      display: flex
+      align-items: center
+      &::before
+         content: ""
+         display: inline-block
+         width: 11.5px
+         height: 8.5px
+         min-width: 11.5px
+         min-height: 8.5px
+         margin-right: 5px
+         background:
+            color: transparent
+            image: url("../img/icons/eye.svg")
+            repeat: no-repeat
+            size: auto
+            position: center    
+      &.pageviews-dot
+         &::before
+            background: none    
+            width: 2px
+            height: 2px
+            min-width: 2px
+            min-height: 2px
+            margin-right: 2px 
+            background-color: $grey3
+            border-radius: 50%
+   &--ordered
+      .post-details-meta-date
+         order: -1
+         
+.artc-item--row.reversed
+   grid-template-columns: 1fr minmax(175px, 175px)
+
+.artc-item--txt
+   .text-wrap
+      display: grid
+      grid-template-columns: auto minmax(76px, 76px)   
+      padding: 20px 10px 
+      position: absolute
+      bottom: 0
+      //align-items: end
+      width: 100%
+      background: rgba(0, 0, 0, .8)
+      
+      +tablet
+         padding: 20px 
+         grid-template-columns: auto auto
+         //+adaptiv-value("column-gap", 130, 130)
+         //grid-template-columns: auto minmax(76px, 115px) 
+      +laptop
+         grid-template-columns: auto minmax(76px, 76px) 
+
+      & > *
+         align-self: end
+
+   .text-wrap--col
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+   .post-meta
+      margin: 0
+      padding: 0
+      justify-self: end
+      
+   .artc-item-image
+      height: 100%
+
+   h2.title
+      +adaptiv-value("font-size", 24, 16) 
+
+   h2.title--lg
+      +adaptiv-value("font-size", 30, 16) 
+      +adaptiv-value("padding-bottom", 20, 10) 
+
+
+/*.artc-item-mid 
+   display: flex
+   flex-direction: column
+   float: unset
+   width: 100%
+   position: relative
+   margin-bottom: 15px   
+
+   .title
+      font-size: 16px
+      line-height: 22px
+      text-transform: none
+      font-weight: 500
+      margin-bottom: 5px
+      margin-top: 10px   
+
+   a
+      display: block 
+
+   .description 
+      color: #777
+      font-size: 14px
+      float: left
+      line-height: 22px   
+   
+   img
+      width: 100%*/
+
+/*.artc-item-horizontal 
+   position: relative
+   float: left
+   width: 100%
+   height: auto
+   margin-bottom: 30px
+
+   .title 
+      float: left
+      display: block
+      width: 100%
+      font-size: 22px
+      font-weight: 500
+      line-height: 28px
+      text-transform: none
+      margin-top: 10px
+
+   .description
+      color: #777
+      float: left
+      line-height: 22px
+      font-size: 13px*/
+
+
+.artc-item-wrap
+   .bl-item
+      padding-top: 30px
+      padding-bottom: 30px
+
+   .bl-item:not(:first-child)   
+      border-top: 1px solid $grey17
+
+   .bl-item:first-child
+      padding-top: 0
