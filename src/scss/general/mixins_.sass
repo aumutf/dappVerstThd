@@ -1,0 +1,106 @@
+
+$laptop-width: 1024px
+$tablet-lg-width: 992px
+$tablet-width: 768px
+$phone-width: 576px
+$phone-width-min: 320px
+$maxWidth: 1440
+
+
+$cont-width: 1240px
+
+
+=laptop
+  @media screen and (min-width: $laptop-width)
+    @content
+
+=tablet-lg
+  @media screen and (min-width: $tablet-lg-width)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet-width)
+    @content
+
+=phone
+  @media screen and (min-width: $phone-width)
+    @content    
+
+=phone-min
+  @media screen and (max-width: $phone-width-min)
+    @content  
+
+=laptop_down
+  @media screen and (min-width: $maxWidth+px)
+    @content
+
+=cont
+  @media screen and (min-width: $cont-width)
+    @content
+
+
+
+
+@mixin adaptiv-value-imp($property, $pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $addMobSize: $addSize + $addSize*0.7
+
+  @media screen and (max-width: 767px)
+    #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth})) + !important
+
+  @media screen and (min-width: 767px)
+    #{$property}: calc(#{$mobSize}px + #{$addSize} * (100vw / #{$maxWidth})) + !important
+
+
+
+    
+@mixin adaptiv-value($property, $pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $addSize1: calc(#{$pcSize} - #{$pcSize}/1.4)
+  $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
+  
+  #{$property}: $pcSize+px
+  
+  @media screen and (max-width: 768px)
+    #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+  @media screen and (min-width: 768px) and (max-width: $maxWidth+px)
+    #{$property}: calc(#{$pcSize}px/1.4 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
+
+@mixin adaptiv-value_test($property, $pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $addSize1: calc(#{$pcSize} - #{$pcSize})
+  $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
+  
+  #{$property}: $pcSize+px
+  
+  @media screen and (max-width: 768px)
+    #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+  @media screen and (min-width: 768px) and (max-width: $maxWidth+px)
+    #{$property}: calc(#{$pcSize}px + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
+
+
+
+
+=placeholder
+  @content
+
+@mixin beveled-corners($bg, $tr: $tl, $br: $tl, $bl:$tr)
+  background: #{$bg}
+  background: linear-gradient(135deg, transparent #{$tl}, #{$bg} 0) top left, linear-gradient(225deg, transparent #{$tr}, #{$bg} 0) top right, linear-gradient(-45deg, transparent #{$br}, #{$bg} 0) bottom right, linear-gradient(45deg, transparent #{$bl}, #{$bg} 0) bottom left
+  background-size: 50% 50%
+  background-repeat: no-repeat
+
+
+@mixin adaptiv-valueN($property, $pcSize, $mobSize)
+  $maxWidth: 1440
+
+  $addSize: $pcSize - $mobSize
+  $addSize1: calc(#{$pcSize} - #{$pcSize}/1.6)
+  $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
+  
+  #{$property}: $pcSize+px
+  
+  @media screen and (min-width: 768px) and (max-width: 1439px)
+    #{$property}: calc(#{$pcSize}px/1.6 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
