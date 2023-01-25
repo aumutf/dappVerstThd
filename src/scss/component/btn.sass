@@ -1,0 +1,173 @@
+
+.tmp-wrap
+   display: inline-flex
+   flex-direction: column
+   .btn
+      margin-bottom: 20px
+
+
+//BUTTON 
+.btn
+   position: relative
+   text-decoration: none
+   -webkit-appearance: none
+   border: 0
+   cursor: pointer
+   user-select: none
+   outline: none
+   background-color: transparent
+   padding: 0
+   font-size: inherit
+   line-height: 1
+   border: 1px solid transparent
+   display: inline-flex
+   align-items: center
+   justify-content: center
+   text-transform: capitalize
+
+   padding: 7px 7px 7px 15px
+   +adaptiv-value("font-size", 14, 14)
+   font-family: $EurostileReg
+   text-align: center
+
+   &:focus, &:active, &.focus, &:hover
+      outline: none
+      box-shadow: none
+      color: inherit
+
+   .btn-icon 
+      width: $w_bicon
+      height: $w_bicon
+      min-width: $w_bicon
+      min-height: $w_bicon
+      //margin-left: auto
+      +adaptiv-value("margin-left", 17, 7)
+
+.brd-red
+   background: $redB0_op
+   border-color: $redB0
+   color: $col_btn_brd-red
+   &:focus, &:active, &.focus, &:hover
+      color: $col_btn_brd-red
+
+.bg-grey
+   background: $grey1E
+   border-color: transparent
+   color: $redB0
+   text-transform: uppercase
+   font-family: $EurostileHea
+   &:focus, &:active, &.focus, &:hover
+      color: $redB0
+
+.txt-itc
+   font-family: $EurostileHeaIta
+
+.txt-grey
+   color: $grey8D
+   text-transform: uppercase
+   font-family: $EurostileReg
+
+
+
+.cust
+   color: #FFFFFF
+   font-size: 12px
+   line-height: 1
+   font-family: $EurostileReg
+   padding: 9.83px 5.83px 8px 9.83px
+   border-radius: 3.68598px
+   background: $grey13
+   .btn-icon
+      fill: $grey8D
+
+.btn-tri
+   font-size: 16px
+   line-height: 2.5
+   color: $redDf
+   font-family: $EurostileBol
+   .btn-icon
+      width: 7px
+      height: 4px
+      min-width: 7px
+      min-height: 4px
+      +adaptiv-value("margin-left", 5, 5)
+      fill: $redDf
+
+.brd-rad
+   border-radius: 3px
+
+.btn-less
+   .btn-icon
+      transform: rotate(180deg)
+      transition: transform ease-in 2s
+      
+
+.btn-grad
+   +adaptiv-valueN("font-size", 8, 8)
+   font-weight: 700
+   line-height: 1.7
+   text-shadow: 0px 0.75px 0px rgba(0, 0, 0, 0.25)
+   color: #FFFFFF
+   text-transform: uppercase
+   text-align: center
+   
+   +adaptiv-valueN("padding-top", 3, 3)
+   +adaptiv-valueN("padding-bottom", 3, 3)
+   +adaptiv-valueN("padding-left", 27, 27)
+   +adaptiv-valueN("padding-right", 27, 27)
+   border-radius: 0
+   background: linear-gradient(90deg, #A90E35 2.81%, #EF1244 50.09%, #A90E35 93.05%), #D9D9D9
+   position: relative
+
+   position: relative
+   text-decoration: none
+   -webkit-appearance: none
+   border: 0
+   cursor: pointer
+   user-select: none
+   outline: none
+   width: 100%
+   &:focus, &:active, &.focus, &:hover
+      outline: none
+      box-shadow: none
+      color: inherit
+
+   &::before, &::after
+      content: ""
+      position: absolute
+      left: 0
+      //width: 5px
+      +adaptiv-valueN("width", 5, 5)
+      height: 1px
+      background: #B00F38
+   &::before
+      transform: rotate(45deg) translate(-4px, 1px)
+      top: 0
+   &::after
+      transform: rotate(-45deg) translate(-3px,-1px)
+      top: 100%
+
+   &:active
+      background: linear-gradient(90deg, #5E0018 -0.02%, #EF1244 51.76%, #5E0018 100.02%), #D9D9D9
+
+.btn-grad-wrap
+   display: flex
+   background: linear-gradient(90deg, rgba(169, 14, 53, 0.3) 2.81%, rgba(239, 18, 68, 0.3) 50.09%, rgba(169, 14, 53, 0.3) 93.05%)
+   border: 0.1px solid #B00F38
+   //padding: 3px
+   +adaptiv-valueN("padding", 3, 3)
+   position: relative
+
+   &::before, &::after
+      content: ""
+      position: absolute
+      right: 0
+      +adaptiv-valueN("width", 5, 5)
+      height: 1px
+      background: #B00F38
+   &::before
+      transform: rotate(-45deg) translate(0px,1px)
+      top: 0
+   &::after
+      transform: rotate(45deg) translate(-1px,-2px)
+      top: 100%
