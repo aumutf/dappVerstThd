@@ -1,12 +1,11 @@
-@import "../general/variables.sass"
 
 .header
   background-color: $bg_header
-  position: fixed
+  //position: fixed
   top: 0
   left: 0
   width: 100%
-  height: $headerH_mob
+  //height: $headerH_mob
   z-index: 1000
   +tablet
     position: relative
@@ -14,12 +13,11 @@
     z-index: unset
 
   .container
-    max-width: 100%!important
+    //max-width: 100%!important
     padding: 0
-    //+laptop
-      //padding: 0 50px
 
   &__inner
+    max-width: 1200px
     +adaptiv-value("padding-left", 20, 20)
     +adaptiv-value("padding-right", 20, 20)
     +adaptiv-value("padding-top", 8, 8)
@@ -27,441 +25,278 @@
     display: flex
     align-items: center
 
-    &.searching
-      .nav, .logo, .menu--right
-        display: none
-        +tablet
-          display: flex
-      .btn-left, .btn-close
-        display: inline-block
-        +tablet
-          display: none
-      .burger
-        display: none
-      .btn-close
-        display: none
-    .search.active
-      width: 100%
-      margin-right: 0
-      margin-left: 0
-      flex-grow: 1
-      +tablet
-        margin-left: 15px
-
-  .search-field
-    display: none
-    +tablet
-      display: block
+  &-top
+    //border-bottom: 2px solid rgba(0, 0, 0, 0.2)
+    padding-top: 11px
+    padding-bottom: 15px
+    margin-bottom: 10px
+    +cont
+      margin-bottom: 2px
+  &-btm
+    padding-top: 5px
+    padding-bottom: 5px
 
   .logo
-    margin-left: auto
-    margin-right: auto
-
-  .btn-left, .btn-close
-    +tablet
-      display: none
-    
-  .profile-dropdown
-    width: 100%
-    .dropdown-menu
-      background: $bgcolor
-      box-shadow: none
-      border-radius: 0
+    +adaptiv-value("width", 34, 24.6)
+    +adaptiv-value("min-width", 34, 24.6)
+    +adaptiv-value("height", 34, 24.6)
+    +adaptiv-value("min-height", 34, 24.6)
+    +adaptiv-value("margin-right", 57, 46)
+    img
       width: 100%
-      padding-top: 10px
-      flex-direction: column
-      align-items: flex-start
-      border-top: 1px solid $grey
-      padding-left: 0
-      display: flex
-      margin-top: 0px
-      max-width: initial
-      +tablet
-        padding-top: 20px
-        border-top: none
-        display: none
-        padding-left: 20px
-        margin-top: unset
-        box-shadow: 0 4px 15px rgb(0 0 0 / 25%)
-        width: auto
-        
-        
-      &.show
-        display: flex
+      height: 100%
+      object-fit: contain
 
-      li:last-child
-        border-top: none
- 
-  .a-profile
-    display: none
-    +tablet
-      display: flex
-      align-items: center
+  .btn
+    +cont
+      +adaptiv-value("min-width", 115, 115)
 
-    &__img
-      border-radius: 50%
-      width: 24px
-      height: 24px
-      min-width: 24px
-      min-height: 24px
-      margin-left: 10px
-      +adaptiv-value("margin-left", 30, 30)
-      overflow: hidden
-
-      img
-        width: 100%
-        height: auto
-
-  .nav
-    order: 1
-    display: none
-    position: fixed
-    top: 0
-    right: 0
-    width: 70%
-    height: 100%
-    overflow: auto
-    transition: all 0.5s ease 0s
-    background: #202020
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25)
-    border-radius: 0px 4px 4px 4px
-    filter: drop-shadow(-100px 0px 25px rgba(0, 0, 0, 0.8))
-    z-index: 1002F
-    padding: 20px 0 20px 20px
-    +adaptiv-value("margin-left", 105, 12)
-    
-
-    +tablet
-      display: flex
-      position: relative
-      height: auto
-      box-shadow: none
-      border-radius: unset
-      filter: none
-      padding: 0
-      order: unset
-      background: transparent
-      overflow: unset
-
-    &.mobActive
-      display: block
-      padding-top: 20px
-      +tablet
-        padding-top: 0
-      .burger
-        display: none
-      .menu--right
-        display: flex
-
-  .lang-dropdown
-    order: -1
-    +tablet
-      order: 1
-    &--mobile
-      display: block
-      +tablet
-        display: none
-      .dropdown-select.open ul
-        left: 0
-        z-index: 1001
-    //&--desktop
-      display: block
-      +tablet
-        display: none
-
-    .dropdown-menu
-      background-color: var(--bgcolor)
-      color: $fontcolor
-      font-size: inherit
-      line-height: inherit
-      min-width: 4rem
-      padding-top: 10px
-      padding-bottom: 10px
-      
-      .menu-item
-        padding: 0
-        margin-left: 0
-        &:last-child
-          padding-bottom: 0
-
-  .nav__menu
-    border-bottom: 1px solid $grey
-    +tablet
-      align-items: center
-      border-bottom: 0
-
-    .menu-item
-      position: relative
-      font-size: inherit
-      font-weight: 500
-
-      &::after
-        content: ""
-        position: absolute
-        display: inline-block
-        width: 100%
-        bottom: -4px
-        left: 0
-        display: none
-        +tablet
-          display: inline-block
-          border-bottom: 2px solid transparent
-          
-      &:hover
-        &::after
-          border-bottom-color: $accentColor
-
-  .menu--right.menu
-    display: none
-    +tablet
-      display: flex
-      flex-wrap: unset
-
-  .menu--right
-    .dropdown-menu
-      .menu-item:not(.lang-dropdown)
-        //margin-bottom: 20px
-        +tablet
-          margin-left: 20px  
-          margin-bottom: 0
-
-  .btn-left, .btn-close
-    display: none
-
-  .menu
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    +tablet
-      align-items: center
-      flex-direction: row
-      flex-wrap: wrap
-  .menu-item
-    &:hover
-      color: $accentColor
-      background-color: transparent
-
-  .btn-login
-    +adaptiv-value("margin-right", 0, 45)
-
-  .dropdown-select
-    +adaptiv-value("margin-left",0, 26)
-
-  .menu:not(.menu--right)
-    .menu-item:not(:first-child)
-      +tablet
-        +adaptiv-value("margin-left", 40, 0)
-    .menu-item
-      margin-bottom: 20px 
-      +tablet
-        +adaptiv-value("margin-bottom", 0, 45) 
-
-
-
-  .dropdown-menu .menu-item
-    &:hover
-      .menu__icon
-        fill: $accentColor
-
-
-  .dropdown-menu .menu-item>a 
+.header-top
+  &__rt
+    margin-left: auto
     display: flex
     align-items: center
-    padding: 0
-    line-height: inherit
-    color: inherit
-    .menu__icon
-      &:hover
-        fill: $accentColor
+    justify-content: space-around
+    flex-direction: column
+    flex-grow: 1
+    +cont
+      flex-direction: row
 
 
-  .dropdown-menu>li>a 
-    display: block
-    padding: 3px 20px
-    clear: both
-    font-weight: 400
-    line-height: 1.42857143
-    color: #333
-    white-space: inherit
-
-  .dropdown-menu .menu__icon 
-    +adaptiv-value("width", 24, 16)
-    +adaptiv-value("height", 24, 16)
-    +adaptiv-value("min-width", 24, 16)
-    +adaptiv-value("min-height", 24, 16)
-    display: inline-block
-    fill: #fff
-    margin-right: 10px
-
-  .dropdown-menu.dropdown-menu-right 
-    .menu-item 
-      margin-right: 0
-      margin-left: 0!important  
-      padding-top: 10px
-      padding-bottom: 10px
-    .menu-item:first-child
-      +tablet
-        padding-top: 0
-    .menu-item:not(:last-child)
-      margin-bottom: 0
-      
-.dropdown-menu
+.nav
   display: flex
+  align-items: center
   flex-direction: column
-  padding: 20px
-  background: $bgcolor
-  box-shadow: 0 4px 15px rgb(0 0 0/25%)
-  border-radius: 4px
-  color: #fff
-  min-width: 160px
-  border: none
-  display: none
-  font-size: inherit
+  justify-content: space-around
+  font-family: $EurostileBolObl
+  text-transform: uppercase
+  font-weight: $bold
+  +adaptiv-value("font-size", 14, 14)
+  font-style: italic
+  +cont
+    flex-direction: row
+
+  &-item
+    +adaptiv-value("margin-right", 60, 0)
+    a
+      color: $menucolor
+
+  .nav-item.active, .nav-item:hover, .nav-item:active
+    &>a
+      color: $grey7a   
+
+.wch
+  +adaptiv-value("margin-right", 20, 10)
+  margin-left: unset
+  +cont
+    margin-left: auto
+  .btn-icon
+    fill: $greyD9
   
-
-.burger
-  order: 2
-  +adaptiv-value("margin-left", 13, 13)
-  display: block
-  position: relative
-  z-index: 1003
-  +adaptiv-value("width", 18, 18)
-  +adaptiv-value("height", 18, 12)
-  +tablet
-    display: none
-    order: unset
-    margin-left: 0
-
-  &::before, &::after
-    content: ''
-    position: absolute
-    width: 100%
-    height: 2px
-    left: 0
-    background-color: $fontcolor
-    transition: all 0.5s ease 0s
-    border-radius: 2px
-  &::before
-    top: 0
-  &::after
-    bottom: 0
-
-  span
-    position: absolute
-    background-color: $fontcolor
-    left: 0
-    width: 100%
-    height: 3px
-    top: 5px
-    transition: all 0.5s ease 0s
-    border-radius: 2px
-
-  &.active
-    background-color: $grey
-    width: 36px
-    height: 36px
-    position: fixed
-    right: 70%
-    top: 1px
-
-    &::before, &::after
-      width: 70%
-      left: 6px
-      background-color: $bgcolor
-    &::before
-      transform: rotate(45deg)
-      top: 18px
-    span
-      transform: scale(0)
-    &::after
-      transform: rotate(-45deg)
-      bottom: 16px
+.adv
+  +adaptiv-value("margin-right", 20, 0)
+  
+  .btn-icon
+    width: 8px
+    height: 10px
+    min-width: 8px
+    min-height: 10px
+    fill: $redB0
+    
 
 .search
-  transition: all 500ms ease-out 0ms
-  order: -1
-  margin-left: 0
-  margin-right: 0
-  +adaptiv-value("width", 130, 18)
-  +adaptiv-value("margin-right", -25, 0)
-  +tablet
+  &-in
+    display: flex
+    align-items: center
+    background: rgba(0, 0, 0, 0.2)
+    border-radius: 6px
+    padding: 4px 12px 5px 7px
+
+  &-icon
+    width: 10.35px    
+    height: 13.18px
+    margin-right: 6px
+    fill: $grey7a
+  
+  &-btn
     margin-left: auto
-    margin-right: auto!important
-    order: 0
-    
-  &.active
-    //flex-grow: 1
-    +adaptiv-value("margin-left", 28, 24)
-    .search-field
-      padding-left: 10px
+    border-radius: 2px
+    background: $redB0
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $menucolor
+    +adaptiv-value("font-size", 14, 14)
+    font-family: $InterRegular
+    font-weight: $bold
+    min-width: 19px
+    min-height: 19px
+    width: 19px
+    height: 19px
+    border: none
+    cursor: pointer
+
+  &-wrap
+    display: flex
+    align-items: center
+    input
+      background: transparent
+      border: none
+      color: $grey7a
+      +adaptiv-value("font-size", 14, 14)
+      font-family: $EurostileReg
+      width: 100%
+      height: 19px
+      padding: 0
+
+.hd-list
+  display: flex
+  align-items: center
+  white-space: nowrap
+  overflow: auto hidden
+  +adaptiv-value("margin-right", 10, 10)
+  +adaptiv-value("font-size", 10, 10)
+  
+  &__item
+    display: flex
+    align-items: center
+    +adaptiv-value("margin-right", 40, 10)
+    text-transform: uppercase
+    font-family: $EurostileBol
+    font-weight: $bold
+    &>a
+      +adaptiv-value("margin-left", 10, 10)
+      color: $redB0
+
+.notif-icon
+  min-width: 21px
+  min-height: 21px
+  width: 21px
+  height: 21px
+  
+  fill: $grey7a
+  +cont
+    +adaptiv-value("margin-right", 20, 20)
+
+.lang-menu
+  margin-left: auto
+  +adaptiv-value("margin-right", 20, 20)
+
+
+.prof-menu
+  display: flex
+  align-items: center
+  border-radius: 6px
+  +adaptiv-value("padding-top", 3, 0)
+  +adaptiv-value("padding-bottom", 3, 0)
+  +adaptiv-value("padding-left", 31, 20)
+  +adaptiv-value("padding-right", 10, 7)
+  background-color: $bl10
+  position: relative
+  margin-left: auto
+  +cont
+    margin-left: unset
+    background-color: rgba(0, 0, 0, 0.2)
+  
+  &-img
+    border-radius: 50%
+    position: absolute
+    +adaptiv-value("left", -15, -13)
+    +adaptiv-value("width", 30, 26)
+    +adaptiv-value("min-width", 30, 26)
+    +adaptiv-value("height", 30, 26)
+    +adaptiv-value("min-height", 30, 26)
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+    picture
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 2px
+      background: blue
+      border-radius: 50%
+      +cont
+        padding: 0
+  &-txt
+    color: $grey7a
+    +adaptiv-value("font-size", 14, 10)
+    line-height: 18px
+  &-btn
+    margin-left: 6px
+    +cont
+      margin-left: auto
+      
+
+.info-icon
+  +adaptiv-value("width", 12, 10)
+  +adaptiv-value("min-width", 12, 10)
+  +adaptiv-value("height", 12, 10)
+  +adaptiv-value("min-height", 12, 10)
+  fill: $redB0
+
+.hd-btn
+  background-color: $bl10
+  border-radius: 6.46154px
+  padding: 9.69px
+  display: flex
+  align-items: center
+  justify-content: center
+  +adaptiv-value("width", 42, 26)
+  +adaptiv-value("min-width", 42, 26)
+  +adaptiv-value("height", 42, 26)
+  +adaptiv-value("min-height", 42, 26)
+  +cont
+    background-color: transparent
+    border-radius: unset
+    padding: 0
+    width: unset!important
+    height: unset!important
+  &>span
+    display: none
+    +cont
       display: inline-block
 
-    .search-wrap
-      flex-grow: 1
+  .btn-icon
+    width: 100%
+    height: 100%
+    margin-left: unset
+    +cont
+      width: $w_bicon
+      height: $w_bicon
+      min-width: $w_bicon
+      min-height: $w_bicon
+      margin-left: auto
+      
 
-.search-field
-  background: $bg_header
-  color: $fontcolor
-  padding-top: 12px
-  padding-bottom: 11px
-  +adaptiv-value("padding-left", 5, 30)
-  +adaptiv-value("padding-right", 5, 5)
-  border: none
-  flex-grow: 1
-  width: 100%
-  border-radius: 8px
-  font-size: inherit
-  +tablet
-    +adaptiv-value("padding-top", 10, 10)
-    +adaptiv-value("padding-bottom", 10, 10)
-  +placeholder
-    color: $fontcolor
+  .btn-icon
+    fill: $grey40
 
-.search-label
+.burger
   display: flex
-  align-items: center
-  justify-content: space-between
-  margin: 0
-
-.search-wrap
-  display: flex
-  align-items: center
-  justify-content: space-between
-
-.search-icon
-  fill: #ffffff
-  +adaptiv-value("width", 18.5, 18.5)
-  +adaptiv-value("min-width", 18.5, 18.5)
-  +adaptiv-value("height", 18.5, 18.5)
-
-.lang-dropdown
-  margin-top: 10px
-  margin-bottom: 10px
-  +tablet
-    margin-top: 0
-    margin-bottom: 0
-    +adaptiv-value("margin-left", 30, 30)
-  .dropdown-toggle
-    &:before,&:after
-      display: none
-
-.headerSign
-  .search,.menu--right li:not(.signUp-link)
+  +cont
     display: none
-  .menu--right
-    margin-left: auto
-  .btn-login
-    margin-left: 24px
 
-.signUp-link
-  margin-top: 10px
-  margin-bottom: 10px
-  +tablet
-    margin-top: 0
-    margin-bottom: 0
-    
-.header
-  .btn-login
-    +tablet
-      margin-left: 24px
 
+.lang-menu,.btn-notif,.prof-menu
+  //display: none
+  +cont
+    display: flex
+
+.prof-menu, .wch, .btn-notif
+  margin-right: 10px
+  +cont
+    margin-right: unset
+
+
+.mob
+  +cont
+    display: none
+
+
+.header-top__rt,
+.header-btm .btn-notif, .header-btm .prof-menu, .header-btm .lang-menu
+  display: none
+  +cont
+    display: flex

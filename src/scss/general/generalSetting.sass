@@ -2,7 +2,7 @@
 //!GENERAL SETTINGS
 body
   font:
-    family: $Inter
+    family: $EurostileMed
     weight: $regular
     size: $fs_body+px
   color: $fontcolor
@@ -21,6 +21,7 @@ body
   margin: 0 auto
   padding-left: $contPlMob+px
   padding-right: $contPlMob+px
+  background: green
   +tablet
     padding-left: $contPlTablet+px
     padding-right: $contPlTablet+px
@@ -28,12 +29,13 @@ body
     padding-left: $contPl+px
     padding-right: $contPl+px
 
+.body-wrap
+  display: flex
+  flex-direction: column
 
 //LINK
 .link
   color: $accentColor   
-  &--grey
-    color: $grey7
 
 //LOGO  
 .logo
@@ -44,49 +46,9 @@ body
 
 //BUTTONS
 .btn
-  &--filled
-    color: $fontcolor
-    border-radius: $br_btn
-    background: $accentColor
-    padding: 5px 12px
-    +tablet
-      +adaptiv-value("padding-left", 28, 3)
-      +adaptiv-value("padding-right", 28, 3)
+  background: #000
 
-    &:hover
-      opacity: 0.8!important
-      background-color: $accentColor!important
-      border: 0!important  
-      color: $fontcolor
 
-  &--dark
-    padding-top: 7px
-    padding-bottom: 7px
-    +adaptiv-value("padding-left", 22, 22)
-    +adaptiv-value("padding-right", 22, 22)  
-    background: $black2  
-    color: $fontcolor
-    font-weight: $semiBold
-    border-radius: 0
-
-  &--lined
-    position: relative
-    &::before, &::after
-      content: ""
-      width: 83px
-      display: inline-block
-      border-top: 1px solid $grey17
-      position: absolute
-      top: 50%
-
-    &::before
-      left: -83px
-    &::after
-      right: -83px
-
-.btn-wrap-lined
-  display: flex
-  justify-content: center
   
 //TITLES
 h1
@@ -95,21 +57,13 @@ h1
     line-height: 1.2    
 h2
   &.title
-    +adaptiv-value("font-size", 24, 20)
+    +adaptiv-value("font-size", 32, 24)
     line-height: 1.2    
-h3
-  &.title
-    +adaptiv-value("font-size", 17, 17)
-    line-height: 1.2  
-h4
-  &.title
-    +adaptiv-value("font-size", 14, 14)
-    line-height: 1.2  
+
 
 
 .subtitle
   +adaptiv-value("font-size", 12, 12)
-  color: $grey3
   line-height: 1.5
   &>a
     color: inherit

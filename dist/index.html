@@ -6,16 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/style.min.css?_v=20230120135406">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230125140239">
   <title>Главная</title>
 
   <style>
     body {
-      --bgcolor: #202020;
-      --menubg: #1b1b1b;
+      --bgcolor: #111111;
+      --menubg: #111111;
       --menucolor: #ffffff;
-      --fontcolor: #ffffff;
-      --menucolor: #ffffff;
+      --fontcolor: #DBDBDB;
+      --menucolor: #DBDBDB;
+      
       --submenu-color: #adadad;
       --submenu-active-bg: #1d1d1d;
       --submenu-active-color: #5c5c5c;
@@ -34,15 +35,198 @@
 <body>
    <div class="body-wrap">
       <header class="header">
-  <div class="container">
-  
+  <div class="header-top">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="dapp.expert"></picture></a>
+        
+        <div class="prof-menu mob">
+          <div class="prof-menu-img">
+            <picture><source srcset="img/user.webp" type="image/webp"><img src="img/user.png" alt="user"></picture>
+          </div>
+          <div class="prof-menu-txt">0x63...ACa2</div>
+          <a href="#" class="prof-menu-btn">
+            <svg class="btn-icon info-icon">
+              <use xlink:href="img/sprite/symbol/sprite.svg#info-icon" />
+            </svg>
+          </a>
+        </div>
+        <a class="wch btn hd-btn mob">
+          <span>Watchlists</span>
+          <svg class="btn-icon star-icon">
+            <use xlink:href="img/sprite/symbol/sprite.svg#star-icon" />
+          </svg>
+        </a>
+        <a href="#" class="btn-notif hd-btn mob">
+          <svg class="btn-icon notif-icon">
+            <use xlink:href="img/sprite/symbol/sprite.svg#bell-icon" />
+          </svg>
+        </a>
+
+        <div class="header-top__rt">
+          <ul class="nav">
+            <li class="nav-item"><a href="#">Ranking</a></li>
+            <li class="nav-item"><a href="#">News</a></li>
+            <li class="nav-item"><a href="#">Experts</a></li>
+            <li class="nav-item"><a href="#">DeFight</a></li>
+          </ul>
+          <a class="wch btn hd-btn">
+            <span>Watchlists</span>
+            <svg class="btn-icon star-icon">
+              <use xlink:href="img/sprite/symbol/sprite.svg#star-icon" />
+            </svg>
+          </a>
+          <a href="#" class="adv btn brd-red">
+            <span>Advertise</span>
+            <svg class="btn-icon star-icon">
+              <use xlink:href="img/sprite/symbol/sprite.svg#adv-icon" />
+            </svg>
+          </a>
+          <div class="search">
+            <form novalidate="novalidate">
+              <div class="search-in">
+                <label for="search" class="search-label">
+                  <span class="search-wrap">
+                    <svg class="search-icon">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#search-icon" />
+                    </svg>
+                    <input type="text" id="search" name="q" maxlength="300" pattern=".*\S+.*" class="search-field"
+                      placeholder="Search" required="">
+                  </span>
+                </label>
+                <button class="search-btn" type="button">/</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+        <a href="#" class="burger hd-btn">
+          <svg class="btn-icon menu-icon">
+            <use xlink:href="img/sprite/symbol/sprite.svg#menu-icon" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="header-btm">
+    <div class="container">
+      <div class="header__inner">
+        <div class="hd-list">
+          <div class="hd-list__item">
+            <span class="">Dapps</span>
+            <a href="#">6456</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">Blockchains:</span>
+            <a href="#">14</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">Active users:</span>
+            <a href="#">745.23K</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">30d Volume:</span>
+            <a href="#">43.243B</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">30d Transactions:</span>
+            <a href="#">332.243B</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">30d Transactions:</span>
+            <a href="#">332.243B</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">30d Transactions:</span>
+            <a href="#">332.243B</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">30d Transactions:</span>
+            <a href="#">332.243B</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">30d Transactions:</span>
+            <a href="#">332.243B</a>
+          </div>
+          <div class="hd-list__item">
+            <span class="">30d Transactions:</span>
+            <a href="#">332.243B</a>
+          </div>
+        </div>
+
+
+        <div class="lang-menu">English</div>
+        <a href="#" class="btn-notif hd-btn">
+          <svg class="btn-icon notif-icon">
+            <use xlink:href="img/sprite/symbol/sprite.svg#bell-icon" />
+          </svg>
+        </a>
+        <div class="prof-menu">
+          <div class="prof-menu-img">
+            <picture><source srcset="img/user.webp" type="image/webp"><img src="img/user.png" alt="user"></picture>
+          </div>
+          <div class="prof-menu-txt">0x63...ACa2</div>
+          <a href="#" class="prof-menu-btn">
+            <svg class="btn-icon info-icon">
+              <use xlink:href="img/sprite/symbol/sprite.svg#info-icon" />
+            </svg>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
   </div>
 </header>
+
+      banner
 
       <footer class="footer">
     <div class="container">
         <div class="footer__inner">
-           
+            <div class="col1">
+                <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="dapp.expert"></picture>
+                <picture><source srcset="img/logotext.webp" type="image/webp"><img src="img/logotext.png" alt="dapp.expert"></picture>
+            </div>
+            <div class="col2">
+                <div class="ftr-tl">Company</div>
+                <ul class="ftr-menu">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col3">
+                <div class="ftr-tl">Support</div>
+                <ul class="ftr-menu">
+                    <li><a href="#">Help & FAQ</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Advertizing</a></li>
+                </ul>
+            </div>
+            <div class="col4">
+
+                <div class="ftr-rght">
+                    <div class="ftr-tl">Socials</div>
+                    <span class="ftr-lang">English</span>
+                </div>
+                
+                <ul class="ftr-menu">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">VKontakte</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Reddit</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="col5 copyright">
+                © 2020. DappExpert. All rights reserved.
+            </div>
         </div>
     </div>
 </footer>
