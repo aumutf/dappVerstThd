@@ -1,0 +1,67 @@
+.dropdown
+   &.dd-grey
+      display: inline-flex
+      align-items: center
+      background-color: $grey12 
+      color: #FFF
+      +adaptiv-value("font-size", 14, 14)  
+      line-height: 1.45
+      font-family: $EurostileReg
+      
+
+      .btn
+         position: relative
+         padding: 4px 5px
+         padding-left: 40px
+         color: #FFF
+      .dropdown-menu
+         background: $grey12
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+         border-radius: 4px
+         padding: 0
+         
+      .dropdown-item
+         display: block
+         width: 100%
+         padding: 10px 10px
+         clear: both
+         font-weight: 400
+         color: #FFF
+         text-align: inherit
+         white-space: nowrap
+         background-color: transparent
+         border: 0
+         +adaptiv-value("font-size", 14, 14)  
+         line-height: 1.45
+
+      .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover
+         color: #fff
+         text-decoration: none
+         background-color: $grey1E
+         border-radius: 2px
+         
+.dd-icon
+   width: $w_dicon
+   height: $w_dicon
+   min-width: $w_dicon
+   min-height: $w_dicon
+   fill: #FFF
+
+.dd-before
+   +adaptiv-value("width", 23, 23)
+   +adaptiv-value("min-width", 23, 23)
+   +adaptiv-value("height", 23, 23)
+   +adaptiv-value("min-height", 23, 23)
+   border-radius: 50%
+   background-color: $grey1E
+   display: inline-flex
+   align-items: center
+   justify-content: center
+
+   display: flex
+   align-items: center
+   justify-content: center
+   border: 7px solid $bgcolor
+   box-sizing: content-box
+   position: absolute
+   left: -5px
