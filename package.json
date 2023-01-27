@@ -44,6 +44,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "country-flag-emoji-polyfill": "^0.1.4",
+    "emoji-picker-element": "^1.15.1",
+    "gifpicker": "^1.1.2",
     "gulp-cli": "^2.3.0"
   }
 }
