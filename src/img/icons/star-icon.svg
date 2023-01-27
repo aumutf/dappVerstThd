@@ -1,3 +1,40 @@
-<svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.5 0L7.95934 4.19196L12.6819 4.19196L8.86126 6.78274L10.3206 10.9747L6.5 8.38393L2.6794 10.9747L4.13874 6.78274L0.318133 4.19196L5.04066 4.19196L6.5 0Z" fill="#D9D9D9"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="12.363767"
+   height="10.9747"
+   viewBox="0 0 12.363767 10.9747"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="star-icon.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="36.545455"
+     inkscape:cx="2.5174129"
+     inkscape:cy="6.0335821"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="m 6.181867,0 1.45934,4.19196 h 4.72256 l -3.82064,2.59078 1.45934,4.19196 -3.8206,-2.59077 -3.8206,2.59077 L 3.820607,6.78274 0,4.19196 h 4.722527 z"
+     fill="#d9d9d9"
+     id="path2" />
 </svg>

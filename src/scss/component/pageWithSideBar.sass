@@ -1,0 +1,193 @@
+
+//---------------------------------------- page width side bar style
+.bl2col
+   &-wrap
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      margin-top: 30px
+      +adaptiv-value("margin-top", 30, 30)
+      +adaptiv-value("padding-top", 33, 33)
+      padding-top: 33px
+
+   &__l
+      +adaptiv-value("width", 790, 280)
+      padding-left: 32px
+      +adaptiv-value("padding-left", 32, 32)
+      z-index: 10
+
+   &__r
+      +adaptiv-value("width", 305, 305)
+      +adaptiv-value("min-width", 305, 305)
+      z-index: 12
+      position: relative
+
+.bl2col-wrap-blur
+   position: relative
+   &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      display: inline-block
+      background: linear-gradient(148.18deg,rgba(49,17,22,.63) -38.64%,rgba(15,20,26,0) 60.18%)
+      border-top-left-radius: 40px
+      width: 100%
+      height: 700px
+      +adaptiv-value("height", 700, 700)
+      z-index: 2
+
+   &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      display: inline-block
+      background-image: url(../img/icons/frameBl.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      width: 80%
+      height: 600px
+      +adaptiv-value("height", 600, 600)
+      z-index: 3
+
+
+
+.bbgrad
+   position: relative
+   width: 100%
+   height: 520px
+   +adaptiv-value("height", 520, 520)
+   &::before
+      content: ""
+      display: inline-block
+      width: 100%
+      height: 100%
+      box-shadow: 0px -137px 65px 40px rgb(15 20 26 / 93%) inset
+      filter: blur(14px)
+
+
+.line-up
+   position: absolute
+   width: 100%
+   height: 100%
+   top: 0
+
+   &::before, &::after
+      content: ""
+      position: absolute
+      right: 0
+      background-image: url(../img/icons/line_up.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      +adaptiv-value("width", 310, 310)
+      +adaptiv-value("height", 36, 36)
+      display: inline-block
+   &::before
+      +adaptiv-value("top", 6, 6)
+   &::after
+      bottom: 0
+      display: none
+      transform: scaleY(-1)
+
+.hide-text.excerptN
+   &+.line-up::after
+      display: block
+
+.excerptN+.bg-grad
+   box-shadow: 0 -175px 52px -52px rgb(15 20 26 / 97%) inset
+
+.excerptN
+   +adaptiv-value("height", 1600, 1600)
+   position: relative
+   transition-property: height
+   transition-timing-function: ease
+   transition-duration: 1s
+   overflow: hidden
+   //backdrop-filter: blur(4px)
+   //background: linear-gradient(0deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+
+.hide-text-wrapN
+   position: relative
+   +adaptiv-value("margin-bottom", 35, 35)
+   +adaptiv-value("margin-top", 25, 25)
+
+.hide-text-wrapN .hide-text:after
+   content: ""
+   display: inline-block
+   width: 100%
+   height: 15%
+   //background: linear-gradient(180deg,rgba(32,32,32,0) 0,#202020 87.83%)
+   //background: linear-gradient(0deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+   background: linear-gradient(0deg,rgba(49,17,22,.63) -70%,rgba(15,20,26,0) 100%)
+   position: absolute
+   left: 0
+   bottom: 0
+   z-index: 12
+   //box-shadow: 4px 2px 5px #000000
+
+.hide-text-wrapN .hide-text.excerptN:after
+   width: 95%
+
+.blGrad
+   position: relative
+   &::after
+      content: ""
+      display: flex
+      border-bottom: 1px solid transparent
+      border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+      border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+      border-image-slice: 1
+      border-top-width: 0px
+      flex-grow: 1
+      z-index: 11
+      position: relative
+
+.btn--more
+   position: absolute
+   bottom: 0
+   z-index: 100
+
+.btnExc-more
+   +adaptiv-value("font-size", 20, 20)
+   font-weight: 700
+   line-height: 2
+   color: $redDf
+   display: flex
+   align-items: center
+   border: none
+   background: transparent
+   cursor: pointer
+   position: absolute
+   +adaptiv-value("bottom", 10, 10)
+   +adaptiv-value("left", 30, 30)
+
+   &::after
+      content: ""
+      width: 0
+      height: 0
+      display: inline-block
+      border-style: solid
+      border-width: 0 4px 4px 4px
+      +adaptiv-value("border-top-width", 0, 0)
+      +adaptiv-value("border-right-width", 4, 4)
+      +adaptiv-value("border-bottom-width", 4, 4)
+      +adaptiv-value("border-left-width", 4, 4)
+      border-color: transparent transparent $redDf transparent
+      +adaptiv-value("margin-left", 5, 5)
+      +adaptiv-value("margin-top", 5, 5)
+
+
+
+//---------------------------------------- 
+.bg-grad
+   position: absolute
+   bottom: 0
+   left: 0
+   height: 20%
+   //box-shadow: 0 -175px 52px -52px rgb(15 20 26 / 97%) inset
+   +adaptiv-value("width", 790, 280)
+   z-index: 11
+   &.notactive
+      box-shadow: none
+

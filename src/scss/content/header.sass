@@ -1,6 +1,6 @@
 
 .header
-  background-color: $bg_header
+
   //position: fixed
   top: 0
   left: 0
@@ -14,35 +14,37 @@
 
   .container
     //max-width: 100%!important
-    padding: 0
+    //padding: 0
 
   &__inner
-    max-width: 1200px
-    +adaptiv-value("padding-left", 20, 20)
-    +adaptiv-value("padding-right", 20, 20)
-    +adaptiv-value("padding-top", 8, 8)
-    +adaptiv-value("padding-bottom", 8, 8)
+    //max-width: 1200px
+    //+adaptiv-value("padding-left", 20, 20)
+    //+adaptiv-value("padding-right", 20, 20)
+    +adaptiv-value("padding-top", 5, 5)
+    +adaptiv-value("padding-bottom", 5, 5)
     display: flex
     align-items: center
 
   &-top
     //border-bottom: 2px solid rgba(0, 0, 0, 0.2)
-    padding-top: 11px
-    padding-bottom: 15px
-    margin-bottom: 10px
+    padding-top: 10px
+    padding-bottom: 2px
+    margin-bottom: 3px
+    background-color: $bg_header
     +cont
-      margin-bottom: 2px
+      margin-bottom: 3px
   &-btm
-    padding-top: 5px
-    padding-bottom: 5px
+    padding-top: 0px
+    padding-bottom: 0px
+    background-color: $bg_header
 
   .logo
-    +adaptiv-value("width", 34, 24.6)
-    +adaptiv-value("min-width", 34, 24.6)
-    +adaptiv-value("height", 34, 24.6)
-    +adaptiv-value("min-height", 34, 24.6)
+    +adaptiv-value("width", 36, 24.6)
+    +adaptiv-value("min-width", 36, 24.6)
+    +adaptiv-value("height", 36, 24.6)
+    +adaptiv-value("min-height", 36, 24.6)
     +adaptiv-value("margin-right", 57, 46)
-    img
+    img, picture
       width: 100%
       height: 100%
       object-fit: contain
@@ -72,9 +74,7 @@
 
     .nav-item.active, .nav-item:hover, .nav-item:active
       &>a
-        color: $grey7a   
-
-
+        color: $grey7a
 
 .header-top
   &__rt
@@ -87,40 +87,45 @@
     +cont
       flex-direction: row
 
-
 .wch
+  padding-right: 10px
+  padding-left: 14px
   +adaptiv-value("margin-right", 20, 10)
   margin-left: unset
   +cont
     margin-left: auto
   .btn-icon
     fill: $greyD9
-  
+    +adaptiv-value("margin-left", 12, 12)
+
 .adv
   +adaptiv-value("margin-right", 20, 0)
-  
+
   .btn-icon
     width: 8px
     height: 10px
     min-width: 8px
     min-height: 10px
     fill: $redB0
-    
+
+
 
 .search
+  +adaptiv-value("width", 238, 50)
   &-in
     display: flex
     align-items: center
     background: rgba(0, 0, 0, 0.2)
     border-radius: 6px
-    padding: 4px 12px 5px 7px
+    padding: 4px 13px 4px 9px
 
   &-icon
-    width: 10.35px    
-    height: 13.18px
-    margin-right: 6px
-    fill: $grey7a
-  
+    width: 13px
+    height: 13px
+    margin-right: 10px
+    fill: transparent
+    stroke: $grey7a
+
   &-btn
     margin-left: auto
     border-radius: 2px
@@ -151,25 +156,42 @@
       width: 100%
       height: 19px
       padding: 0
+  &-label
+    margin-bottom: 0
+    flex-grow: 1
 
 .hd-list
+  width: 62%
+  overflow: hidden
+  +adaptiv-value("margin-right", 10, 10)
+  height: 15px
   display: flex
   align-items: center
-  white-space: nowrap
-  overflow-x: auto
-  +adaptiv-value("margin-right", 10, 10)
-  +adaptiv-value("font-size", 10, 10)
+  position: relative
 
-  
+  &-in
+    display: flex
+    align-items: center
+    //white-space: nowrap
+    overflow-x: auto
+    +adaptiv-value("font-size", 10, 10)
+
+    position: absolute
+    top: 0
+    left: 0
+    height: 30px
+    width: 100%
+    
   &__item
     display: flex
     align-items: center
-    +adaptiv-value("margin-right", 40, 10)
+    +adaptiv-value("margin-right", 42, 10)
     text-transform: uppercase
     font-family: $EurostileBol
     font-weight: $bold
+    white-space: nowrap
     &>a
-      +adaptiv-value("margin-left", 10, 10)
+      +adaptiv-value("margin-left", 14, 10)
       color: $redB0
 
 .notif-icon
@@ -177,23 +199,21 @@
   min-height: 21px
   width: 21px
   height: 21px
-  
+
   fill: $grey7a
-  +cont
-    +adaptiv-value("margin-right", 20, 20)
+
 
 .lang-menu
   margin-left: auto
-  +adaptiv-value("margin-right", 20, 20)
-
+  +adaptiv-value("margin-right", -3, 0)
 
 .prof-menu
   display: flex
   align-items: center
   border-radius: 6px
-  +adaptiv-value("padding-top", 3, 0)
-  +adaptiv-value("padding-bottom", 3, 0)
-  +adaptiv-value("padding-left", 31, 20)
+  +adaptiv-value("padding-top", 6, 3)
+  +adaptiv-value("padding-bottom", 6, 3)
+  +adaptiv-value("padding-left", 27, 20)
   +adaptiv-value("padding-right", 10, 7)
   background-color: $bl10
   position: relative
@@ -201,7 +221,7 @@
   +cont
     margin-left: unset
     background-color: rgba(0, 0, 0, 0.2)
-  
+
   &-img
     border-radius: 50%
     position: absolute
@@ -226,12 +246,13 @@
   &-txt
     color: $grey7a
     +adaptiv-value("font-size", 14, 10)
-    line-height: 18px
+    line-height: 1.28
+    +adaptiv-value("margin-right", 28, 18)
   &-btn
+    display: inline-flex
     margin-left: 6px
     +cont
       margin-left: auto
-      
 
 .info-icon
   +adaptiv-value("width", 12, 10)
@@ -247,16 +268,19 @@
   display: flex
   align-items: center
   justify-content: center
-  +adaptiv-value("width", 42, 26)
-  +adaptiv-value("min-width", 42, 26)
-  +adaptiv-value("height", 42, 26)
-  +adaptiv-value("min-height", 42, 26)
+  width: 26px
+  height: 26px
+  min-width: 26px
+  min-height: 26px
+
   +cont
     background-color: transparent
     border-radius: unset
     padding: 0
     width: unset!important
     height: unset!important
+
+
   &>span
     display: none
     +cont
@@ -265,24 +289,72 @@
   .btn-icon
     width: 100%
     height: 100%
-    margin-left: unset
+    margin-left: unset!important
     +cont
       width: $w_bicon
       height: $w_bicon
       min-width: $w_bicon
       min-height: $w_bicon
       margin-left: auto
-      
 
   .btn-icon
     fill: $grey40
+
+  .star-icon
+    width: 14px
+    min-width: 14px
+    height: 13px
+    min-height: 13px
+
+  .notif-icon
+    width: 9.84px
+    min-width: 9.84px
+    height: 12.24px
+    min-height: 12.24px
+
+  .menu-icon
+    width: 14px
+    min-width: 14px
+    height: 14px
+    min-height: 14px
 
 .burger
   display: flex
   +cont
     display: none
 
+.btn-notif
+  position: relative
+  +cont
+    +adaptiv-value("margin-right", 36, 16)
 
+  .notif-count
+    border-radius: 50%
+    background-color: $redB0
+    position: absolute
+    line-height: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 1
+
+    width: 9px
+    min-width: 9px
+    height: 9px
+    min-height: 9px
+
+    top: 5px
+    right: 5px
+    font-size: 6px
+    +cont
+      top: -2px
+      right: -2px
+      width: 14px
+      min-width: 14px
+      height: 14px
+      min-height: 14px
+      font-size: 10px
+      
 .lang-menu,.btn-notif,.prof-menu
   //display: none
   +cont
@@ -293,11 +365,9 @@
   +cont
     margin-right: unset
 
-
 .mob
   +cont
     display: none
-
 
 .header-top__rt,
 .header-btm .btn-notif, .header-btm .prof-menu, .header-btm .lang-menu
