@@ -7,15 +7,22 @@
    color: $grey9E
 
    margin-top: auto
+   background-color: $bl0E
 
    &__inner
       display: grid
       grid-template-columns:  auto 1fr
-      +adaptiv-value("grid-column-gap", 100, 26.5)
+      grid-column-gap: 26.5px
       +adaptiv-value("grid-row-gap", 0, 45)
-
+      +phone
+         grid-column-gap: 15px
+         grid-template-columns: repeat(4, auto)
+         +adaptiv-value("width", 930, 320)
       +tablet
-         grid-template-columns: auto auto auto 1fr
+         grid-column-gap: 83px
+
+.logo-img
+   margin-right: 10px
 
 .copyright
    +adaptiv-value("font-size", 10, 10)
@@ -23,7 +30,8 @@
 
 .ftr-tl
    +adaptiv-value("font-size", 14, 14)
-   +adaptiv-value("margin-bottom", 20, 20)
+   +adaptiv-value("margin-top", 8, 8)
+   +adaptiv-value("margin-bottom", 10, 10)
    line-height: 1
    color: $fontcolor
 
@@ -38,7 +46,7 @@
 
 .ftr-menu
    a
-      padding: 10px 0
+      padding: 4px 0
 
 .col1
    display: flex
@@ -48,35 +56,39 @@
    
    grid-column:  span 2
    grid-row: 1
-   +tablet
+   +phone
       grid-row: 1
+      grid-column: unset
 
 .col2
    grid-row: 2
-   +tablet
+   +phone
       grid-row: 1
 
 .col3
    grid-row: 2
    grid-column:  span 2
-   +tablet
-      
+   +phone
+      grid-column: unset
       grid-row: 1
 
 .col4
    grid-row: 3
    grid-column:  span 2
-   +tablet
-      
+   +phone
+      grid-column: unset
       grid-row: 1
 
 .col5
    grid-row: 4
    grid-column:  span 2
    text-align: center
-   +tablet
+   +phone
       text-align: left
+      grid-row: 2
+      grid-column: unset
+      margin-top: -15px
 
 .ftr-lang
-   +adaptiv-value("margin-left", 15, 15)
-   +adaptiv-value("margin-bottom", 20, 20)
+   +adaptiv-value("margin-left", 17, 17)
+   +adaptiv-value("margin-top", 8, 8)

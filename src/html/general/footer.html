@@ -2,8 +2,12 @@
     <div class="container">
         <div class="footer__inner">
             <div class="col1">
-                <img src="@img/logo.png" alt="dapp.expert">
-                <img src="@img/logotext.png" alt="dapp.expert">
+
+                <a href="#" class="logo">
+                    <img class="logo-img" src="@img/logo.png" alt="dapp.expert">
+                    <img src="@img/logotext.png" alt="dapp.expert">
+                </a>
+
             </div>
             <div class="col2">
                 <div class="ftr-tl">Company</div>
@@ -25,9 +29,19 @@
 
                 <div class="ftr-rght">
                     <div class="ftr-tl">Socials</div>
-                    <span class="ftr-lang">English</span>
+
+                    <div class="dropdown dd-grey dd-smp dd-lft lang-menu ftr-lang">
+                        <button class="btn dropdown-toggle" type="button" id="dd3" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Eng
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dd3">
+                            <a class="dropdown-item" href="#">Eng</a>
+                            <a class="dropdown-item" href="#">Rus</a>
+                        </div>
+                    </div>
                 </div>
-                
+
                 <ul class="ftr-menu">
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Facebook</a></li>

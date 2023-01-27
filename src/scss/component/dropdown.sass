@@ -2,12 +2,11 @@
    &.dd-grey
       display: inline-flex
       align-items: center
-      background-color: $grey12 
+      background-color: $grey12
       color: #FFF
-      +adaptiv-value("font-size", 14, 14)  
+      +adaptiv-value("font-size", 14, 14)
       line-height: 1.45
       font-family: $EurostileReg
-      
 
       .btn
          position: relative
@@ -19,7 +18,7 @@
          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
          border-radius: 4px
          padding: 0
-         
+
       .dropdown-item
          display: block
          width: 100%
@@ -31,7 +30,7 @@
          white-space: nowrap
          background-color: transparent
          border: 0
-         +adaptiv-value("font-size", 14, 14)  
+         +adaptiv-value("font-size", 14, 14)
          line-height: 1.45
 
       .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover
@@ -47,6 +46,25 @@
          min-width: unset
    &.dd-trp
       background-color: transparent
+
+   &.dd-lft
+      text-transform: uppercase
+      .btn
+         +adaptiv-value("font-size", 10, 10)
+         padding: 2px 6px 2px 3px
+      .dropdown-menu
+         width: 100%
+         
+      .dropdown-toggle
+         text-transform: uppercase
+      .dropdown-toggle::after
+         order: -1
+         margin-left: unset
+         margin-right: 4px
+         color: $grey40
+      .dropdown-item
+         text-align: center
+         +adaptiv-value("font-size", 10, 10)
 
 .dd-icon
    width: $w_dicon
