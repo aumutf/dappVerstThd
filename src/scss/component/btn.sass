@@ -24,8 +24,9 @@
    align-items: center
    justify-content: center
    text-transform: capitalize
+   border-radius: 0
 
-   padding: 7px 7px 7px 15px
+   padding: 6px 15px 6px 10px
    +adaptiv-value("font-size", 14, 14)
    font-family: $EurostileReg
    text-align: center
@@ -35,6 +36,9 @@
       box-shadow: none
       color: inherit
 
+   &>span
+      flex-grow: 1
+      
    .btn-icon 
       width: $w_bicon
       height: $w_bicon

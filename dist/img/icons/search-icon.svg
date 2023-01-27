@@ -1,4 +1,44 @@
-<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="10.4062" y="10.6484" width="0.574391" height="3.19051" transform="rotate(-45 10.4062 10.6484)" fill="#ABB5C7" stroke="#7A7A7A" stroke-width="0.574391"/>
-<circle cx="7.33664" cy="7.32129" r="4.67674" transform="rotate(-45 7.33664 7.32129)" stroke="#7A7A7A"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="11.311501"
+   height="11.162895"
+   viewBox="0 0 11.311501 11.162895"
+   fill="none"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="search-icon.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="43.176471"
+     inkscape:cx="8.106267"
+     inkscape:cy="7.9904632"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     id="rect2"
+     style="fill:#abb5c7;stroke:#7a7a7a;stroke-width:0.574391"
+     d="M 8.243158,8.5007078 8.6493137,8.094552 10.905345,10.350583 10.499189,10.756739 Z" />
+  <path
+     id="circle4"
+     style="display:inline;stroke:#7a7a7a"
+     d="m 8.4805525,1.8666432 a 4.6767402,4.6767402 0 0 1 0,6.6139092 4.6767402,4.6767402 0 0 1 -6.6139093,10e-8 4.6767402,4.6767402 0 0 1 0,-6.6139094 4.6767402,4.6767402 0 0 1 6.6139093,10e-8 z" />
 </svg>

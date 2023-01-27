@@ -1,0 +1,51 @@
+
+.bl-addnews
+   +adaptiv-value("margin-top", 35, 35)
+   &-in
+      display: flex
+      flex-direction: column
+   &-btm
+      display: flex
+      .btn
+         margin-left: auto
+      .lft
+         display: grid
+         grid-template-columns: repeat(3, auto)
+         grid-column: 17px
+         +adaptiv-value("grid-column", 17, 17)
+
+   &-itm:not(:last-child)
+      +adaptiv-value("margin-bottom", 17, 17)
+
+
+.useri
+   display: flex
+   
+.useri-pht
+   display: flex
+   align-items: center
+   justity-content: center
+   +adaptiv-value("width", 22.89, 22.89)
+   +adaptiv-value("min-width", 22.89, 22.89)
+   +adaptiv-value("height", 22.89, 22.89)
+   +adaptiv-value("min-height", 22.89, 22.89)
+   border-radius: 50%
+   overflow: hidden
+   +adaptiv-value("margin-right", 11, 11)
+   img
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+.useri-name
+   +adaptiv-value("font-size", 16, 16)
+   line-height: 1.43
+   color: #FFF
+   font-family: $EurostileBol
+   +adaptiv-value("margin-right", 10, 10)
+
+.useri-email
+   +adaptiv-value("font-size", 16, 16)
+   line-height: 1.43
+   color: $grey6A
+
