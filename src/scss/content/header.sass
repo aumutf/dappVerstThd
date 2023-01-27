@@ -51,6 +51,31 @@
     +cont
       +adaptiv-value("min-width", 115, 115)
 
+  .nav
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: space-around
+    font-family: $EurostileBolObl
+    text-transform: uppercase
+    font-weight: $bold
+    +adaptiv-value("font-size", 14, 14)
+    font-style: italic
+    background-color: transparent
+    +cont
+      flex-direction: row
+
+    &-item
+      +adaptiv-value("margin-right", 60, 0)
+      a
+        color: $menucolor
+
+    .nav-item.active, .nav-item:hover, .nav-item:active
+      &>a
+        color: $grey7a   
+
+
+
 .header-top
   &__rt
     margin-left: auto
@@ -62,28 +87,6 @@
     +cont
       flex-direction: row
 
-
-.nav
-  display: flex
-  align-items: center
-  flex-direction: column
-  justify-content: space-around
-  font-family: $EurostileBolObl
-  text-transform: uppercase
-  font-weight: $bold
-  +adaptiv-value("font-size", 14, 14)
-  font-style: italic
-  +cont
-    flex-direction: row
-
-  &-item
-    +adaptiv-value("margin-right", 60, 0)
-    a
-      color: $menucolor
-
-  .nav-item.active, .nav-item:hover, .nav-item:active
-    &>a
-      color: $grey7a   
 
 .wch
   +adaptiv-value("margin-right", 20, 10)
@@ -153,9 +156,10 @@
   display: flex
   align-items: center
   white-space: nowrap
-  overflow: auto hidden
+  overflow-x: auto
   +adaptiv-value("margin-right", 10, 10)
   +adaptiv-value("font-size", 10, 10)
+
   
   &__item
     display: flex
