@@ -1,26 +1,32 @@
 
 .bl-addnews
-   +adaptiv-value("margin-top", 35, 35)
+   +adaptiv-value("margin-top", 19, 19)
    &-in
       display: flex
       flex-direction: column
+      padding-left: 15px
+      padding-right: 15px
+      margin-bottom: 24px
    &-btm
       display: flex
+      align-items: center
+      margin-top: -2px
       .btn
          margin-left: auto
+
       .lft
          display: grid
          grid-template-columns: repeat(3, auto)
-         grid-column: 17px
-         +adaptiv-value("grid-column", 17, 17)
+         +adaptiv-value("grid-column-gap", 17, 17)
+
+         align-items: center
 
    &-itm:not(:last-child)
-      +adaptiv-value("margin-bottom", 17, 17)
-
+      +adaptiv-value("margin-bottom", 19, 19)
 
 .useri
    display: flex
-   
+
 .useri-pht
    display: flex
    align-items: center
@@ -49,3 +55,52 @@
    line-height: 1.43
    color: $grey6A
 
+.bl2col-itm
+   padding-top: 23px
+   padding-bottom: 23px
+   &:not(:last-child)
+      border-bottom: 0.572183px solid $grey24
+
+.bl2col__r
+   .nav-tabs
+      margin-left: 15px
+      margin-right: 15px
+      margin-bottom: 23px
+   .nav-tabs .nav-link
+      +adaptiv-value("font-size", 14, 14)
+      line-height: 1.4
+   .btn-more
+      width: 100%
+
+.bl2col-tab-hd
+   display: flex
+   align-items: center
+   justify-content: space-between
+   padding-top: 17px
+   padding-left: 15px
+   padding-right: 15px
+   padding-bottom: 28px
+   background: linear-gradient(180deg, #151B24 -105%, rgba(21, 27, 36, 0.12) 100%)
+
+.tab-hd-itm
+   display: flex
+   align-items: center
+   justify-content: space-between
+   +adaptiv-value("font-size", 13.7324, 13.7324)
+   line-height: 1
+   cursor: pointer
+   .svg-icon
+      margin-left: 10px
+      fill: $redD6
+
+.refresh-icon
+   width: 9.15px
+   min-width: 9.15px
+   height: 9.15px
+   min-height: 9.15px
+
+.triangle-icon
+   width: 10px
+   min-width: 10px
+   height: 6px
+   min-height: 6px

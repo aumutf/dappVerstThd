@@ -4,18 +4,7 @@
 @@include('html/general/head.html',{
 "title":"Главная"
 })
-<style>
-   .hide {
-      display: none;
-   }
-   #showEmojiPicker {
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background-color: #555;
-   }
-</style>
+
 
 <body>
    <div class="body-wrap">
@@ -24,17 +13,17 @@
       @@include('html/component/banner.html',{})
       @@include('html/component/btn.html',{})
       @@include('html/component/dropdown.html',{})
-     
+
       =========================================
       <div class="container">
          <div class="wrapper">
             <textarea name="postText" id="postText" cols="100" rows="8"></textarea>
             <span id="showEmojiPicker"></span>
             <div class="emoji-wrapper">
-               <emoji-picker class="hide dark" ></emoji-picker>
+               <emoji-picker class="hide dark"></emoji-picker>
             </div>
          </div>
-         
+
       </div>
       +++++++++++++++++++++++++++++++++++++++++
       <GifPicker apikey="LuMoYviTkqW5nFrx0I1Ndvdtei0TA79P" onSelect="{gifUrl => console.log(gifUrl)}" />

@@ -1,0 +1,103 @@
+.newsItm
+   display: flex
+   flex-direction: column
+   +adaptiv-value("width", 350, 350)
+   +adaptiv-value("min-width", 350, 350)
+   padding: 0px 15px 0px
+
+.newsItm-hd
+   display: grid
+   grid-template-columns: auto auto auto 1fr
+   grid-column-gap: 10px
+   margin-bottom: 23px
+
+.newsItm-logo
+   width: 34.33px
+   min-width: 34.33px
+   height: 34.33px
+   min-height: 34.33px
+   grid-row: span 2
+
+.newsItm-title
+   font-size: 13.7324px
+   line-height: 1.6
+   color: #FFFFFF
+   font-family: $EurostileHea
+
+.chkd-icon
+   width: 11.82px
+   min-width: 11.82px
+   height: 11.82px
+   min-height: 11.82px
+   fill: $redD6
+   stroke: #FFF
+
+.newsItm-date, .newsItm-login
+   font-size: 13.7324px
+   line-height: 1.6
+   color: $grey87
+
+.newsItm-login
+   grid-column: span 2
+
+.newsItm-cnt
+   margin-bottom: 5px
+
+   font-size: 13.7324px
+   line-height: 1.67
+   color: #FFFFFF
+
+.newsItm-img
+   border-radius: 9.15493px
+   overflow: hidden
+   flex-grow: 1
+   &:not(:last-child)
+      margin-right: 5.72px
+
+.newsItm-imgs
+   margin-bottom: 17px
+   display: flex
+   align-items: center
+
+
+.newsItm-btm
+   display: flex
+   justify-content: space-between
+
+.socItm
+   display: flex
+   align-items: center
+   cursor: pointer
+   &-icon
+      margin-right: 6.87px
+      fill: $grey93
+      width: 13.73px
+      height: 13.73px
+      min-height: 13.73px
+      min-width: 13.73px
+      display: flex
+      align-items: center
+   &-cnt
+      font-size: 11.4437px
+      line-height: 1.45
+      text-transform: uppercase
+      color: $grey93
+
+.heart-icon
+   width: 16.02px
+   height: 13.73px
+   min-height: 13.73px
+   min-width: 16.02px
+
+.dots-icon
+   width: 14.88px
+   height: 4.58px
+   min-height: 4.58px
+   min-width: 14.88px
+
+
+//=====================newsItm-bxd
+.newsItm-bxd
+   background: #151B24
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+   padding: 12px 15px 21px

@@ -1,6 +1,6 @@
 .inp
    +adaptiv-value("font-size", 9.15493, 9.15493)
-   line-height: 4
+   line-height: 3.6
    text-transform: uppercase
    color: #FFFFFF
    padding-top: 0
@@ -14,15 +14,16 @@
    &::placeholder
       color: #FFFFFF
 
+$btnH: 14px
 
 .inp-img
-   height: 14px
-   min-height: 14px
+   height: $btnH
+   min-height: $btnH
    width: 17px
    min-width: 17px
    &-label
-      height: 14px
-      min-height: 14px
+      height: $btnH
+      min-height: $btnH
       width: 17px
       min-width: 17px
       
@@ -38,11 +39,32 @@
          background-color: transparent
          background-image: url("../img/icons/downloadImg.svg")
          background-repeat: no-repeat
-         background-size: contain
+         background-size: cover
          padding: 0
          border: none
          border-radius: 0
+   &-wrap
+      display: inline-flex
+      align-items: center
+      height: auto
+      
 
 .inp-img:lang(en)~.inp-img-label::after
    content: ""
 
+.btn-gif
+   background-image: url("../img/icons/downloadGif.svg")
+
+.btn-smile
+   background-image: url("../img/icons/downloadSmile.svg")
+
+.btn-em
+   width: 14.88px
+   min-width: 14.88px
+   height: $btnH
+   min-height: $btnH
+   background-color: transparent
+   background-repeat: no-repeat
+   background-size: cover
+   padding: 0
+   border: none
