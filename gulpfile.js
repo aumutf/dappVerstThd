@@ -21,6 +21,10 @@ import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { copyCss, copyJs } from "./gulp/tasks/assets.js";
 
+import { scssNewsPage } from "./gulp/tasks/scssNewsPage.js";
+import { scssTermsConditions } from "./gulp/tasks/scssTermsConditions.js";
+import { scssPrivacyPolicy } from "./gulp/tasks/scssPrivacyPolicy.js";
+
 // Наблюдатель за изменениями в файлах
 function watcher() {
   gulp.watch(path.watch.files, copy)
@@ -31,6 +35,10 @@ function watcher() {
   gulp.watch(path.watch.sprite, svgSpriteTask)
   gulp.watch(path.watch.assetsjs, copyJs)
   gulp.watch(path.watch.assetscss, copyCss)
+
+  gulp.watch(path.watch.scssNewsPage, scssNewsPage)
+  gulp.watch(path.watch.scssTermsConditions, scssTermsConditions)
+  gulp.watch(path.watch.scssPrivacyPolicy, scssPrivacyPolicy)
 }
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
@@ -39,7 +47,11 @@ const assets = gulp.series(copyJs, copyCss);
 
 const mainTasks = gulp.series(fonts, gulp.parallel(
   copy, html, scss, js, images, svgSpriteTask,
-  assets));
+  scssNewsPage,
+  scssTermsConditions,
+  scssPrivacyPolicy,
+  assets
+));
 
 
 // Построение сценариев выполнения задач

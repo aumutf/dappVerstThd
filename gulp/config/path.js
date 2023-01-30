@@ -22,7 +22,11 @@ export const path = {
     svgSpriteIcons: `${srcFolder}/img/icons/*.svg`,
     scss: `${srcFolder}/scss/style.scss`,
     html: `${srcFolder}/*.html`,
-    files: `${srcFolder}/files/**/*.*`
+    files: `${srcFolder}/files/**/*.*`,
+
+    scssNewsPage: `${srcFolder}/scss/styleNewsPage.scss`,
+    scssTermsConditions: `${srcFolder}/scss/styleTermsConditions.scss`,
+    scssPrivacyPolicy: `${srcFolder}/scss/stylePrivacyPolicy.scss`
   },
   watch: {
     assetscss: `${srcFolder}/assets/**/*.css`,
@@ -32,7 +36,11 @@ export const path = {
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     sprite: `${srcFolder}/img/icon/*.svg`,
-    files: `${srcFolder}/files/**/*.*`
+    files: `${srcFolder}/files/**/*.*`,
+
+    scssNewsPage: `${srcFolder}/scss/**/*.scss`,
+    scssTermsConditions: `${srcFolder}/scss/**/*.scss`,
+    scssPrivacyPolicy: `${srcFolder}/scss/**/*.scss`
   },
   clean: buildFolder,
   buildFolder: buildFolder,

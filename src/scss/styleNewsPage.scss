@@ -1,0 +1,21 @@
+@import "fonts.scss";
+@import "general/mixins_.sass";
+@import "general/variables.sass";
+@import "general/general_.sass";
+@import "general/generalSetting.sass"; 
+
+@import "component/btn.sass";      
+@import "component/dropdown.sass";      
+@import "component/tab.sass";      
+@import "component/input.sass";      
+@import "component/pageWithSideBar.sass";      
+@import "component/emoji.sass";      
+@import "component/news-item.sass";      
+
+@import "content/news.sass"; 
+
+@import "content/header.sass";                              
+@import "content/footer.sass";             
+
+@import "component/banner.sass";                              
+      
