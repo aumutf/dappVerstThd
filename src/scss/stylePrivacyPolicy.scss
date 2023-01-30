@@ -4,18 +4,13 @@
 @import "general/general_.sass";
 @import "general/generalSetting.sass"; 
 
-@import "component/btn.sass";      
-@import "component/dropdown.sass";      
-@import "component/tab.sass";      
-@import "component/input.sass";      
+@import "content/header.sass";   
+@import "component/banner.sass";                           
+@import "content/footer.sass";  
+
+
+@import "component/btn.sass";       
 @import "component/pageWithSideBar.sass";      
-@import "component/emoji.sass";      
-@import "component/news-item.sass";      
 
-@import "content/news.sass"; 
-
-@import "content/header.sass";                              
-@import "content/footer.sass";             
-
-@import "component/banner.sass";                              
-      
+@import "content/termsConditions.sass"; 
+@import "content/privacyPolicy.sass"; 

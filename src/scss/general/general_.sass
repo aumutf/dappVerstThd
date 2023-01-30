@@ -47,3 +47,51 @@ img, picture
 picture
   display: flex
   align-items: center
+
+
+
+
+$pointW: 8px
+
+ul.ulN, .tcpp ul.ulN
+  display: flex
+  flex-direction: column
+  li
+    margin-bottom: 13px
+    position: relative
+    display: flex
+    align-items: center
+    color: #FFFFFF
+    margin-left: 0
+    &::before
+      content: ""
+      display: flex
+      margin-right: 23px
+      width: $pointW
+      height: $pointW
+      min-width: $pointW
+      min-height: $pointW      
+      border-radius: 50%
+      background-color: $redB0
+
+.post .post-text ul.ulN
+  list-style: none
+  margin-left: 0
+
+.lineVert
+  position: relative
+  &::after
+    content: ""
+    position: absolute
+    top: -23px
+    left: 3px
+    //width: 3px
+    height: 100%
+    border-width: 2px
+    border-style: solid
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(rgba(47, 47, 48, 1)), to(rgba(47, 47, 48, 0))) 1 100%
+    -webkit-border-image: -webkit-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    -moz-border-image: -moz-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%  
+    -o-border-image: -o-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    border-image: linear-gradient(to top, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
+    border-right: 0
