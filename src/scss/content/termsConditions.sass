@@ -74,7 +74,7 @@
             content: counters(item, ".") "."
             counter-increment: item
             color: $redB0
-            margin-right: 0px
+            margin-right: 5px
             font-family: $EurostileBol
             +adaptiv-value("font-size", 20, 10)
 
@@ -108,8 +108,12 @@
          +adaptiv-value("margin-bottom", 16, 30)
          margin-left: 0px
 
+         &::before
+            display: none
+
          &::marker
             color: $redB0
+            color: yellow
             margin-right: 10px
             font-family: $EurostileBol
             +adaptiv-value("font-size", 20, 10)
