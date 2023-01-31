@@ -6,11 +6,16 @@
     background: #161923
 
     .modal-auth-col
-        width: 50%
+        width: 100%
+        +tablet
+            width: 50%
         padding: 30px 44px 15px 41px
         &--right
             background-image: url(../img/register.jpg)
             background-size: cover
+            display: none
+            +tablet
+                display: block
 
     .modal-title
         text-align: center
@@ -32,14 +37,15 @@
         +adaptiv-value("height", 35, 35)
         &::placeholder 
             font-family: Inter, sans-serif
-            font-size: 6px
-            line-height: 7px
+            +adaptiv-value("font-size", 9, 9)
+            line-height: 1.16
             font-weigth: 300
             letter-spacing: 0.5em
             color: #8B8E97
             text-align: center
     .form-group
         position: relative
+        margin-bottom: 10px
         &::before
             content: 'i'
             display: inline-block
@@ -63,6 +69,7 @@
         text-align: center
         letter-spacing: 0.08em
         text-transform: uppercase
+        margin-bottom: 10px
 
     .btn.bg-red
         width: 100%
@@ -70,12 +77,13 @@
         background: rgba(192, 0, 43, 0.25)
         color: #fff
         font-family: $EurostileBol
-        +adaptiv-value("font-size", 5, 5)
+        +adaptiv-value("font-size", 10, 10)
         +adaptiv-value("line-height", 10, 10)
         +adaptiv-value("height", 35, 35)
         +adaptiv-value("margin-bottom", 20, 20)
         text-align: center
         text-transform: uppercase
+        letter-spacing: 0.2em
 
     .reg-title
         font-family: Inter, sans-serif
@@ -129,4 +137,7 @@
             color: #fff
             text-decoration: underline
 
-
+.modal-body 
+    padding: 0
+.modal-content
+    border: none
