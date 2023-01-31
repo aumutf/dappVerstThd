@@ -1,0 +1,115 @@
+.tcpp
+   &-in
+      +adaptiv-value("padding-left", 30, 0)
+      +adaptiv-value("padding-right", 30, 0)
+      +adaptiv-value("padding-top", 0, 0)
+      +adaptiv-value("padding-bottom", 43, 0)
+      +adaptiv-value("font-size", 16, 14)
+      line-height: 2.14
+      color: $greyDB
+      letter-spacing: 0.02em
+      +tablet
+         line-height: 2.46
+
+   h2.title
+      +adaptiv-value("font-size", 36, 20)
+      line-height: 1
+      font-family: $EurostileBol
+      color: #FFFFFF
+      margin-bottom: 0px
+      +adaptiv-value("margin-top", 14, 0)
+      +tablet
+         margin-bottom: 8px
+         line-height: 1.11
+
+   h3.title
+      display: block
+      +adaptiv-value("font-size", 20, 14)
+      line-height: 2
+      font-family: $EurostileBol
+      color: $redB0
+      text-transform: uppercase
+      +adaptiv-value("margin-top", 40, 9)
+      +adaptiv-value("margin-bottom", 12, 10)
+
+   ol h3.title
+      display: inline-block
+
+   &-date
+      +adaptiv-value("font-size", 16, 10)
+      color: #FFFFFF
+
+   p
+      +adaptiv-value("margin-bottom", 33, 30)
+
+
+
+   .bl2col-wrap-blur::after,
+   .bl2col-wrap-blur::before
+      display: none
+      +tablet
+         display: inline-block
+
+   &-img
+      width: 100%
+      height: auto
+      display: inline-block
+      position: absolute 
+      
+      +adaptiv-value("width", 894, 440)
+      +adaptiv-value("left", -141, -58)
+      +adaptiv-value("top", -69, -10)
+      height: 290px
+      +tablet
+         height: 100%
+
+      img, picture
+         object-fit: cover
+
+   ol
+      counter-reset: item
+      li
+         display: block
+         &::before
+            content: counters(item, ".") "."
+            counter-increment: item
+            color: $redB0
+            margin-right: 0px
+            font-family: $EurostileBol
+            +adaptiv-value("font-size", 20, 10)
+
+   ol ol li::before
+      font-family: $EurostileReg
+      content: counters(item, ".") ""
+
+.tccp-rht
+   //min-width: 53%
+   +adaptiv-value("min-width", 604, 280)
+   +adaptiv-value("min-height", 725, 300)
+   float: right
+   overflow: hidden
+   position: relative
+   margin-bottom: 10px
+   +tablet
+      margin-bottom: 0
+.tcppw
+   .banner
+      display: none
+      +tablet
+         display: block
+
+.termsCond
+   ol
+      +adaptiv-value("margin-left", 60, 20)
+      +adaptiv-value("margin-bottom", 30, 20)
+      li
+         display: list-item
+         +adaptiv-value("margin-top", 16, 30)
+         +adaptiv-value("margin-bottom", 16, 30)
+         margin-left: 0px
+
+         &::marker
+            color: $redB0
+            margin-right: 10px
+            font-family: $EurostileBol
+            +adaptiv-value("font-size", 20, 10)
