@@ -179,17 +179,18 @@
     position: absolute
     top: 0
     left: 0
-    height: 30px
+    //height: 30px
     width: 100%
     
   &__item
-    display: flex
+    display: inline-flex
     align-items: center
     +adaptiv-value("margin-right", 42, 10)
     text-transform: uppercase
     font-family: $EurostileBol
     font-weight: $bold
     white-space: nowrap
+    float: left
     &>a
       +adaptiv-value("margin-left", 14, 10)
       color: $redB0
