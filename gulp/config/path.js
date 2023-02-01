@@ -26,7 +26,8 @@ export const path = {
 
     scssNewsPage: `${srcFolder}/scss/styleNewsPage.scss`,
     scssTermsConditions: `${srcFolder}/scss/styleTermsConditions.scss`,
-    scssPrivacyPolicy: `${srcFolder}/scss/stylePrivacyPolicy.scss`
+    scssPrivacyPolicy: `${srcFolder}/scss/stylePrivacyPolicy.scss`,
+    scssNewsAllPage: `${srcFolder}/scss/styleNewsAllPage.scss`
   },
   watch: {
     assetscss: `${srcFolder}/assets/**/*.css`,
@@ -40,7 +41,8 @@ export const path = {
 
     scssNewsPage: `${srcFolder}/scss/**/*.scss`,
     scssTermsConditions: `${srcFolder}/scss/**/*.scss`,
-    scssPrivacyPolicy: `${srcFolder}/scss/**/*.scss`
+    scssPrivacyPolicy: `${srcFolder}/scss/**/*.scss`,
+    scssNewsAllPage: `${srcFolder}/scss/**/*.scss`
   },
   clean: buildFolder,
   buildFolder: buildFolder,
