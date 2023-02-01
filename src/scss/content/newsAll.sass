@@ -1,0 +1,22 @@
+.page-news-all
+   .bl2col-in
+      background: black
+      padding: 0
+      +tablet
+         padding: 27px
+
+   .bl2col-wrap-blur::after, .bl2col-wrap-blur::before
+      display: none
+      +tablet
+         display: inline-block
+   .nw-itm
+      border-bottom: 0.5px solid $grey24
+      border-bottom: 5px solid yellow
+      margin-bottom: 20px
+      padding-bottom: 20px
+
+      &:nth-child(2), &:last-child,  &:nth-last-child(2)
+         +tablet
+            border-bottom: none
+
+

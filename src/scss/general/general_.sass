@@ -95,3 +95,33 @@ ul.ulN, .tcpp ul.ulN
     -o-border-image: -o-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
     border-image: linear-gradient(to top, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
     border-right: 0
+
+
+.dg-3
+  display: grid
+  grid-template-columns: 1fr
+  +adaptiv-value("grid-column-gap", 0, 0)
+  +tablet
+    grid-template-columns: repeat(3,1fr)
+    +adaptiv-value("grid-column-gap", 33, 33)
+
+
+.gr3
+  
+  grid-row: unset!important
+  +tablet
+    grid-row: span 3!important
+
+.gr2
+  grid-row: unset!important
+  +tablet
+    grid-row: span 2!important
+
+.gc2
+  grid-column: unset!important
+  +tablet
+    
+    grid-column: span 2!important
+
+.br0
+  border-radius: 0!important
