@@ -40,6 +40,10 @@
    .title-wrap
       +adaptiv-value("margin-bottom", 16, 11)
 
+   img, picture
+      object-fit: cover
+
+
 .newsAll-bl
    padding-bottom: 0
    padding-top: 0
@@ -56,15 +60,18 @@
 
    .nw-itm
       border-bottom: 1px solid $grey24
-      padding-top: 22px
-      padding-bottom: 10px
-      margin-bottom: 25px
+      +adaptiv-value("padding-top", 22, 22)
+      //padding-top: 22px
+      //padding-bottom: 10px
+      +adaptiv-value("padding-bottom", 10, 20)
+      //margin-bottom: 25px
+      +adaptiv-value("margin-bottom", 25, 0)
       width: 100%
       +tablet
          width: auto
-         margin-bottom: 0px
-         padding-bottom: 20px
-         padding-top: 22px
+         //margin-bottom: 0px
+         //padding-bottom: 20px
+         //padding-top: 22px
 
       &:first-child, &:nth-child(2), &:nth-child(3)
          padding-top: 0

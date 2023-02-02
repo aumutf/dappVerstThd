@@ -1,23 +1,6 @@
+
 .dropdown
    &.dd-grey
-      display: inline-flex
-      align-items: center
-      background-color: $grey12
-      color: #FFF
-      +adaptiv-value("font-size", 13, 13)
-      line-height: 1.45
-      font-family: $EurostileReg
-
-      .btn
-         position: relative
-         +adaptiv-value("padding-top", 4, 0)
-         +adaptiv-value("padding-left", 40, 16)
-         +adaptiv-value("padding-right", 5, 0)
-         +adaptiv-value("padding-bottom", 4, 1)
-         color: #FFF
-         +adaptiv-value("font-size", 13, 10)
-         text-transform: unset
-         line-height: 1
       .dropdown-menu
          background: $grey12
          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -25,7 +8,8 @@
          padding: 0
 
       .dropdown-item
-         display: block
+         display: flex
+         align-items: center
          width: 100%
          padding: 10px 10px
          clear: both
@@ -78,27 +62,11 @@
    &.dd-cnt
       .dropdown-item
          text-align: center
+         justify-content: center
 
    &.dd-more
-      background-color: transparent
-      border-left: 3px solid transparent
-      padding: 5px
-      &:hover, &:active
-         background-color: $grey15
-         border-left-color: $redB0
-
       .dropdown-toggle::after
          display: none
-      .socItm-icon
-         margin-right: 0
-      .btn
-         padding: 3px 4px
-      .dropdown-item
-         +adaptiv-value("font-size", 11, 11)
-         padding: 6px
-
-      .bg-drk
-         background-color: $grey15
 
 .dd-icon
    fill: #FFF
@@ -127,4 +95,83 @@
    left: -5px
    +adaptiv-value("left", -5, 0)
    +adaptiv-value("border-width", 7, 2)
+
+.dd-grey
+   display: inline-flex
+   align-items: center
+   background-color: $grey12
+   color: #FFF
+   +adaptiv-value("font-size", 13, 13)
+   line-height: 1.45
+   font-family: $EurostileReg
+
+   .btn
+      position: relative
+      +adaptiv-value("padding-top", 4, 0)
+      +adaptiv-value("padding-left", 40, 16)
+      +adaptiv-value("padding-right", 5, 0)
+      +adaptiv-value("padding-bottom", 4, 1)
+      color: #FFF
+      +adaptiv-value("font-size", 13, 10)
+      text-transform: unset
+      line-height: 1
+
+.di-logo
+   +adaptiv-value("width", 12, 12)
+   +adaptiv-value("min-width", 12, 12)
+   +adaptiv-value("height", 12, 12)
+   +adaptiv-value("min-height", 12, 12)
+
+.eye-icon
+   +adaptiv-value("width", 8.14, 8.14)
+   +adaptiv-value("min-width", 8.14, 8.14)
+   +adaptiv-value("height", 5.7, 5.7)
+   +adaptiv-value("min-height", 5.7, 5.7)
+   fill: $grey0F
+
+.eye-icon-wrap
+   display: flex
+   align-items: center
+   justify-content: center
+   background-color: $grey6B
+   border-radius: 4px
+   +adaptiv-value("width", 12, 12)
+   +adaptiv-value("min-width", 12, 12)
+   +adaptiv-value("height", 12, 12)
+   +adaptiv-value("min-height", 12, 12)
+
+.dropdown-item
+   .eye-icon-wrap, .di-logo
+      margin-right: 7px
+
+.dd-more
+   padding: 5px!important
+   &:hover, &:active
+      background-color: $grey15
+   .bg-drk
+      background-color: $grey15!important
+      padding-left: 8px!important
+      justify-content: flex-start!important
+   .socItm-icon
+      margin-right: 0
+   .btn
+      padding: 3px 4px
+   .dropdown-item
+      +adaptiv-value("font-size", 11, 11)
+      padding: 6px
+
+.dd-more, .hwl
+   background-color: transparent!important
+   border-left: $btnMore_brd solid transparent!important
+   border-radius: 0
+   &:hover, &:active
+      border-left-color: $redB0!important
+
+.hwl
+   display: flex
+   align-items: center
+   padding: 5px
+
+.dropdown-menu
+   border: none
 
