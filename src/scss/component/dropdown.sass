@@ -10,12 +10,13 @@
 
       .btn
          position: relative
-         +adaptiv-value("padding-top", 4, 4)
+         +adaptiv-value("padding-top", 4, 0)
          +adaptiv-value("padding-left", 40, 16)
-         +adaptiv-value("padding-right", 5, 5)
-         +adaptiv-value("padding-bottom", 4, 4)
+         +adaptiv-value("padding-right", 5, 0)
+         +adaptiv-value("padding-bottom", 4, 1)
          color: #FFF
-         +adaptiv-value("font-size", 13, 13)
+         +adaptiv-value("font-size", 13, 10)
+         text-transform: unset
          line-height: 1
       .dropdown-menu
          background: $grey12
@@ -107,10 +108,10 @@
    +adaptiv-value("min-height", 8.73, 6.52)
 
 .dd-before
-   +adaptiv-value("width", 23, 12)
-   +adaptiv-value("min-width", 23, 12)
-   +adaptiv-value("height", 23, 12)
-   +adaptiv-value("min-height", 23, 12)
+   +adaptiv-value("width", 23, 8)
+   +adaptiv-value("min-width", 23, 8)
+   +adaptiv-value("height", 23, 8)
+   +adaptiv-value("min-height", 23, 8)
    border-radius: 50%
    background-color: $grey1E
    display: inline-flex
@@ -124,4 +125,6 @@
    box-sizing: content-box
    position: absolute
    left: -5px
+   +adaptiv-value("left", -5, 0)
    +adaptiv-value("border-width", 7, 2)
+
