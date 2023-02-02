@@ -65,7 +65,7 @@ $cont-width: 1240px
     #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
   @media screen and (min-width: 768px) and (max-width: $maxWidth+px)
-    #{$property}: calc(#{$pcSize}px/1.4 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
+    #{$property}: calc(#{$pcSize}px/2 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
 
 @mixin adaptiv-value_test($property, $pcSize, $mobSize)
   $addSize: $pcSize - $mobSize
@@ -93,7 +93,7 @@ $cont-width: 1240px
   background-repeat: no-repeat
 
 
-@mixin adaptiv-valueN($property, $pcSize, $mobSize)
+@mixin adaptiv-valueTab($property, $pcSize, $mobSize)
   $maxWidth: 1440
 
   $addSize: $pcSize - $mobSize

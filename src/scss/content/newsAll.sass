@@ -3,20 +3,99 @@
       background: black
       padding: 0
       +tablet
-         padding: 27px
+         padding: $tabInP
+         +adaptiv-value("padding-top", 27, 0)
+         +adaptiv-value("padding-left", 27, 0)
+         +adaptiv-value("padding-right", 27, 0)
+         +adaptiv-value("padding-bottom", 27, 0)
+
 
    .bl2col-wrap-blur::after, .bl2col-wrap-blur::before
       display: none
       +tablet
          display: inline-block
+
+
+   h1.title
+      line-height: 1.45
+      text-align: center
+      letter-spacing: 0.02em
+      text-transform: uppercase
+      color: $grey8D
+      +adaptiv-value("font-size", 32, 24)
+      +tablet
+         color: #FFFFFF
+         text-transform: capitalize
+
+   .title-sub
+      display: none
+      +tablet
+         display: block
+
+
+.newsAll-bl
+   padding-bottom: 40px
+   padding-top: 40px
+
+   &:first-child
+      padding-top: 0
+      
+   &:not(:last-child)
+      border-bottom: 0.5px solid $grey24
+      border-bottom: 5px solid yellow
+
+
    .nw-itm
       border-bottom: 0.5px solid $grey24
       border-bottom: 5px solid yellow
       margin-bottom: 20px
       padding-bottom: 20px
+      width: 100%
+      +tablet
+         width: auto
+      
 
-      &:nth-child(2), &:last-child,  &:nth-last-child(2)
+.newsAll-frs
+   .nw-itm
+      &:nth-child(2), &:last-child, &:nth-last-child(2)
          +tablet
             border-bottom: none
+            margin-bottom: 0
+            padding-bottom: 0
 
+.newsAll-scd
+   .nw-itm
+      &:last-child, &:nth-last-child(2), &:nth-last-child(3)
+         +tablet
+            border-bottom: none
+            margin-bottom: 0
+            padding-bottom: 0
 
+.newsAll-thd
+   .nw-itm
+      &:nth-child(3), &:last-child, &:nth-last-child(2)
+         +tablet
+            border-bottom: none
+            margin-bottom: 0
+            padding-bottom: 0
+         
+.newsAll-frth
+   .nw-itm
+      &:first-child, &:last-child 
+         +tablet
+            border-bottom: none
+            margin-bottom: 0
+            padding-bottom: 0
+
+.newsAll-ffth
+   .nw-itm
+      &:last-child, &:nth-last-child(2), &:nth-last-child(3)
+         +tablet
+            border-bottom: none
+            margin-bottom: 0
+            padding-bottom: 0
+//.newsAll-ffth,
+//.newsAll-frth,
+//.newsAll-thd,
+//.newsAll-scd
+  // display: none
