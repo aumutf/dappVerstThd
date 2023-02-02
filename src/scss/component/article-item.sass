@@ -15,6 +15,7 @@ $nwItmPb: 0
       +adaptiv-value("font-size", 16, 14)
       line-height: 1.45
       +adaptiv-value("margin-bottom", 6.5, 6.5)
+      
 
    &-in
       padding-top: 0
@@ -120,30 +121,41 @@ $nwItmPb: 0
       +adaptiv-value("margin-bottom", 20, 20)
 
 .nw-itm--wd
-   +adaptiv-value("width", 788, 320)
-   +adaptiv-value("min-width", 788, 320)
+   +adaptiv-value("width", 788, 280)
+   +adaptiv-value("min-width", 788, 280)
 
 
 .img-lg
-   +adaptiv-value("width", 370, 320)
-   +adaptiv-value("min-width", 370, 320)
-   +adaptiv-value("height", 260, 260)
-   +adaptiv-value("min-height", 260, 260)
+   +adaptiv-value("width", 370, 280)
+   +adaptiv-value("min-width", 370, 280)
+   +adaptiv-value("height", 260, 200)
+   +adaptiv-value("min-height", 260, 200)
+
 
 .img-md
-   +adaptiv-value("width", 370, 320)
-   +adaptiv-value("min-width", 370, 320)
-   +adaptiv-value("height", 130, 130)
-   +adaptiv-value("min-height", 130, 130)
+   +adaptiv-value("width", 370, 280)
+   +adaptiv-value("min-width", 370, 280)
+   +adaptiv-value("height", 130, 100)
+   +adaptiv-value("min-height", 130, 100)
 
 .img-sm
-   +adaptiv-value("width", 92, 92)
-   +adaptiv-value("min-width", 92, 92)
-   +adaptiv-value("height", 92, 92)
-   +adaptiv-value("min-height", 92, 92)
+   +adaptiv-value("width", 70, 70)
+   +adaptiv-value("min-width", 70, 70)
+   +adaptiv-value("height", 70, 70)
+   +adaptiv-value("min-height", 70, 70)
 
 .img-wd
-   +adaptiv-value("width", 788, 320)
-   +adaptiv-value("min-width", 788, 320)
+   +adaptiv-value("width", 788, 280)
+   +adaptiv-value("min-width", 788, 280)
    +adaptiv-value("height", 278, 278)
    +adaptiv-value("min-height", 278, 278)
+
+
+.nw-itm-wrap
+   position: relative
+   .nw-itm-gr
+      position: absolute
+      bottom: 20px
+      left: 0
+      width: 100%
+      z-index: 1

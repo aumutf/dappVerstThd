@@ -103,7 +103,7 @@ ul.ulN, .tcpp ul.ulN
   +adaptiv-value("grid-column-gap", 0, 0)
   +tablet
     grid-template-columns: repeat(3,1fr)
-    +adaptiv-value("grid-column-gap", 33, 33)
+    +adaptiv-value("grid-column-gap", 33, 0)
 
 
 .gr3
@@ -125,3 +125,17 @@ ul.ulN, .tcpp ul.ulN
 
 .br0
   border-radius: 0!important
+
+.title-wrap
+  display: grid
+  grid-template-columns: 1fr
+  +tablet
+    grid-template-columns: auto auto
+    +adaptiv-value("column-gap", 20, 0)
+
+.title-sub
+  +adaptiv-value("font-size", 16, 14)
+  line-height: 1.45
+  color: $grey93
+  
+

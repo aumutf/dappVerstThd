@@ -5,7 +5,6 @@
    .btn
       margin-bottom: 20px
 
-
 //BUTTON 
 .btn
    position: relative
@@ -38,8 +37,8 @@
 
    &>span
       flex-grow: 1
-      
-   .btn-icon 
+
+   .btn-icon
       width: $w_bicon
       height: $w_bicon
       min-width: $w_bicon
@@ -70,8 +69,6 @@
    color: $grey8D
    text-transform: uppercase
    font-family: $EurostileReg
-
-
 
 .cust
    color: #FFFFFF
@@ -104,21 +101,20 @@
    .btn-icon
       transform: rotate(180deg)
       transition: transform ease-in 2s
-      
 
 .btn-grad
-   +adaptiv-valueN("font-size", 8, 8)
+   +adaptiv-value("font-size", 8, 8)
    font-weight: 700
    line-height: 1.7
    text-shadow: 0px 0.75px 0px rgba(0, 0, 0, 0.25)
    color: #FFFFFF
    text-transform: uppercase
    text-align: center
-   
-   +adaptiv-valueN("padding-top", 3, 3)
-   +adaptiv-valueN("padding-bottom", 3, 3)
-   +adaptiv-valueN("padding-left", 27, 27)
-   +adaptiv-valueN("padding-right", 27, 27)
+
+   +adaptiv-value("padding-top", 3, 3)
+   +adaptiv-value("padding-bottom", 3, 3)
+   +adaptiv-value("padding-left", 27, 27)
+   +adaptiv-value("padding-right", 27, 27)
    border-radius: 0
    background: linear-gradient(90deg, #A90E35 2.81%, #EF1244 50.09%, #A90E35 93.05%), #D9D9D9
    position: relative
@@ -141,7 +137,7 @@
       position: absolute
       left: 0
       //width: 5px
-      +adaptiv-valueN("width", 5, 5)
+      +adaptiv-value("width", 5, 5)
       height: 1px
       background: #B00F38
    &::before
@@ -159,14 +155,14 @@
    background: linear-gradient(90deg, rgba(169, 14, 53, 0.3) 2.81%, rgba(239, 18, 68, 0.3) 50.09%, rgba(169, 14, 53, 0.3) 93.05%)
    border: 0.1px solid #B00F38
    //padding: 3px
-   +adaptiv-valueN("padding", 3, 3)
+   +adaptiv-value("padding", 3, 3)
    position: relative
 
    &::before, &::after
       content: ""
       position: absolute
       right: 0
-      +adaptiv-valueN("width", 5, 5)
+      +adaptiv-value("width", 5, 5)
       height: 1px
       background: #B00F38
    &::before
