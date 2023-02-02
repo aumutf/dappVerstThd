@@ -10,8 +10,10 @@
 
       .btn
          position: relative
-         padding: 4px 5px
-         padding-left: 40px
+         +adaptiv-value("padding-top", 4, 4)
+         +adaptiv-value("padding-left", 40, 16)
+         +adaptiv-value("padding-right", 5, 5)
+         +adaptiv-value("padding-bottom", 4, 4)
          color: #FFF
          +adaptiv-value("font-size", 13, 13)
          line-height: 1
@@ -98,17 +100,17 @@
          background-color: $grey15
 
 .dd-icon
-   width: $w_dicon
-   height: $w_dicon
-   min-width: $w_dicon
-   min-height: $w_dicon
    fill: #FFF
+   +adaptiv-value("width", 8.73, 6.52)
+   +adaptiv-value("min-width", 8.73, 6.52)
+   +adaptiv-value("height", 8.73, 6.52)
+   +adaptiv-value("min-height", 8.73, 6.52)
 
 .dd-before
-   +adaptiv-value("width", 23, 23)
-   +adaptiv-value("min-width", 23, 23)
-   +adaptiv-value("height", 23, 23)
-   +adaptiv-value("min-height", 23, 23)
+   +adaptiv-value("width", 23, 12)
+   +adaptiv-value("min-width", 23, 12)
+   +adaptiv-value("height", 23, 12)
+   +adaptiv-value("min-height", 23, 12)
    border-radius: 50%
    background-color: $grey1E
    display: inline-flex
@@ -122,3 +124,4 @@
    box-sizing: content-box
    position: absolute
    left: -5px
+   +adaptiv-value("border-width", 7, 2)

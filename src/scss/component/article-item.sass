@@ -7,14 +7,11 @@ $nwItmPb: 0
    display: flex
    flex-direction: column
 
-   //width: 370px
-   //max-width: 370px
-   background: green
    h3.title
       font-family: $EurostileHea
       +adaptiv-value("font-size", 16, 14)
       line-height: 1.45
-      +adaptiv-value("margin-bottom", 6.5, 6.5)
+      +adaptiv-value("margin-bottom", 12.5, 12.5)
       
 
    &-in
@@ -22,12 +19,13 @@ $nwItmPb: 0
       padding-right: $nwItmPr
       padding-bottom: $nwItmPb
       padding-left: $nwItmPl
-      background: red
+      +adaptiv-value("margin-top", -6, -6)
+
    &-txt
       color: $grey93
       +adaptiv-value("font-size", 16, 12)
       line-height: 1.45
-      +adaptiv-value("margin-bottom", 16, 14)
+      +adaptiv-value("margin-bottom", 14, 14)
 
    &-btm
       display: flex
@@ -47,19 +45,14 @@ $nwItmPb: 0
       &::before
          content: ""
          display: flex
-         width: 2px
-         min-width: 2px
-         height: 2px
-         min-height: 2px
          background-color: $greyB9
          border-radius: 50%
-         margin-left: 8px
-         margin-right: 8px
-         +tablet
-            width: 2.67px
-            min-width: 2.67px
-            height: 2.67px
-            min-height: 2.67px
+         +adaptiv-value("margin-left", 8, 5)
+         +adaptiv-value("margin-right", 8, 5)
+         +adaptiv-value("width", 2.67, 2)
+         +adaptiv-value("min-width", 2.67, 2)
+         +adaptiv-value("height", 2.67, 2)
+         +adaptiv-value("min-height", 2.67, 2)
 
 .nw-itm--lg
    display: flex
@@ -81,13 +74,13 @@ $nwItmPb: 0
 .nw-itm-gr
    display: grid
    grid-template-columns: 1fr auto
-   grid-column-gap: 10px
+   +adaptiv-value("grid-column-gap", 10, 3)
    grid-column: 1
 
    background: $grey15
    box-shadow: 0px 5.27143px 5.27143px rgba(0, 0, 0, 0.25)
    +adaptiv-value("border-radius", 5.27143, 4)
-   +adaptiv-value("padding-top", 17.5, 5)
+   +adaptiv-value("padding-top", 17.5, 3)
    +adaptiv-value("padding-left", 11, 8)
    +adaptiv-value("padding-right", 6, 5)
    +adaptiv-value("padding-bottom", 7, 5)
@@ -95,10 +88,11 @@ $nwItmPb: 0
    .nw-itm-txt
       grid-column: 1
       font-size: 13.1786px
-      +adaptiv-value("font-size", 13, 15)
+      +adaptiv-value("font-size", 13, 10)
       line-height: 1.53
       color: #FFFFFF
       +adaptiv-value("margin-bottom", 5, 5)
+      +adaptiv-value("margin-top", 0, 5)
       
    .nw-itm-img
       grid-row: 1/3
@@ -118,25 +112,30 @@ $nwItmPb: 0
    .nw-itm-img
       +adaptiv-value("border-radius", 9, 7)
       overflow: hidden
-      +adaptiv-value("margin-bottom", 20, 20)
+      +adaptiv-value("margin-bottom", 15, 15)
 
 .nw-itm--wd
-   +adaptiv-value("width", 788, 280)
-   +adaptiv-value("min-width", 788, 280)
+   +adaptiv-value("width", 780, 280)
+   +adaptiv-value("min-width", 780, 280)
 
 
 .img-lg
-   +adaptiv-value("width", 370, 280)
+   //+adaptiv-value("width", 370, 280)
    +adaptiv-value("min-width", 370, 280)
-   +adaptiv-value("height", 260, 200)
+   //+adaptiv-value("height", 260, 200)
    +adaptiv-value("min-height", 260, 200)
-
+   width: 100%
+   height: auto
 
 .img-md
-   +adaptiv-value("width", 370, 280)
+   //+adaptiv-value("width", 370, 280)
    +adaptiv-value("min-width", 370, 280)
-   +adaptiv-value("height", 130, 100)
+   //+adaptiv-value("height", 130, 100)
    +adaptiv-value("min-height", 130, 100)
+   width: 100%
+   height: auto
+
+
 
 .img-sm
    +adaptiv-value("width", 70, 70)
@@ -145,11 +144,13 @@ $nwItmPb: 0
    +adaptiv-value("min-height", 70, 70)
 
 .img-wd
-   +adaptiv-value("width", 788, 280)
+   //+adaptiv-value("width", 788, 280)
    +adaptiv-value("min-width", 788, 280)
-   +adaptiv-value("height", 278, 278)
+   //+adaptiv-value("height", 278, 278)
    +adaptiv-value("min-height", 278, 278)
-
+   width: 100%
+   height: auto
+   min-height: auto
 
 .nw-itm
    position: relative

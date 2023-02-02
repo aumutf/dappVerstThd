@@ -1,12 +1,11 @@
 .page-news-all
    .bl2col-in
-      background: black
       padding: 0
       +tablet
          padding: $tabInP
-         +adaptiv-value("padding-top", 27, 0)
+         +adaptiv-value("padding-top", 0, 0)
          +adaptiv-value("padding-left", 27, 0)
-         +adaptiv-value("padding-right", 27, 0)
+         +adaptiv-value("padding-right", 0, 0)
          +adaptiv-value("padding-bottom", 27, 0)
 
 
@@ -14,6 +13,9 @@
       display: none
       +tablet
          display: inline-block
+
+   .bl2col-wrap
+      +adaptiv-value("padding-top", 22, 0)
 
 
    h1.title
@@ -23,36 +25,49 @@
       text-transform: uppercase
       color: $grey8D
       +adaptiv-value("font-size", 32, 24)
+      +adaptiv-value("padding-top", 0, 16)
+      +adaptiv-value("padding-bottom", 0, 0)
       +tablet
          color: #FFFFFF
          text-transform: capitalize
+         text-align: left
 
    .title-sub
       display: none
       +tablet
          display: block
 
+   .title-wrap
+      +adaptiv-value("margin-bottom", 16, 11)
 
 .newsAll-bl
-   padding-bottom: 40px
-   padding-top: 40px
-
+   padding-bottom: 0
+   padding-top: 0
+   +tablet
+      +adaptiv-value("padding-bottom", 35, 0)
+      +adaptiv-value("padding-top", 40, 0)
+      
    &:first-child
       padding-top: 0
       
    &:not(:last-child)
-      border-bottom: 0.5px solid $grey24
-      border-bottom: 5px solid yellow
-
+      +tablet
+         border-bottom: 1px solid $grey24
 
    .nw-itm
-      border-bottom: 0.5px solid $grey24
-      border-bottom: 5px solid yellow
-      margin-bottom: 20px
-      padding-bottom: 20px
+      border-bottom: 1px solid $grey24
+      padding-top: 22px
+      padding-bottom: 10px
+      margin-bottom: 25px
       width: 100%
       +tablet
          width: auto
+         margin-bottom: 0px
+         padding-bottom: 20px
+         padding-top: 22px
+
+      &:first-child, &:nth-child(2), &:nth-child(3)
+         padding-top: 0
       
 
 .newsAll-frs
@@ -94,6 +109,10 @@
             border-bottom: none
             margin-bottom: 0
             padding-bottom: 0
+
+      &:last-child
+         border-bottom: none
+         
 //.newsAll-ffth,
 //.newsAll-frth,
 //.newsAll-thd,

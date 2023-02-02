@@ -64,8 +64,8 @@ $cont-width: 1240px
   @media screen and (max-width: 768px)
     #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
-  @media screen and (min-width: 768px) and (max-width: $maxWidth+px)
-    #{$property}: calc(#{$pcSize}px/2 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
+  @media screen and (min-width: 768px) and (max-width: 1439px)
+    #{$property}: calc(#{$pcSize}px/1.8 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
 
 @mixin adaptiv-value_test($property, $pcSize, $mobSize)
   $addSize: $pcSize - $mobSize

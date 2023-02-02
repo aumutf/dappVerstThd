@@ -129,13 +129,21 @@ ul.ulN, .tcpp ul.ulN
 .title-wrap
   display: grid
   grid-template-columns: 1fr
+  align-items: center
   +tablet
-    grid-template-columns: auto auto
-    +adaptiv-value("column-gap", 20, 0)
+    grid-template-columns: auto 1fr
+    +adaptiv-value("column-gap", 25, 0)
 
 .title-sub
   +adaptiv-value("font-size", 16, 14)
   line-height: 1.45
   color: $grey93
   
+.ban-none-mob
+  .banner
+    display: none
+    +tablet
+      display: block
+
+
 
