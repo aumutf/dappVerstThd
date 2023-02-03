@@ -35,7 +35,7 @@ body
 
 //LINK
 .link
-  color: $accentColor   
+  color: $accentColor
 
 //LOGO  
 .logo
@@ -48,19 +48,22 @@ body
 .btn
   background: #000
 
-
-  
 //TITLES
 h1
   &.title
     +adaptiv-value("font-size", 40, 34)
-    line-height: 1.2    
+    line-height: 1.2
 h2
   &.title
     +adaptiv-value("font-size", 32, 24)
-    line-height: 1.2    
+    line-height: 1.2
 
-
+h3
+  &.title
+    +adaptiv-value("font-size", 24, 16)
+    line-height: 1.8
+    +tablet
+      line-height: 1.25
 
 .subtitle
   +adaptiv-value("font-size", 12, 12)
@@ -68,18 +71,16 @@ h2
   &>a
     color: inherit
 
+.scroll-trp::-webkit-scrollbar
+  width: 0
 
-.scroll-trp::-webkit-scrollbar 
-  width: 0              
+.scroll-trp::-webkit-scrollbar-track
+  background: transparent
 
-.scroll-trp::-webkit-scrollbar-track 
-  background: transparent        
-
-.scroll-trp::-webkit-scrollbar-thumb 
-  background-color: transparent  
-  border-radius: 0       
-  border: 0px solid transparent  
+.scroll-trp::-webkit-scrollbar-thumb
+  background-color: transparent
+  border-radius: 0
+  border: 0px solid transparent
 
 .scroll-trp
-  scrollbar-width: none        
-
+  scrollbar-width: none
