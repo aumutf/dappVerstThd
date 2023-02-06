@@ -4,9 +4,8 @@
   &:focus, &:active
     outline: none !important
 
-
 h1, h2, h3, h4, p, ul, ol
-  margin: 0px    
+  margin: 0px
   padding: 0px
 
 a
@@ -25,7 +24,6 @@ ul
   //font-weight: $semiBold
   word-break: break-word
 
-
 //LOGO
 .logo
   display: flex
@@ -36,8 +34,7 @@ ul
   img
     max-width: 100%
     height: 100%
-    object-fit: contain  
-
+    object-fit: contain
 
 img, picture
   width: 100%
@@ -47,9 +44,6 @@ img, picture
 picture
   display: flex
   align-items: center
-
-
-
 
 $pointW: 8px
 
@@ -70,7 +64,7 @@ ul.ulN, .tcpp ul.ulN
       width: $pointW
       height: $pointW
       min-width: $pointW
-      min-height: $pointW      
+      min-height: $pointW
       border-radius: 50%
       background-color: $redB0
 
@@ -91,11 +85,18 @@ ul.ulN, .tcpp ul.ulN
     border-style: solid
     -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(rgba(47, 47, 48, 1)), to(rgba(47, 47, 48, 0))) 1 100%
     -webkit-border-image: -webkit-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
-    -moz-border-image: -moz-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%  
+    -moz-border-image: -moz-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
     -o-border-image: -o-linear-gradient(bottom, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
     border-image: linear-gradient(to top, rgba(47, 47, 48, 1), rgba(47, 47, 48, 0)) 1 100%
     border-right: 0
 
+.dg-2
+  display: grid
+  grid-template-columns: 1fr
+  +adaptiv-value("grid-column-gap", 0, 0)
+  +tablet
+    grid-template-columns: repeat(2,1fr)
+    +adaptiv-value("grid-column-gap", 33, 0)
 
 .dg-3
   display: grid
@@ -105,9 +106,7 @@ ul.ulN, .tcpp ul.ulN
     grid-template-columns: repeat(3,1fr)
     +adaptiv-value("grid-column-gap", 33, 0)
 
-
 .gr3
-  
   grid-row: unset!important
   +tablet
     grid-row: span 3!important
@@ -120,7 +119,7 @@ ul.ulN, .tcpp ul.ulN
 .gc2
   grid-column: unset!important
   +tablet
-    
+
     grid-column: span 2!important
 
 .br0
@@ -138,12 +137,144 @@ ul.ulN, .tcpp ul.ulN
   +adaptiv-value("font-size", 16, 14)
   line-height: 1.45
   color: $grey93
-  
+
 .ban-none-mob
   .banner
     display: none
     +tablet
       display: block
 
+.bl-quote
+  color: $greyDB
+  font-family: $EurostileItalic
+  position: relative
+  &::before, &::after
+    content: ""
+    display: inline-block
+    position: absolute
+    width: 80%
+    height: 1px
+    background: rgb(169,14,53)
+    background: linear-gradient(38deg, rgba(169,14,53,1) 0%, rgba(239,18,68,1) 52%, rgba(169,14,53,1) 100%)
+  &::before
+    right: 0
+    top: 0
+    width: 92%
+  &::after
+    left: 0
+    bottom: 0
 
+  &-in
+    +adaptiv-value("padding-top", 18, 18)
+    +adaptiv-value("padding-left", 46, 46)
+    +adaptiv-value("padding-right", 66, 66)
+    +adaptiv-value("padding-bottom", 18, 18)
+    position: relative
+    &::before, &::after
+      content: "“"
+      display: inline-block
+      position: absolute
+      font-family: $EurostileBlaItalic
+      +adaptiv-value("font-size", 40, 40)
+      line-height: 1
+      +adaptiv-value("max-height", 12, 12)
+      color: $redB0
 
+    &::before
+      left: 0
+      +adaptiv-value("top", -10, -10)
+    &::after
+      right: 0
+      bottom: 0
+
+  &-auth
+    display: inline-block
+    position: absolute
+    right: 0
+    +adaptiv-value("bottom", -10, -10)
+    +adaptiv-value("margin-left", 33, 33)
+    +adaptiv-value("margin-right", 33, 33)
+  p
+    margin-bottom: 0
+
+.di-logo-wrap
+  display: flex
+  align-items: center
+  +adaptiv-value("font-size", 18, 18)
+  line-height: 2.5
+  font-family: $EurostileBol
+
+.di-logo-md
+  +adaptiv-value("width", 42, 42)
+  +adaptiv-value("min-width", 42, 42)
+  +adaptiv-value("height", 42, 42)
+  +adaptiv-value("min-height", 42, 42)
+
+.di-logo-round
+  border-radius: 50%
+  overflow: hidden
+
+.di-logo-icn
+  position: relative
+
+  .btn
+    position: absolute
+    background: $grey1E
+    padding: 0
+    +adaptiv-value("right", 15, 15)
+    +adaptiv-value("bottom", -5, -5)
+    +adaptiv-value("width", 21, 21)
+    +adaptiv-value("min-width", 21, 21)
+    +adaptiv-value("height", 21, 21)
+    +adaptiv-value("min-height", 21, 21)
+
+  .plus-icon
+    fill: $redD6
+    +adaptiv-value("width", 8.4, 8.4)
+    +adaptiv-value("min-width", 8.4, 8.4)
+    +adaptiv-value("height", 8.4, 8.4)
+    +adaptiv-value("min-height", 8.4, 8.4)
+
+//Блок с разделителем
+.newsAll-bl, .lnBt-bl
+  padding-bottom: 0
+  padding-top: 0
+  +tablet
+    +adaptiv-value("padding-bottom", 30, 0)
+    +adaptiv-value("padding-top", 30, 0)
+
+  &:first-child
+    padding-top: 0
+
+  &:not(:last-child)
+    +tablet
+      border-bottom: 1px solid $grey24
+
+  .nw-itm
+    border-bottom: 1px solid $grey24
+    +adaptiv-value("padding-top", 22, 22)
+    +adaptiv-value("padding-bottom", 22, 20)
+    +adaptiv-value("margin-bottom", 0, 0)
+    width: 100%
+    +tablet
+      width: auto
+
+.flw
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+//bg grey with gradient  
+.bg-grey-grad
+  position: relative
+  &::before
+    display: none
+    +tablet
+      display: block
+      content: ""
+      position: absolute
+      top: 0
+      +adaptiv-value("left", -40, -40)
+      +adaptiv-value("height", 156, 156)
+      +adaptiv-value("height", 838, 320)
+      background: linear-gradient(180deg, #151B24 -105%, rgba(21, 27, 36, 0.12) 100%)

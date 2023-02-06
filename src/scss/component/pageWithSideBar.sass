@@ -9,23 +9,29 @@
       display: flex
       align-items: flex-start
       justify-content: space-between
+      flex-direction: column
       margin-top: 0
       padding-top: 0
       +tablet
+         flex-direction: row
          +adaptiv-value("padding-top", 33, 0)
          +adaptiv-value("margin-top", 30, 0)
 
    &__l
-      +adaptiv-value("width", 790, 280)
-      padding-left: 32px
-      +adaptiv-value("padding-left", 32, 32)
+      width: 100%
       z-index: 10
+      +tablet
+         +adaptiv-value("width", 790, 280)
+         +adaptiv-value("padding-left", 32, 0)
 
    &__r
-      +adaptiv-value("width", 350, 350)
-      +adaptiv-value("min-width", 350, 350)
+      width: 100%
+      min-width: 100%
       z-index: 13
       position: relative
+      +tablet
+         +adaptiv-value("width", 350, 350)
+         +adaptiv-value("min-width", 350, 350)
 
 .bl2col-wrap-blur
    position: relative
@@ -34,7 +40,7 @@
       position: absolute
       top: 0
       left: 0
-      display: inline-block
+      display: none
       background: linear-gradient(148.18deg,rgba(49,17,22,.63) -38.64%,rgba(15,20,26,0) 60.18%)
       border-top-left-radius: 40px
       width: 100%
@@ -42,12 +48,15 @@
       +adaptiv-value("height", 700, 700)
       z-index: 2
 
+      +tablet
+         display: inline-block
+
    &::after
       content: ""
       position: absolute
       top: 0
       left: 0
-      display: inline-block
+      display: none
       background-image: url(../img/icons/frameBl.svg)
       background-repeat: no-repeat
       background-size: cover
@@ -56,6 +65,8 @@
       +adaptiv-value("height", 600, 600)
       z-index: 3
 
+      +tablet
+         display: inline-block
 
 
 .bbgrad

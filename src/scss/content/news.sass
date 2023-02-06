@@ -1,4 +1,5 @@
 
+//!======================= NEWS RIGHT SIDE STYLE
 .bl-addnews
    +adaptiv-value("margin-top", 19, 19)
    &-in
@@ -104,3 +105,43 @@
    min-width: 10px
    height: 6px
    min-height: 6px
+
+//!======================= NEWS LEFT SIDE STYLE
+
+.di-logo-wrap
+   display: flex
+   align-items: center
+   .di-logo
+      margin-right: 5px
+
+.news-img-lg
+   +adaptiv-value("width", 806, 280)
+   +adaptiv-value("min-width", 806, 280)
+   +adaptiv-value("height", 268, 105)
+   +adaptiv-value("min-height", 268, 105)
+   
+.nw
+   h2.title
+      +adaptiv-value("margin-bottom", 32, 32)
+   .nw-itm-btm
+      +adaptiv-value("margin-bottom", 36, 36)
+   .nw-itm .nw-itm-btm
+      +adaptiv-value("margin-bottom", 0, 0)
+
+   p:not(.bl-quote-txt), .bl-quote
+      +adaptiv-value("margin-bottom", 40, 40)
+
+   p:last-child
+      +adaptiv-value("margin-bottom", 35, 35)
+
+   .tag
+      margin-left: auto
+   .flw
+      +adaptiv-value("margin-bottom", 20, 20)
+
+.nw-tags
+   display: flex
+   align-items: center
+   .di-logo-md
+      +adaptiv-value("margin-right", 20, 20)
+   
