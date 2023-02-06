@@ -25,6 +25,7 @@ import { scssNewsPage } from "./gulp/tasks/scssNewsPage.js";
 import { scssTermsConditions } from "./gulp/tasks/scssTermsConditions.js";
 import { scssPrivacyPolicy } from "./gulp/tasks/scssPrivacyPolicy.js";
 import { scssNewsAllPage } from "./gulp/tasks/scssNewsAllPage.js";
+import { scssAnalyticsAllPage } from "./gulp/tasks/scssAnalyticsAllPage.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -41,6 +42,7 @@ function watcher() {
   gulp.watch(path.watch.scssTermsConditions, scssTermsConditions)
   gulp.watch(path.watch.scssPrivacyPolicy, scssPrivacyPolicy)
   gulp.watch(path.watch.scssNewsAllPage, scssNewsAllPage)
+  gulp.watch(path.watch.scssAnalyticsAllPage, scssAnalyticsAllPage)
 }
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
@@ -53,6 +55,7 @@ const mainTasks = gulp.series(fonts, gulp.parallel(
   scssTermsConditions,
   scssPrivacyPolicy,
   scssNewsAllPage,
+  scssAnalyticsAllPage,
   assets
 ));
 
