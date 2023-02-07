@@ -1,39 +1,43 @@
 .newsItm
    display: flex
    flex-direction: column
-   +adaptiv-value("width", 350, 350)
-   +adaptiv-value("min-width", 350, 350)
+   width: 100%
    padding: 0px 15px 0px
+   +adaptiv-value("padding-top", 15, 15)
+   +tablet
+      +adaptiv-value("width", 280, 280)
+      +adaptiv-value("min-width", 280, 280)
 
 .newsItm-hd
    display: grid
    grid-template-columns: auto auto auto 1fr
-   grid-column-gap: 10px
-   margin-bottom: 23px
+   +adaptiv-value("grid-column-gap", 10, 10)
+   +adaptiv-value("margin-bottom", 23, 15)
 
 .newsItm-logo
-   width: 34.33px
-   min-width: 34.33px
-   height: 34.33px
-   min-height: 34.33px
    grid-row: span 2
+   +adaptiv-value("width", 34.33, 34.33)
+   +adaptiv-value("min-width", 34.33, 34.33)
+   +adaptiv-value("height", 34.33, 34.33)
+   +adaptiv-value("min-height", 34.33, 34.33)
+
 
 .newsItm-title
-   font-size: 13.7324px
+   +adaptiv-value("font-size", 13.7324, 13.7324)
    line-height: 1.6
    color: #FFFFFF
    font-family: $EurostileHea
 
 .chkd-icon
-   width: 11.82px
-   min-width: 11.82px
-   height: 11.82px
-   min-height: 11.82px
+   +adaptiv-value("width", 12, 12)
+   +adaptiv-value("min-width", 12, 12)
+   +adaptiv-value("height", 12, 12)
+   +adaptiv-value("min-height", 12, 12)
    fill: $redD6
    stroke: #FFF
 
 .newsItm-date, .newsItm-login
-   font-size: 13.7324px
+   +adaptiv-value("font-size", 13.7324, 13.7324)
    line-height: 1.6
    color: $grey87
 
@@ -41,21 +45,20 @@
    grid-column: span 2
 
 .newsItm-cnt
-   margin-bottom: 5px
-
-   font-size: 13.7324px
+   +adaptiv-value("margin-bottom", 5, 5)
+   +adaptiv-value("font-size", 13.7324, 13.7324)
    line-height: 1.67
    color: #FFFFFF
 
 .newsItm-img
-   border-radius: 9.15493px
+   +adaptiv-value("border-radius", 9, 9)
    overflow: hidden
    flex-grow: 1
    &:not(:last-child)
-      margin-right: 5.72px
+      +adaptiv-value("margin-right", 5.7, 5.7)
 
 .newsItm-imgs
-   margin-bottom: 17px
+   +adaptiv-value("margin-bottom", 17, 17)
    display: flex
    align-items: center
 
@@ -69,35 +72,39 @@
    align-items: center
    cursor: pointer
    &-icon
-      margin-right: 6.87px
+      +adaptiv-value("margin-right", 6.87, 6.87)
       fill: $grey93
-      width: 13.73px
-      height: 13.73px
-      min-height: 13.73px
-      min-width: 13.73px
+      +adaptiv-value("width", 13.73, 13.73)
+      +adaptiv-value("min-width", 13.73, 13.73)
+      +adaptiv-value("height", 13.73, 13.73)
+      +adaptiv-value("min-height", 13.73, 13.73)
+
       display: flex
       align-items: center
    &-cnt
-      font-size: 11.4437px
+      +adaptiv-value("font-size", 11, 11)
       line-height: 1.45
       text-transform: uppercase
       color: $grey93
 
 .heart-icon
-   width: 16.02px
-   height: 13.73px
-   min-height: 13.73px
-   min-width: 16.02px
+   +adaptiv-value("width", 16, 16)
+   +adaptiv-value("min-width", 16, 16)
+   +adaptiv-value("height", 13.73, 13.73)
+   +adaptiv-value("min-height", 13.73, 13.73)
 
 .dots-icon
-   width: 14.88px
-   height: 4.58px
-   min-height: 4.58px
-   min-width: 14.88px
+   +adaptiv-value("width", 15, 15)
+   +adaptiv-value("min-width", 15, 15)
+   +adaptiv-value("height", 4, 4)
+   +adaptiv-value("min-height", 4, 4)
 
 
 //=====================newsItm-bxd
 .newsItm-bxd
-   background: #151B24
+   background: $grey15
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-   padding: 12px 15px 21px
+   +adaptiv-value("padding-top", 12, 12)
+   +adaptiv-value("padding-right", 15, 15)
+   +adaptiv-value("padding-bottom", 21, 21)
+   +adaptiv-value("padding-left", 15, 15)
