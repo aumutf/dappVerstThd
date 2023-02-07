@@ -6,9 +6,7 @@ $phone-width: 576px
 $phone-width-min: 320px
 $maxWidth: 1440
 
-
 $cont-width: 1240px
-
 
 =laptop
   @media screen and (min-width: $laptop-width)
@@ -24,11 +22,11 @@ $cont-width: 1240px
 
 =phone
   @media screen and (min-width: $phone-width)
-    @content    
+    @content
 
 =phone-min
   @media screen and (max-width: $phone-width-min)
-    @content  
+    @content
 
 =laptop_down
   @media screen and (min-width: $maxWidth+px)
@@ -37,9 +35,6 @@ $cont-width: 1240px
 =cont
   @media screen and (min-width: $cont-width)
     @content
-
-
-
 
 @mixin adaptiv-value-imp($property, $pcSize, $mobSize)
   $addSize: $pcSize - $mobSize
@@ -51,16 +46,13 @@ $cont-width: 1240px
   @media screen and (min-width: 767px)
     #{$property}: calc(#{$mobSize}px + #{$addSize} * (100vw / #{$maxWidth})) + !important
 
-
-
-    
 @mixin adaptiv-value($property, $pcSize, $mobSize)
   $addSize: $pcSize - $mobSize
   $addSize1: calc(#{$pcSize} - #{$pcSize}/1.4)
   $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
-  
+
   #{$property}: $pcSize+px
-  
+
   @media screen and (max-width: 768px)
     #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
@@ -71,17 +63,14 @@ $cont-width: 1240px
   $addSize: $pcSize - $mobSize
   $addSize1: calc(#{$pcSize} - #{$pcSize})
   $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
-  
+
   #{$property}: $pcSize+px
-  
+
   @media screen and (max-width: 768px)
     #{$property}: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
 
   @media screen and (min-width: 768px) and (max-width: $maxWidth+px)
     #{$property}: calc(#{$pcSize}px + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))
-
-
-
 
 =placeholder
   @content
@@ -92,15 +81,14 @@ $cont-width: 1240px
   background-size: 50% 50%
   background-repeat: no-repeat
 
-
 @mixin adaptiv-valueTab($property, $pcSize, $mobSize)
   $maxWidth: 1440
 
   $addSize: $pcSize - $mobSize
   $addSize1: calc(#{$pcSize} - #{$pcSize}/1.6)
   $addMobSize: calc(#{$addSize} + #{$addSize}*0.7)
-  
+
   #{$property}: $pcSize+px
-  
+
   @media screen and (min-width: 768px) and (max-width: 1439px)
     #{$property}: calc(#{$pcSize}px/1.6 + #{$addSize1} * ((100vw - 768px) / #{$maxWidth - 768}))

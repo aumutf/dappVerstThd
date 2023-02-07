@@ -1,16 +1,23 @@
 .tag
+   display: flex
+   justify-content: space-between
+   align-items: center
+   width: 100%
+   +tablet
+      width: unset
+
    &-itm
       font-family: $EurostileMed
       background: $grey13
       text-transform: capitalize
       color: $grey99
-      +adaptiv-value("font-size", 12.7, 12.7)
+      +adaptiv-value("font-size", 12.7, 10)
       line-height: 1.7
-      +adaptiv-value("border-radius", 3.8, 3.8)
-      +adaptiv-value("padding-top", 4, 4)
-      +adaptiv-value("padding-left", 8, 8)
-      +adaptiv-value("padding-right", 6, 6)
-      +adaptiv-value("padding-bottom", 4, 4)
+      +adaptiv-value("border-radius", 3.8, 3)
+      +adaptiv-value("padding-left", 8, 5)
+      +adaptiv-value("padding-right", 6, 5)
+      +adaptiv-value("padding-bottom", 4, 1)
+      +adaptiv-value("padding-top", 4, 2)
    
    &-itm:not(:last-child)
-      +adaptiv-value("margin-right", 13, 13)
+      +adaptiv-value("margin-right", 13, 5)
