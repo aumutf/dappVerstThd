@@ -148,13 +148,6 @@
 .dropdown-item
    .eye-icon-wrap, .di-logo
       margin-right: 7px
-      
-   .expl-icon
-      +adaptiv-value("width", 6.42, 6.42)
-      +adaptiv-value("min-width", 6.42, 6.42)
-      +adaptiv-value("height", 6.96, 6.96)
-      +adaptiv-value("min-height", 6.96, 6.96)
-      fill: $redDb
 
    &>a:not(.expl-btn):not(.btn)
       display: inline-block
@@ -163,6 +156,14 @@
       overflow: hidden
       text-overflow: ellipsis
 
+.dropdown-item, .ddownsMobMenu-item
+   .expl-icon
+      +adaptiv-value("width", 6.42, 6.42)
+      +adaptiv-value("min-width", 6.42, 6.42)
+      +adaptiv-value("height", 6.96, 6.96)
+      +adaptiv-value("min-height", 6.96, 6.96)
+      fill: $redDb
+      
 .dd-more
    padding: 5px!important
    &:hover, &:active
@@ -196,7 +197,7 @@
 
 .dd-grey.dd-tags
    .dropdown-menu
-      display: flex
+      //display: flex
       flex-wrap: wrap
       +adaptiv-value("min-width", 257, 257)
       +adaptiv-value("width", 257, 257)
