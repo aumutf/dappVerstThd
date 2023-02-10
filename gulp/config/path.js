@@ -28,7 +28,8 @@ export const path = {
     scssTermsConditions: `${srcFolder}/scss/styleTermsConditions.scss`,
     scssPrivacyPolicy: `${srcFolder}/scss/stylePrivacyPolicy.scss`,
     scssNewsAllPage: `${srcFolder}/scss/styleNewsAllPage.scss`,
-    scssAnalyticsAllPage: `${srcFolder}/scss/styleAnalyticsAllPage.scss`
+    scssAnalyticsAllPage: `${srcFolder}/scss/styleAnalyticsAllPage.scss`,
+    scssDappPage: `${srcFolder}/scss/styleDappPage.scss`
   },
   watch: {
     assetscss: `${srcFolder}/assets/**/*.css`,
@@ -44,7 +45,8 @@ export const path = {
     scssTermsConditions: `${srcFolder}/scss/**/*.scss`,
     scssPrivacyPolicy: `${srcFolder}/scss/**/*.scss`,
     scssNewsAllPage: `${srcFolder}/scss/**/*.scss`,
-    scssAnalyticsAllPage: `${srcFolder}/scss/**/*.scss`
+    scssAnalyticsAllPage: `${srcFolder}/scss/**/*.scss`,
+    scssDappPage: `${srcFolder}/scss/**/*.scss`
   },
   clean: buildFolder,
   buildFolder: buildFolder,

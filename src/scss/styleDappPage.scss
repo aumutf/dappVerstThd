@@ -11,14 +11,17 @@
 @import "component/pageWithSideBar.sass";      
 @import "component/emoji.sass";      
 @import "component/news-item.sass";      
-@import "component/article-item.sass";  
-@import "component/tags.sass";  
+@import "component/article-item.sass";      
+@import "component/tags.sass";      
+@import "component/hideText.sass";      
 
 @import "content/news.sass"; 
+
+
+@import "content/dapp.sass"; 
 
 @import "content/header.sass";                              
 @import "content/footer.sass";             
 
 @import "component/banner.sass";                              
-@import "component/modal_auth.sass";                              
       

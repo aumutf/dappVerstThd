@@ -6,6 +6,7 @@
          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
          border-radius: 4px
          padding: 0
+         +adaptiv-value("min-width", 121, 121)
 
       .dropdown-item
          display: flex
@@ -20,7 +21,8 @@
          background-color: transparent
          border: 0
          +adaptiv-value("font-size", 14, 14)
-         line-height: 1.45
+         line-height: 1
+
 
       .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover
          color: #fff
@@ -146,6 +148,20 @@
 .dropdown-item
    .eye-icon-wrap, .di-logo
       margin-right: 7px
+      
+   .expl-icon
+      +adaptiv-value("width", 6.42, 6.42)
+      +adaptiv-value("min-width", 6.42, 6.42)
+      +adaptiv-value("height", 6.96, 6.96)
+      +adaptiv-value("min-height", 6.96, 6.96)
+      fill: $redDb
+
+   &>a:not(.expl-btn):not(.btn)
+      display: inline-block
+      +adaptiv-value("width", 90, 90)
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
 
 .dd-more
    padding: 5px!important
@@ -177,4 +193,32 @@
 
 .dropdown-menu
    border: none
+
+.dd-grey.dd-tags
+   .dropdown-menu
+      display: flex
+      flex-wrap: wrap
+      +adaptiv-value("min-width", 257, 257)
+      +adaptiv-value("width", 257, 257)
+      padding: 10px
+
+   .dropdown-item
+      display: inline-flex
+      width: unset!important
+      background: $grey13
+      text-transform: uppercase
+      color: #FFFFFF
+      padding: 8px 8px 7px
+      margin-bottom: 5px
+      &:not(:last-child)
+         margin-right: 5px
+
+.dd-grey.dd-cntr
+   .btn-imgic
+      padding: 5px 6px 6px 14px
+
+.dd-item-btn, .dropdown.dd-grey .dd-item-btn
+   padding-top: 0
+   padding-bottom: 0
+   margin-bottom: 10px
 
