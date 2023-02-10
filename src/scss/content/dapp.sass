@@ -9,25 +9,46 @@
       margin-left: unset!important
       flex-wrap: wrap
       .tag-itm
-         +adaptiv-value("margin-bottom", 20, 20)
+         +tablet
+            +adaptiv-value("margin-bottom", 20, 20)
          &:not(:last-child)
-            +adaptiv-value("margin-right", 12, 12)
-
+            +adaptiv-value("margin-right", 12, 10)
 
    .btn-cornd:not(:last-child)
       +adaptiv-value("margin-right", 20, 20)
    .btns
       margin-left: auto
+   .di-logo-wrap
+      +adaptiv-value("font-size", 24, 16)
+      .di-logo
+         +adaptiv-value("margin-right", 16, 10)
 
 .logo-ddown
    display: grid
    grid-template-columns: auto 1fr
-   +adaptiv-value("row-gap", 25, 25)
+
+   padding-top: 15px
+   padding-bottom: 15px
+   border-top: 1px solid $grey24
+   border-bottom: 1px solid $grey24
+   margin-bottom: 20px
+   +tablet
+      +adaptiv-value("row-gap", 25, 25)
+
+      padding-top: 0
+      padding-bottom: 0
+      border-top: none
+      border-bottom: none
+      margin-bottom: 0
+
    .ddowns
       display: flex
       flex-wrap: wrap
       align-items: flex-start
       grid-column: span 2
+      display: none
+      +tablet
+         display: flex
       .dropdown
          +adaptiv-value("margin-bottom", 20, 20)
          &:not(:last-child)
@@ -36,9 +57,118 @@
    .btn-flw
       align-self: auto
       justify-self: flex-end
-   
+      +adaptiv-value("font-size", 10, 10)
+      +adaptiv-value("padding-top", 6, 4)
+      +adaptiv-value("padding-bottom", 6, 4)
+   .di-logo-wrap
+      +adaptiv-value("font-size", 16, 12)
+      .di-logo
+         +adaptiv-value("margin-right", 10, 10)
 
 .dapp-top
    display: grid
-   grid-template-columns: auto auto
-   +adaptiv-value("column-gap", 20, 20)
+   grid-template-columns: auto
+   +adaptiv-value("row-gap", 15, 15)
+   +tablet
+      grid-template-columns: auto auto
+      +adaptiv-value("column-gap", 20, 20)
+      row-gap: unset
+
+.ddownsMob
+   display: flex
+   flex-direction: column
+   grid-column: span 2
+   +tablet
+      display: none
+
+.ddownMob
+   display: flex
+   color: #FFFFFF
+   padding-top: 15px
+   border-top: 1px solid $grey24
+   margin-top: 15px
+   &-title
+      font-size: 12px
+   &-rht
+      flex-grow: 1
+      margin-left: auto
+      font-size: 10px
+      text-transform: uppercase
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      .tag
+         justify-content: flex-end
+      .tag-itm
+         display: flex
+         align-items: center
+         justify-content: space-between
+         color: #FFFF
+      .tags-icon
+         margin-left: 10px
+      .ddownMob-items
+         display: inline-block
+         +adaptiv-value("width", 100, 100)
+         white-space: nowrap
+         overflow: hidden
+         text-overflow: ellipsis
+      .btn-trg
+         padding: 0
+         width: 10px
+         height: 6px
+         transform: rotate(-90deg)
+         margin-left: 5px
+         fill: $redB0
+
+.ddownsMobMenu
+   display: flex
+   flex-direction: column
+   align-items: flex-start
+   position: fixed
+   top: 0
+   left: 0
+   width: 100%
+   height: 100vh
+   padding: 15px 20px
+   background: rgba(2, 3, 3, 0.5)
+   box-shadow: 0px 0px 30.9153px #10141B
+   backdrop-filter: blur(15px)
+   overflow-y: scroll
+   display: none
+   +tablet
+      display: none
+   .ddlined
+      border-bottom: 1px solid $grey24
+      padding-top: 15px
+      padding-bottom: 15px
+      display: flex
+
+   &-title
+      font-family: $EurostileMed
+      font-size: 12px
+      margin-top: 15px
+   &-item
+      font-family: $EurostileReg
+      font-size: 12px
+
+   &-itm
+      display: flex
+      flex-direction: column
+      width: 100%
+
+   .expl-icon
+      margin-left: 10px
+
+   .ddMobItem
+      display: flex
+      align-items: center
+      margin-left: 10px
+      .btn:not(.btn-imgic)
+         padding: 0
+
+.trunk-txt
+   display: inline-block
+   width: 75px
+   white-space: nowrap
+   overflow: hidden
+   text-overflow: ellipsis

@@ -296,18 +296,24 @@ ul.ulN, .tcpp ul.ulN
 
   &.di-logo-wrap-grid
     display: grid
-    grid-template-columns: auto auto
-    column-gap: 10px
+    grid-template-columns: auto 1fr
+    //column-gap: 10px
     row-gap: 3px
     line-height: 1
+    +tablet
+      grid-template-columns: auto auto
     .di-logo
       +adaptiv-value("font-size", 16, 16)
-      grid-row: span 2
+      +tablet
+        grid-row: span 2
     .di-logo-txt
+      display: none
       +adaptiv-value("font-size", 12, 12)
       font-family: $EurostileMed
       color: $grey93
       grid-column: 2
+      +tablet
+        display: block
 
 .di-logo-md
   +adaptiv-value("width", 42, 42)
@@ -316,10 +322,10 @@ ul.ulN, .tcpp ul.ulN
   +adaptiv-value("min-height", 42, 42)
 
 .di-logo.di-logo-sm1
-  +adaptiv-value("width", 30, 30)
-  +adaptiv-value("min-width", 30, 30)
-  +adaptiv-value("height", 30, 30)
-  +adaptiv-value("min-height", 30, 30)
+  +adaptiv-value("width", 30, 20)
+  +adaptiv-value("min-width", 30, 20)
+  +adaptiv-value("height", 30, 20)
+  +adaptiv-value("min-height", 30, 20)
 
 .di-logo.di-logo-sm
   +adaptiv-value("width", 20, 20)

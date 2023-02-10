@@ -185,10 +185,10 @@
    display: inline-flex
    align-items: center
    justify-content: center
-   +adaptiv-value("width", 30, 30)
-   +adaptiv-value("min-width", 30, 30)
-   +adaptiv-value("height", 30, 30)
-   +adaptiv-value("min-height", 30, 30)
+   +adaptiv-value("width", 30, 20)
+   +adaptiv-value("min-width", 30, 20)
+   +adaptiv-value("height", 30, 20)
+   +adaptiv-value("min-height", 30, 20)
    border: 1px solid $grey19
    position: relative
    +adaptiv-value("padding", 0, 0)
@@ -226,32 +226,36 @@
       
 
    .star-icon
-      +adaptiv-value("width", 16.8, 16.8)
-      +adaptiv-value("min-width", 16.8, 16.8)
-      +adaptiv-value("height", 16.8, 16.8)
-      +adaptiv-value("min-height", 16.8, 16.8)
+      +adaptiv-value("width", 16.8, 11.2)
+      +adaptiv-value("min-width", 16.8, 11.2)
+      +adaptiv-value("height", 16.8, 11.2)
+      +adaptiv-value("min-height", 16.8, 11.2)
       
    .follow-icon
-      +adaptiv-value("width", 18, 18)
-      +adaptiv-value("min-width", 18, 18)
-      +adaptiv-value("height", 18, 18)
-      +adaptiv-value("min-height", 18, 18)
+      +adaptiv-value("width", 18, 9)
+      +adaptiv-value("min-width", 18, 9)
+      +adaptiv-value("height", 18, 9)
+      +adaptiv-value("min-height", 18, 9)
 
 .btn-imgic
    display: flex
    align-items: center
-   padding: 5px 6px 6px 14px
+   padding: 7px 5px 7px 5px
    background: $viol21
-   border-radius: 2.6px
    width: 100%
+   +adaptiv-value("font-size", 14, 8)
+   +adaptiv-value("border-radius", 2.6, 1.7)
+   +tablet
+      padding: 5px 6px 6px 14px
    .img-wrap
       display: inline-flex
       flex-grow: initial
-      margin-left: auto
+      margin-left: 5px
       +adaptiv-value("width", 13, 13)
       +adaptiv-value("min-width", 13, 13)
       +adaptiv-value("height", 13, 13)
       +adaptiv-value("min-height", 13, 13)
-
+      +tablet
+         margin-left: auto
 
       
