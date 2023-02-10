@@ -181,4 +181,77 @@
    align-items: center
    justify-content: center
 
+.btn-cornd
+   display: inline-flex
+   align-items: center
+   justify-content: center
+   +adaptiv-value("width", 30, 30)
+   +adaptiv-value("min-width", 30, 30)
+   +adaptiv-value("height", 30, 30)
+   +adaptiv-value("min-height", 30, 30)
+   border: 1px solid $grey19
+   position: relative
+   +adaptiv-value("padding", 0, 0)
 
+   .crIc
+      display: inline-block
+      position: absolute
+      width: 4px
+      min-width: 4px
+      height: 4px
+      min-height: 4px
+      fill: transparent
+      stroke: $grey19
+      +adaptiv-value("margin", 0, 0)
+      stroke-width: 1.5
+      &-lt
+         left: -2px
+         top: -2px
+      &-rt
+         right: -1.5px
+         top: -2px
+         transform: rotate(90deg)
+      &-lb
+         left: -2px
+         bottom: -2px
+         transform: rotate(-90deg)
+      &-rb
+         right: -1.5px
+         bottom: -2px
+         transform: rotate(180deg)
+
+   .star-icon, .follow-icon
+      +adaptiv-value("margin", 0, 0)
+      fill: $grey40
+      
+
+   .star-icon
+      +adaptiv-value("width", 16.8, 16.8)
+      +adaptiv-value("min-width", 16.8, 16.8)
+      +adaptiv-value("height", 16.8, 16.8)
+      +adaptiv-value("min-height", 16.8, 16.8)
+      
+   .follow-icon
+      +adaptiv-value("width", 18, 18)
+      +adaptiv-value("min-width", 18, 18)
+      +adaptiv-value("height", 18, 18)
+      +adaptiv-value("min-height", 18, 18)
+
+.btn-imgic
+   display: flex
+   align-items: center
+   padding: 5px 6px 6px 14px
+   background: $viol21
+   border-radius: 2.6px
+   width: 100%
+   .img-wrap
+      display: inline-flex
+      flex-grow: initial
+      margin-left: auto
+      +adaptiv-value("width", 13, 13)
+      +adaptiv-value("min-width", 13, 13)
+      +adaptiv-value("height", 13, 13)
+      +adaptiv-value("min-height", 13, 13)
+
+
+      

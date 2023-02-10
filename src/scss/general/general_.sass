@@ -294,11 +294,32 @@ ul.ulN, .tcpp ul.ulN
   line-height: 2.5
   font-family: $EurostileBol
 
+  &.di-logo-wrap-grid
+    display: grid
+    grid-template-columns: auto auto
+    column-gap: 10px
+    row-gap: 3px
+    line-height: 1
+    .di-logo
+      +adaptiv-value("font-size", 16, 16)
+      grid-row: span 2
+    .di-logo-txt
+      +adaptiv-value("font-size", 12, 12)
+      font-family: $EurostileMed
+      color: $grey93
+      grid-column: 2
+
 .di-logo-md
   +adaptiv-value("width", 42, 42)
   +adaptiv-value("min-width", 42, 42)
   +adaptiv-value("height", 42, 42)
   +adaptiv-value("min-height", 42, 42)
+
+.di-logo.di-logo-sm1
+  +adaptiv-value("width", 30, 30)
+  +adaptiv-value("min-width", 30, 30)
+  +adaptiv-value("height", 30, 30)
+  +adaptiv-value("min-height", 30, 30)
 
 .di-logo.di-logo-sm
   +adaptiv-value("width", 20, 20)
@@ -372,6 +393,57 @@ ul.ulN, .tcpp ul.ulN
       top: 0
       +adaptiv-value("left", -40, -40)
       +adaptiv-value("height", 156, 156)
-      +adaptiv-value("height", 838, 320)
+      +adaptiv-value("width", 838, 320)
       background: linear-gradient(180deg, #151B24 -105%, rgba(21, 27, 36, 0.12) 100%)
 
+.svg-ic
+  width: 20px
+  min-width: 20px
+  height: 20px
+  min-height: 20px
+  fill: $grey8D
+
+.allSvg-wrap
+  margin-top: 20px
+  margin-bottom: 20px
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  column-gap: 20px
+  row-gap: 20px
+
+.contr-icon, .dd-icon.contr-icon
+  +adaptiv-value("width", 9, 9)
+  +adaptiv-value("min-width", 9, 9)
+  +adaptiv-value("height", 11, 11)
+  +adaptiv-value("min-height", 11, 11)
+
+.link-icon, .dd-icon.link-icon
+  +adaptiv-value("width", 12, 12)
+  +adaptiv-value("min-width", 12, 12)
+  +adaptiv-value("height", 12, 12)
+  +adaptiv-value("min-height", 12, 12)
+
+.expl-icon, .dd-icon.expl-icon
+  +adaptiv-value("width", 10, 10)
+  +adaptiv-value("min-width", 10, 10)
+  +adaptiv-value("height", 11, 11)
+  +adaptiv-value("min-height", 11, 11)
+
+.cmnty-icon, .dd-icon.cmnty-icon
+  +adaptiv-value("width", 8, 8)
+  +adaptiv-value("min-width", 8, 8)
+  +adaptiv-value("height", 10, 10)
+  +adaptiv-value("min-height", 10, 10)
+
+.tags-icon, .dd-icon.tags-icon
+  +adaptiv-value("width", 17, 17)
+  +adaptiv-value("min-width", 17, 17)
+  +adaptiv-value("height", 17, 17)
+  +adaptiv-value("min-height", 17, 17)
+  fill: $grey40
+
+.copy-icon
+  +adaptiv-value("width", 9, 9)
+  +adaptiv-value("min-width", 9, 9)
+  +adaptiv-value("height", 10, 10)
+  +adaptiv-value("min-height", 10, 10)
