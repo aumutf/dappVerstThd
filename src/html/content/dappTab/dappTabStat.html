@@ -1,1 +1,74 @@
-dappTabStat.html
+<div class="bg-grey-grad">
+   <div class="rowLn">
+      <div class="rowLn-title">Total Statistics</div>
+   </div>
+   <div class="rowLn">
+      <div class="rowLn-lft">Volume:</div>
+      <div class="rowLn-rht">
+         <span class="txt-grn">1,120.45M</span>
+      </div>
+   </div>
+   <div class="rowLn">
+      <div class="rowLn-lft">Cotract Balance:</div>
+      <div class="rowLn-rht">
+         <span>$424.24M</span>
+         <span class="percentVal percentVal--up">7.46%</span>
+      </div>
+   </div>
+
+   <div class="rowLn">
+      <div class="rowLn-lft">Users:</div>
+      <div class="rowLn-rht">
+         <span class="txt-grn">532,235</span>
+      </div>
+   </div>
+   <div class="rowLn">
+      <div class="rowLn-lft">Blockchain:</div>
+      <div class="rowLn-rht">
+         <span class="txt-grn">Ethereum</span>
+      </div>
+   </div>
+   <div class="rowLn">
+      <div class="rowLn-lft">Category:</div>
+      <div class="rowLn-rht">
+         <span class="txt-grn">Exchange</span>
+      </div>
+   </div>
+   <div class="rowLn">
+      <div class="rowLn-lft">Users:</div>
+      <div class="rowLn-rht">
+         <span class="txt-grn">354,832</span>
+      </div>
+   </div>
+</div>
+<ul class="nav nav-tabs tab-gen ttc" role="tablist">
+   <li class="nav-item ">
+      <a class="nav-link active show" data-toggle="tab" href="#tabS11" role="tab" aria-selected="true">
+         24h </a>
+   </li>
+   <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#tabS21" role="tab" aria-selected="false">
+         7d </a>
+   </li>
+   <li class="nav-item">
+      <a class="nav-link " data-toggle="tab" href="#tabS31" role="tab" aria-selected="false">
+         30d </a>
+   </li>
+</ul>
+<div class="tab-content tab-gen-in">
+   <div class="tab-pane fade in  active show" id="tabS11" role="tabpanel">
+      <div class="tab-gen-in">
+         @@include('../statTab/24h.html',{})
+      </div>
+   </div>
+   <div class="tab-pane fade in" id="tabS21" role="tabpanel">
+      <div class="tab-gen-in">
+         @@include('../statTab/7d.html',{})
+      </div>
+   </div>
+   <div class="tab-pane fade in" id="tabS31" role="tabpanel">
+      <div class="tab-gen-in">
+         @@include('../statTab/30d.html',{})
+      </div>
+   </div>
+</div>

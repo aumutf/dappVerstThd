@@ -453,3 +453,36 @@ ul.ulN, .tcpp ul.ulN
   +adaptiv-value("min-width", 9, 9)
   +adaptiv-value("height", 10, 10)
   +adaptiv-value("min-height", 10, 10)
+
+
+
+//PERCENTVAL  
+.percentVal 
+  display: inline-flex
+  align-items: center
+  column-gap: 2px
+  margin-left: 3px
+  position: relative
+  padding-left: 7px
+  font-size: 14px
+  &::after
+    content: ""
+    width: 0
+    height: 0
+    border-style: solid
+    line-height: 0
+    position: absolute
+    left: 0
+  &--up
+    color: green
+    &::after
+      border-width: 0 3px 5px 3px
+      border-color: transparent transparent green transparent
+  &--down
+    color: red
+    &::after
+      border-width: 5px 3px 0 3px
+      border-color: red transparent transparent transparent
+  &--sml
+    &::after
+      display: none
