@@ -448,12 +448,25 @@ ul.ulN, .tcpp ul.ulN
   +adaptiv-value("min-height", 17, 17)
   fill: $grey40
 
-.copy-icon
+.copy-icon, .dd-icon.copy-icon
   +adaptiv-value("width", 9, 9)
   +adaptiv-value("min-width", 9, 9)
   +adaptiv-value("height", 10, 10)
   +adaptiv-value("min-height", 10, 10)
 
+.search-icon, .dd-icon.search-icon
+  +adaptiv-value("width", 8, 8)
+  +adaptiv-value("min-width", 8, 8)
+  +adaptiv-value("height", 11, 11)
+  +adaptiv-value("min-height", 11, 11)
+  fill: transparent
+  stroke: #FFF
+
+.wallet-icon, .dd-icon.wallet-icon
+  +adaptiv-value("width", 10, 10)
+  +adaptiv-value("min-width", 10, 10)
+  +adaptiv-value("height", 8, 8)
+  +adaptiv-value("min-height", 8, 8)
 
 
 //PERCENTVAL  
@@ -474,10 +487,10 @@ ul.ulN, .tcpp ul.ulN
     position: absolute
     left: 0
   &--up
-    color: green
+    color: $green64
     &::after
       border-width: 0 3px 5px 3px
-      border-color: transparent transparent green transparent
+      border-color: transparent transparent $green64 transparent
   &--down
     color: red
     &::after

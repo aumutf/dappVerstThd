@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/general/headCoinPage.html',{
+"title":"Крипта"
+})
+
+<body>
+   <div class="body-wrap ban-none-mob">
+      @@include('html/general/header.html',{})
+
+      @@include('html/component/banner.html',{})
+
+      @@include('html/content/coin.html',{})
+
+      @@include('html/general/footer.html',{})
+      @@include('html/general/foot.html',{})
+
+   </div>
+</body>
+<script>
+   $(function () {
+
+      /*-------------------- show more text for text blocks --------------------*/
+      function hideTextHeight() {
+         let h = 500;
+         let hideText = $('.hide-text');
+         hideText.each(function (index, element) {
+            let heightOfHideText = $(this).outerHeight();
+
+            if (heightOfHideText > h) {
+               $(this).toggleClass('excerptN');
+            } else {
+               let btnMore = $('.btn--more');
+               btnMore.css('display', 'none');
+            }
+         })
+      }
+
+      let btnMore = $('.btn--more.btn--show');
+      let btnLess = $('.btn--more.btn--hide');
+
+      if (!btnMore) return;
+      hideTextHeight();
+      $('.btn--more.btn--show').on("click", function () {
+         $(this).closest('.hide-text-wrapN').find('.hide-text').toggleClass('excerptN');
+         $(this).html($('#showMore').val());
+         $(this).css("display", "none");
+         btnLess.css("display", "flex");
+      });
+
+      $('.btn--more.btn--hide').on("click", function () {
+         $(this).closest('.hide-text-wrapN').find('.hide-text').toggleClass('excerptN');
+         $(this).html($('#showMore').val());
+         $(this).css("display", "none");
+         btnMore.css("display", "block");
+      });
+   });
+</script>
+</html>

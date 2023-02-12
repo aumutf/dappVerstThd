@@ -1,0 +1,49 @@
+.dapp-top
+   +adaptiv-value("margin-bottom", 30, 30)
+   +tablet
+      grid-template-columns: 1fr 1fr
+
+.diPrice
+   grid-column: span 2
+   border-bottom: 1px solid $grey24
+
+.diPriceBtm
+   grid-column: span 2
+   display: flex
+   justify-content: space-between
+   align-items: center
+   +adaptiv-value("font-size", 12, 10)
+   line-height: 1
+   font-family: $EurostileReg
+
+   .diLow
+      display: flex
+      align-items: center
+      &::after
+         content: ""
+         background-color: $greyD9
+         width: 3px
+         min-width: 3px
+         height: 3px
+         min-height: 3px
+         border-radius: 50%
+         display: inline-block
+         +adaptiv-value("margin-left", 40, 40)
+
+h1.diPriceHeading
+   +adaptiv-value("font-size", 14, 10)
+   line-height: 1
+   font-family: $EurostileReg
+
+.diPriceTitle
+   display: flex
+   justify-content: space-between
+   align-items: center
+   +adaptiv-value("font-size", 36, 28)
+   line-height: 1
+   font-family: $EurostileBol
+   color: $grey8D
+
+.percentVal
+   +adaptiv-value("font-size", 20, 14)
+   font-family: $EurostileBol
