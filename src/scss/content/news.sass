@@ -110,6 +110,116 @@
    height: 6px
    min-height: 6px
 
+//блок с рамкой svg на стр Дапп
+
+.blrectIc
+   +adaptiv-value("width", 320, 280)
+   +adaptiv-value("height", 93, 90)
+   background: transparent
+   display: flex
+   align-items: center
+   background:
+      image: url("../img/brd-icon.svg")
+      position: 0 0
+      repeat: no-repeat
+      size: contain
+
+   &-in
+      display: flex
+      justify-content: space-between
+      align-items: center
+      position: relative
+      width: 100%
+      height: 100%
+      +adaptiv-value("padding-left", 35, 35)
+      +adaptiv-value("padding-right", 35, 35)
+      &::before, &::after
+         content: ""
+         position: absolute
+         +adaptiv-value("right", -35, -35)
+         background-image: url(../img/line_upSm.png)
+         background-size: contain
+         background-repeat: no-repeat
+         +adaptiv-value("width", 207, 100)
+         +adaptiv-value("height", 25, 12)
+         display: inline-block
+      &::before
+         transform: scaleY(-1)
+         +adaptiv-value("top", 0, 0)
+      &::after
+         bottom: 0
+         transform: scaleY(1)
+
+   &-title
+      color: $grey83
+      font-family: $EurostileRegObl
+      line-height: 1
+      +adaptiv-value("font-size", 14, 14)
+      text-transform: uppercase
+
+      display: flex
+      flex-direction: column
+      .bld
+         font-family: $EurostileHeaIta
+         color: $grey82
+   &-txt
+      color: $green25
+      text-transform: uppercase
+      font-family: $EurostileMed
+      +adaptiv-value("font-size", 10, 10)
+      line-height: 1
+      text-align: right
+
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      +adaptiv-value("width", 65, 65)
+
+   &-price
+      +adaptiv-value("font-size", 20, 20)
+      color: #FFFFFF
+      text-transform: uppercase
+      font-family: $EurostileBol
+
+   &-logo
+      +adaptiv-value("width", 30, 30)
+      +adaptiv-value("min-width", 30, 30)
+      +adaptiv-value("height", 34, 34)
+      +adaptiv-value("min-height", 34, 34)
+      position: relative
+   &-logo-bg
+      position: absolute
+      +adaptiv-value("top", -8.5, -8.5)
+      +adaptiv-value("left", -13.5, -13.5)
+      +adaptiv-value("width", 55, 55)
+      +adaptiv-value("height", 50, 50)
+      stroke: $redB8
+      fill: transparent
+   &-bg
+      position: absolute
+      top: 0
+      left: 0
+      +adaptiv-value("width", 320, 280)
+      +adaptiv-value("height", 90, 90)
+
+   &-icon
+      position: absolute
+      top: 0
+      right: 0
+      +adaptiv-value("width", 12, 12)
+      +adaptiv-value("height", 15, 15)
+      //top: calc(50% - 15px/2)
+      +adaptiv-value("top", 40, 40)
+      +adaptiv-value("right", 5, 5)
+      fill: #FFF
+
+   &-logo-img
+      width: 100%
+      height: 100%
+   .svg-icon
+      width: 100%
+      height: 100%
+
 //!======================= NEWS LEFT SIDE STYLE
 
 .di-logo-wrap
@@ -128,8 +238,7 @@
       +adaptiv-value("min-width", 806, 320)
       +adaptiv-value("height", 268, 105)
       +adaptiv-value("min-height", 268, 105)
-      
-   
+
 .nw
    +adaptiv-value("font-size", 16, 14)
    h2.title
@@ -143,7 +252,7 @@
    .nw-itm .nw-itm-btm
       +adaptiv-value("margin-bottom", 0, 0)
 
-   p:not(:last-child), .su-quote-style-default 
+   p:not(:last-child), .su-quote-style-default
       +adaptiv-value("margin-bottom", 38, 38)
 
    p:last-child
@@ -184,7 +293,7 @@
       +adaptiv-value("margin-bottom", 0, 20)
       +tablet
          +adaptiv-value("margin-bottom", 0, 0)
-   
+
 .page-news
    .bl2col-wrap
       margin-top: 0
@@ -192,5 +301,3 @@
    .bl2col__l
       +tablet
          +adaptiv-value("padding-left", 30, 30)
-
-   

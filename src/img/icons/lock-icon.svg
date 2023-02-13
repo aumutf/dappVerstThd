@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="13.020291"
+   height="16.499901"
+   viewBox="0 0 13.020291 16.499901"
+   fill="none"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="lock-icon.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="47.294118"
+     inkscape:cx="4.5248756"
+     inkscape:cy="9.2083333"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <path
+     id="path2"
+     style="color:#000000;fill:#257f81;-inkscape-stroke:none"
+     d="M 3.53125 0 C 1.9742768 0 0.90607334 0.80841556 0.44726562 1.6113281 C -0.011542096 2.4142407 0 3.2148438 0 3.2148438 L 2 3.2148438 C 2 3.2148438 2.0000929 3.1956534 2.0039062 3.1621094 C 2.0153462 3.0614774 2.0551626 2.8316883 2.1855469 2.6035156 C 2.3593929 2.2992854 2.5576083 2 3.53125 2 C 4.5048855 2 4.7031077 2.2992852 4.8769531 2.6035156 C 5.0507987 2.9077461 5.0605469 3.2148437 5.0605469 3.2148438 L 5.0605469 6.3769531 L 4.1640625 6.3769531 L 4.1640625 12.386719 L 7.9589844 16.5 L 9.2246094 16.5 L 13.019531 12.703125 L 13.019531 6.3769531 L 7.0605469 6.3769531 L 7.0605469 3.2148438 C 7.0605469 3.2148438 7.0720875 2.4142405 6.6132812 1.6113281 C 6.1544755 0.80841582 5.0882193 2.9605918e-16 3.53125 0 z " />
+</svg>
