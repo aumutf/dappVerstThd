@@ -18,11 +18,14 @@
          +adaptiv-value("margin-top", 30, 0)
 
    &__l
-      width: 100%
+      //width: 100%
       z-index: 10
+      flex-grow: 1
+
       +tablet
-         +adaptiv-value("width", 790, 790)
-         +adaptiv-value("padding-left", 32, 32)
+         +adaptiv-value("margin-right", 30, 30)
+         //+adaptiv-value("width", 790, 790)
+         //+adaptiv-value("padding-left", 32, 32)
 
    &__r
       width: 100%
@@ -68,7 +71,6 @@
       +tablet
          display: inline-block
 
-
 .bbgrad
    position: relative
    width: 100%
@@ -81,7 +83,6 @@
       height: 100%
       box-shadow: 0px -137px 65px 40px rgb(15 20 26 / 93%) inset
       filter: blur(14px)
-
 
 .line-up
    position: absolute
@@ -105,8 +106,6 @@
       bottom: 0
       display: none
       transform: scaleY(-1)
-
-
 
 .excerptN+.bg-grad
    box-shadow: 0 -175px 52px -52px rgb(15 20 26 / 97%) inset
@@ -137,8 +136,6 @@
       z-index: 11
       position: relative
 
-
-
 //---------------------------------------- 
 .bg-grad
    position: absolute
@@ -153,4 +150,3 @@
       box-shadow: none
    +tablet
       display: block
-
