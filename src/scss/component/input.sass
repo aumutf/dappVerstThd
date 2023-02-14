@@ -1,7 +1,7 @@
 .inp
    +adaptiv-value("font-size", 9.15493, 9.15493)
    line-height: 3.6
-   text-transform: uppercase
+   //text-transform: uppercase
    color: #FFFFFF
    padding-top: 0
    padding-bottom: 0
@@ -26,7 +26,7 @@ $btnH: 14px
       min-height: $btnH
       width: 17px
       min-width: 17px
-      
+
       padding: 0
       border: none
       border-radius: 0
@@ -47,7 +47,6 @@ $btnH: 14px
       display: inline-flex
       align-items: center
       height: auto
-      
 
 .inp-img:lang(en)~.inp-img-label::after
    content: ""
@@ -71,3 +70,18 @@ $btnH: 14px
 
 .inp-img-label.custom-file-label::after
    font-size: 0
+
+.textarea-file
+   padding-left: 0
+   padding-right: 0
+   resize: none
+   overflow: hidden
+   line-height: 1.5
+   +adaptiv-value("padding-top", 14, 14)
+   border: none
+   &::placeholder
+      text-transform: uppercase
+
+.addImg
+   .inp
+      +adaptiv-value("padding-bottom", 14, 14)
