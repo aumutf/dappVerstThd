@@ -30,7 +30,8 @@ export const path = {
     scssNewsAllPage: `${srcFolder}/scss/styleNewsAllPage.scss`,
     scssAnalyticsAllPage: `${srcFolder}/scss/styleAnalyticsAllPage.scss`,
     scssDappPage: `${srcFolder}/scss/styleDappPage.scss`,
-    scssCoinPage: `${srcFolder}/scss/styleCoinPage.scss`
+    scssCoinPage: `${srcFolder}/scss/styleCoinPage.scss`,
+    scssExchangePage: `${srcFolder}/scss/styleExchangePage.scss`
   },
   watch: {
     assetscss: `${srcFolder}/assets/**/*.css`,
@@ -48,7 +49,8 @@ export const path = {
     scssNewsAllPage: `${srcFolder}/scss/**/*.scss`,
     scssAnalyticsAllPage: `${srcFolder}/scss/**/*.scss`,
     scssDappPage: `${srcFolder}/scss/**/*.scss`,
-    scssCoinPage: `${srcFolder}/scss/**/*.scss`
+    scssCoinPage: `${srcFolder}/scss/**/*.scss`,
+    scssExchangePage: `${srcFolder}/scss/**/*.scss`
   },
   clean: buildFolder,
   buildFolder: buildFolder,

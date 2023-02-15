@@ -9,8 +9,49 @@
                <a class="useri-name" href="#">mr.kobasko</a>
                <a class="useri-email" href="mailto: @mrkobasko" target="_blank">@mrkobasko</a>
             </div>
-            <div class="inp-wr bl-addnews-itm">
-               <input type="text" class="inp inp-gen" placeholder="What is the news?" />
+            <div class="inp-wr bl-addnews-itm addImg">
+
+               <div class="inp inp-gen">
+                  <textarea class="inp inp-gen textarea-file addnews-txt" placeholder="What is the news?">
+                  </textarea>
+                  <div class="addnews-imgs">
+                     <div class="addnews-img">
+                        <div class="img-wrapper">
+                           <svg class="svg-ic close-icon">
+                              <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
+                           </svg>
+                           <img src="@img/img2.jpg" alt="dapp">
+                        </div>
+                     </div>
+                     <div class="addnews-img">
+                        <svg class="svg-ic close-icon">
+                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
+                        </svg>
+                        <div class="img-wrapper">
+                           <img src="@img/img3.jpg" alt="dapp">
+                        </div>
+                     </div>
+                     <div class="addnews-img">
+                        <svg class="svg-ic close-icon">
+                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
+                        </svg>
+                        <div class="img-wrapper">
+                           <img src="@img/img4.jpg" alt="dapp">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <script>
+                  var textarea = document.querySelector('.textarea-file');
+
+                  textarea.addEventListener('keyup', function () {
+                     if (this.scrollTop > 0) {
+                        this.style.height = this.scrollHeight + "px";
+                     }
+                  });
+               </script>
+
             </div>
             <div class="bl-addnews-btm bl-addnews-itm">
                <div class="lft">
