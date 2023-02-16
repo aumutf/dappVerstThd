@@ -82,9 +82,8 @@
    +adaptiv-value("bottom", 10, 10)
    +adaptiv-value("left", 30, 30)
    width: 100%
-   justify-content: center
+   +adaptiv-value("margin-left", 20, 20)
    
-
    &::after
       content: ""
       width: 0
@@ -99,6 +98,10 @@
       border-color: transparent transparent $redDf transparent
       +adaptiv-value("margin-left", 5, 5)
       +adaptiv-value("margin-top", 5, 5)
+
+   &.btnExc-more-cnt
+      justify-content: center
+      +adaptiv-value("margin-left", 0, 0)
 
 .hide-text.excerptN
    &+.line-up::after
