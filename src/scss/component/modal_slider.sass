@@ -3,7 +3,7 @@
 
    .modal-body
       padding-top: 70px
-      padding-bottom: 20px
+      padding-bottom: 85px
       padding-left: 120px
       padding-right: 120px
       color: #FFF
@@ -13,3 +13,32 @@
       backdrop-filter: blur(15px)
       border-radius: 0
       border: none
+
+
+.carousel-indicators 
+   bottom: -17px
+   li
+      background: $greyD9
+      border-radius: 50%
+      width: 8px
+      height: 8px
+
+   .active
+      background: $redB0
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon
+   background-image: url(../img/icons/triangle-icon.svg)
+   
+
+.carousel-control-next-icon
+   transform: rotate(-90deg)
+
+.carousel-control-prev-icon
+   transform: rotate(90deg)
+
+.carousel-control-next
+   right: -46px
+
+.carousel-control-prev
+   left: -46px
