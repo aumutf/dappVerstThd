@@ -390,6 +390,8 @@ ul.ulN, .tcpp ul.ulN
 //------------------------------ bg grey with gradient  
 .bg-grey-grad
   position: relative
+  +adaptiv-value("padding-left", 30, 30)
+  +adaptiv-value("padding-right", 30, 30)
   &::before
     display: none
     +tablet

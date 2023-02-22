@@ -8,6 +8,8 @@
          padding: 0
          padding-top: 3px
          +adaptiv-value("min-width", 121, 121)
+         +adaptiv-value("max-height", 300, 300)
+         overflow-y: scroll
          margin-top: 7px
          &::before
             content: ''
@@ -222,6 +224,7 @@
    border: none
 
 .dd-grey.dd-tags
+
    .dropdown-menu
       //display: flex
       flex-wrap: wrap
@@ -243,6 +246,11 @@
          &::before
             top: -15px
 
+   .dropdown-menuMob
+      display: flex
+      flex-wrap: wrap
+      margin-left: 20px
+
 .dd-grey.dd-cntr
    .btn-imgic
       padding: 5px 6px 6px 14px
@@ -251,4 +259,23 @@
    padding-top: 0
    padding-bottom: 0
    margin-bottom: 10px
+
+.ddownsMobMenu-itm.dd-grey
+   background-color: transparent
+
+.ddownsMobMenu-itm.dd-tags
+   align-items: center
+   flex-wrap: nowrap
+   flex-direction: row
+   +adaptiv-value("font-size", 12, 10)
+
+   .ddownsMobMenu-title
+      margin-top: 0
+
+   .dropdown-item
+      padding: 6px 7px 6px
+      margin-bottom: 11px
+      +tablet
+         padding: 8px 8px 7px
+         margin-bottom: 5px
 

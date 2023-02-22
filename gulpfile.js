@@ -29,6 +29,7 @@ import { scssAnalyticsAllPage } from "./gulp/tasks/scssAnalyticsAllPage.js";
 import { scssDappPage } from "./gulp/tasks/scssDappPage.js";
 import { scssCoinPage } from "./gulp/tasks/scssCoinPage.js";
 import { scssExchangePage } from "./gulp/tasks/scssExchangePage.js";
+import { scssProfilePage } from "./gulp/tasks/scssProfilePage.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -49,6 +50,7 @@ function watcher() {
   gulp.watch(path.watch.scssDappPage, scssDappPage)
   gulp.watch(path.watch.scssCoinPage, scssCoinPage)
   gulp.watch(path.watch.scssExchangePage, scssExchangePage)
+  gulp.watch(path.watch.scssProfilePage, scssProfilePage)
 }
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
@@ -65,6 +67,7 @@ const mainTasks = gulp.series(fonts, gulp.parallel(
   scssDappPage,
   scssCoinPage,
   scssExchangePage,
+  scssProfilePage,
   assets
 ));
 

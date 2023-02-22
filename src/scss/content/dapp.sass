@@ -139,6 +139,7 @@
    overflow-y: scroll
    display: none
    z-index: 1000
+   padding-top: 40px
    +tablet
       display: none!important
    .ddlined
@@ -172,6 +173,11 @@
 
    &.active
       display: flex
+
+   .btn-close
+      position: absolute
+      right: 20px
+      top: 0
 
 .trunk-txt
    display: inline-block
@@ -272,6 +278,8 @@
       +adaptiv-value("height", 90, 90)
       +adaptiv-value("border-radius", 8, 8)
       overflow: hidden
+      img
+         object-fit: cover
       
    &Itm-lst
       position: relative
@@ -290,3 +298,9 @@
          justify-content: center
       .scrCnt
          color: $redB0
+
+
+.emojionearea .emojionearea-editor:empty:before
+   &::placeholder
+      color: #FFFFFF
+      +adaptiv-value("font-size", 9.15493, 9.15493)
