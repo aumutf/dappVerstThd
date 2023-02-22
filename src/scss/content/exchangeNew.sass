@@ -1,0 +1,1270 @@
+body
+   font-family: Eurostile Reg, serif
+   background: $bgcolorN
+
+*
+   box-sizing: border-box
+
+.page-exchangeNew
+   color: $fontcolorN
+   letter-spacing: 0.02em
+
+   .container
+      padding: 0
+      max-width: 1200px!important
+      +tablet
+         padding-left: 20px
+         padding-right: 20px
+      @media screen and (min-width: 1200px)
+         padding-left: 0
+         padding-right: 0
+
+   h2.title
+      font-size: 24px
+      +adaptiv-valueN("font-size", 24, 24)
+      line-height: 1.8
+
+   h2.title-sct
+      font-size: 20px
+      +adaptiv-valueN("font-size", 20, 20)
+      line-height: 1
+      text-transform: uppercase
+      margin-bottom: 30px
+      +adaptiv-valueN("margin-bottom", 18, 18)
+      +adaptiv-valueN("margin-left", 30, 30)
+
+   h3.title
+      font-size: 12px
+      +adaptiv-valueN("font-size", 12, 12)
+      font-weight: 500
+      line-height: 1
+      letter-spacing: 0.08em
+
+   .title-ln
+      position: relative
+      display: flex
+      align-items: center
+      &::after
+         content: "" 
+         display: flex
+         margin-left: 20px
+         +adaptiv-valueN("margin-left", 20, 20)
+         
+         border-bottom: 1px solid transparent
+         border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+         border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+         border-image-slice: 1
+         border-top-width: 0px
+         flex-grow: 1
+
+
+
+//---------------------------------------- page style
+.bl2col
+   &-wrap
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      margin-top: 30px
+      +adaptiv-valueN("margin-top", 30, 30)
+      +adaptiv-valueN("padding-top", 33, 33)
+      padding-top: 33px
+
+   &__l
+      +adaptiv-valueN("width", 790, 280)
+      padding-left: 32px
+      +adaptiv-valueN("padding-left", 32, 32)
+      z-index: 10
+      
+   &__r
+      +adaptiv-valueN("width", 305, 305)
+      +adaptiv-valueN("min-width", 305, 305)
+      z-index: 12
+      position: relative
+
+
+.bl2col-wrap-blur
+   position: relative
+   &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      display: inline-block
+      background: linear-gradient(148.18deg,rgba(49,17,22,.63) -38.64%,rgba(15,20,26,0) 60.18%)
+      border-top-left-radius: 40px
+      width: 100%
+      height: 700px
+      +adaptiv-valueN("height", 700, 700)
+      z-index: 2
+
+   &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      display: inline-block
+      background-image: url(../img/icons/frameBl.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      width: 80%
+      height: 600px
+      +adaptiv-valueN("height", 600, 600)
+      z-index: 3
+
+.blHotN
+   .bl-pst:not(:last-child)
+      position: relative
+      &::after
+         content: ""
+         position: absolute
+         bottom: 0
+         left: 0
+         width: 50%
+         background: $redE6
+         height: 1px
+
+.bbgrad
+   position: relative
+   width: 100%
+   height: 520px
+   +adaptiv-valueN("height", 520, 520)
+   &::before
+      content: ""
+      display: inline-block
+      width: 100%
+      height: 100%
+      box-shadow: 0px -137px 65px 40px rgb(15 20 26 / 93%) inset
+      filter: blur(14px)
+
+
+//---------------------------------------- blExc-head
+
+.blExc-head
+   display: flex
+   justify-content: space-between
+   align-items: flex-start
+   margin-bottom: 45px
+   +adaptiv-valueN("margin-bottom", 45, 45)
+   position: relative
+
+.blExc-logo
+   display: flex
+   align-items: flex-start
+   margin-right: 40px
+   +adaptiv-valueN("margin-right", 40, 40)
+
+   &-img
+      display: flex
+      align-items: center
+
+      overflow: hidden
+      width: 40px
+      min-width: 40px
+      +adaptiv-valueN("width", 40, 40)
+      +adaptiv-valueN("min-width", 40, 40)
+      height: 40px
+      min-height: 40px
+      +adaptiv-valueN("height", 40, 40)
+      +adaptiv-valueN("min-height", 40, 40)
+
+      margin-right: 14px
+      +adaptiv-valueN("margin-right", 14, 14)
+      img
+         object-fit: contain
+         width: 100%
+         height: 100%
+
+   &-name
+      font-size: 40px
+      +adaptiv-valueN("font-size", 40, 40)
+      font-weight: 700
+      line-height: 1
+      max-width: 150px
+      +adaptiv-valueN("max-width", 150, 150)
+
+.blExc-tags-wrap
+   background: rgba(22, 30, 39, 0.7)
+   //backdrop-filter: blur(4px)
+   border-radius: 11px
+   +adaptiv-valueN("border-radius", 11, 11)
+   padding: 12px 13px 12px 20px
+   +adaptiv-valueN("padding-top", 12, 12)
+   +adaptiv-valueN("padding-right", 13, 13)
+   +adaptiv-valueN("padding-bottom", 12, 12)
+   +adaptiv-valueN("padding-left", 20, 20)
+   position: absolute
+   right: 0
+   top: 0   
+   z-index: 10
+   width: 77%
+
+   height: 33px
+   +adaptiv-valueN("height", 33, 33)
+   overflow: hidden
+   background: transparent
+
+.blExc-tags
+   display: flex
+   flex-direction: column
+   position: relative
+
+.blExc-tag-row
+   display: flex
+   flex-wrap: wrap
+   justify-content: flex-start
+
+.blExc-tags-wrap.x
+   height: 33px
+   +adaptiv-valueN("height", 33, 33)
+   overflow: hidden
+   background: transparent
+   &.active
+      height: 126px
+      +adaptiv-valueN("height", 126, 126)
+      
+      
+
+.blExc-tags-wrap.active
+   height: 126px
+   +adaptiv-valueN("height", 126, 126)
+   &::before
+      content: ""
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      position: absolute
+      backdrop-filter: blur(4px)
+      background: rgba(22, 30, 39, 0.7)
+      
+
+
+
+
+
+.blExc-tagScroll
+   height: 33px
+   +adaptiv-valueN("height", 33, 33)
+   //background: red
+
+.active
+   .blExc-tag-btn
+      display: none
+   .blExc-tagScroll
+      overflow-y: auto
+      height: calc(126px - 2*12px)
+      +adaptiv-valueN("height", 102, 102)
+
+      &::-webkit-scrollbar 
+         width: 8px        
+         +adaptiv-valueN("width", 8, 8) /* ширина всей полосы прокрутки */
+
+      &::-webkit-scrollbar-track 
+         background: #0F141A        /* цвет зоны отслеживания */
+         border-radius: 3px
+         +adaptiv-valueN("border-radius", 3, 3)
+
+      &::-webkit-scrollbar-thumb 
+         background-color: #17202A    /* цвет бегунка */
+         border-radius: 3px       /* округлось бегунка */
+         +adaptiv-valueN("border-radius", 3, 3)
+         border: 0px solid #0F141A  /* отступ вокруг бегунка */
+
+      &
+         scrollbar-width: thin          /* "auto" или "thin" */
+         scrollbar-color: #17202A #0F141A   /* цвет бегунка и зоны отслеживания */
+
+.blExc-tag-btm
+   height: 60px
+   +adaptiv-valueN("height", 60, 60)
+   overflow-y: auto
+   display: flex
+   flex-direction: column
+
+   position: absolute
+   top: 100%
+   left: 0
+
+
+   &::-webkit-scrollbar 
+      width: 8px              /* ширина всей полосы прокрутки */
+      +adaptiv-valueN("width", 8, 8)
+
+   &::-webkit-scrollbar-track 
+      background: #0F141A        /* цвет зоны отслеживания */
+      border-radius: 3px
+
+   &::-webkit-scrollbar-thumb 
+      background-color: #17202A    /* цвет бегунка */
+      border-radius: 3px       /* округлось бегунка */
+      +adaptiv-valueN("border-radius", 3, 3)
+      border: 0px solid #0F141A  /* отступ вокруг бегунка */
+
+   &
+      scrollbar-width: thin          /* "auto" или "thin" */
+      scrollbar-color: #17202A #0F141A   /* цвет бегунка и зоны отслеживания */
+
+
+.blExc-tag-btn
+   
+   position: absolute
+   top: 13px
+   +adaptiv-valueN("top", 13, 13)
+   +adaptiv-valueN("right", 7, 7)
+   right: 7px
+   width: 20px
+   height: 20px
+   +adaptiv-valueN("width", 20, 20)
+   +adaptiv-valueN("height", 20, 20)
+   display: flex
+   align-items: center
+   justify-content: center
+   margin: 0!important
+   z-index: 5
+
+   &::before
+      content: ""
+      display: inline-block
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 4px 4px 4px
+      +adaptiv-valueN("border-top-width", 0, 0)
+      +adaptiv-valueN("border-right-width", 4, 4)
+      +adaptiv-valueN("border-bottom-width", 4, 4)
+      +adaptiv-valueN("border-left-width", 4, 4)
+      border-color: transparent transparent #FFF transparent
+
+
+
+
+.blExc-tag
+   font-size: 12px
+   +adaptiv-valueN("font-size", 12, 12)
+   font-weight: 400
+   line-height: 1
+   height: 20px
+   +adaptiv-valueN("height", 20, 20)
+   overflow: hidden
+   background-color: $grey17
+   padding: 3px 7px
+   +adaptiv-valueN("padding-top", 3, 3)
+   +adaptiv-valueN("padding-bottom", 3, 3)
+   +adaptiv-valueN("padding-left", 7, 7)
+   +adaptiv-valueN("padding-right", 7, 7)
+   border-radius: 3px
+   +adaptiv-valueN("border-radius", 3, 3)
+   margin-bottom: 20px
+   +adaptiv-valueN("margin-bottom", 20, 20)
+   +adaptiv-valueN("margin-right", 20, 20)
+   margin-right: 20px
+   display: flex
+   align-items: center
+      
+//---------------------------------------- blExc-fgrs
+
+.blExc-fgrs
+   display: flex
+   justify-content: space-between
+   align-items: center
+
+.blExc-fgr
+   display: flex
+   flex-direction: column
+   align-items: center
+
+   margin-bottom: 60px
+   +adaptiv-valueN("margin-bottom", 60, 60)
+
+   &-lbl
+      margin-bottom: 5px
+      +adaptiv-valueN("margin-bottom", 5, 5)
+      font-size: 24px
+      +adaptiv-valueN("font-size", 24, 24)
+      line-height: 1
+
+   &-val
+      font-size: 16px
+      +adaptiv-valueN("font-size", 16, 16)
+      line-height: 1
+      letter-spacing: 0.3em
+      background: linear-gradient(90deg, rgba(15, 20, 28, 0) 0%, rgba(59, 75, 95, 0.2) 25.31%, rgba(59, 75, 95, 0.14) 50.31%, rgba(59, 75, 95, 0.2) 74.89%, rgba(15, 20, 28, 0) 100%)
+      border-radius: 3px
+      +adaptiv-valueN("border-radius", 3, 3)
+      padding: 9px 10px 8px
+      +adaptiv-valueN("padding-top", 9, 9)
+      +adaptiv-valueN("padding-left", 11, 11)
+      +adaptiv-valueN("padding-right", 6, 6)
+      +adaptiv-valueN("padding-bottom", 8, 8)
+      border-bottom: 1px solid transparent
+      border-image: linear-gradient(0.25turn, rgba(58, 75, 94, 0), rgba(58, 75, 94, 0.73),rgba(58, 75, 94, 0))
+      border-image: linear-gradient(0.25turn, rgba(58, 75, 94, 0), rgba(58, 75, 94, 0.73), rgba(58, 75, 94, 0))
+      border-image-slice: 1
+      border-top-width: 0px
+
+//---------------------------------------- blExc-inf
+
+.blExc-inf
+   display: flex
+   flex-direction: column
+   +adaptiv-valueN("padding-bottom", 27, 27)
+   +adaptiv-valueN("padding-top", 27, 27)
+   &-title
+      +adaptiv-valueN("font-size", 16, 16)
+      line-height: 1
+      +adaptiv-valueN("margin-bottom", 17, 17)
+
+      text-overflow: ellipsis
+      +adaptiv-valueN("height", 16, 16)
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      position: relative
+
+   &-val
+      +adaptiv-valueN("font-size", 14, 14)
+      line-height: 1
+      color: $grey9e
+
+
+.blExc-inf-row
+   display: grid
+   grid-template-columns: 220px 132px 200px 115px
+   //grid-template-columns: minmax(220px, 220px) minmax(130px, 130px) auto minmax(90px, 90px)
+   
+   //+adaptiv-valueN("xx", 132, 132)
+   //+adaptiv-valueN("xx1", 130, 130)
+   //+adaptiv-valueN("xx2", 900, 90)
+   +adaptiv-valueN("column-gap", 32, 32)
+   @media screen and (min-width: 768px) and (max-width: 1439px)
+      grid-template-columns: minmax(calc(220px/1.5 + calc(220 - 220/1.5) * ((100vw - 768px) / 672)), calc(220px/1.5 + calc(220 - 220/1.5) * ((100vw - 768px) / 672))) minmax(calc(132px/1.5 + calc(132 - 132/1.5) * ((100vw - 768px) / 672)), calc(132px/1.5 + calc(132 - 132/1.5) * ((100vw - 768px) / 672))) minmax(calc(200px/1.5 + calc(200 - 200/1.5) * ((100vw - 768px) / 672)), calc(200px/1.5 + calc(200 - 200/1.5) * ((100vw - 768px) / 672))) minmax(calc(900px/1.5 + calc(900 - 900/1.5) * ((100vw - 768px) / 672)), calc(900px/1.5 + calc(900 - 900/1.5) * ((100vw - 768px) / 672)))
+
+   
+   &:not(:last-child)
+      border-bottom: 1px solid $grey2f
+
+
+.blExc-inf-wrap
+   display: flex
+   flex-direction: column
+   
+   +adaptiv-valueN("margin-bottom", 40, 40)
+
+//---------------------------------------- blExc-abt
+.blExc-abt
+   //font-size: 20px
+   +adaptiv-valueN("font-size", 20, 20)
+   line-height: 2
+   color: $greydb
+
+   p
+      +adaptiv-valueN("margin-bottom", 20, 20)
+
+   h2.title
+      +adaptiv-valueN("margin-bottom", 16, 16)
+
+//---------------------------------------- component bl-pst -- блок поста новый дизайн
+.bl-pst
+   +adaptiv-valueN("width", 420, 420)
+   +adaptiv-valueN("min-width", 420, 420)
+   +adaptiv-valueN("max-width", 420, 420)
+   &__top
+      display: flex
+      justify-content: space-between
+      +adaptiv-valueN("margin-bottom", 10, 10)
+   &__cntr
+      +adaptiv-valueN("margin-bottom", 11, 11)
+   &__btm
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+
+
+   h3.title
+      +adaptiv-valueN("font-size", 17, 17)
+      line-height: 1.45
+      font-weight: 700
+      color: $fontcolor
+
+      text-overflow: ellipsis
+      height: 43px
+      +adaptiv-valueN("height", 43, 43)
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      position: relative
+      +adaptiv-valueN("margin-right", 7, 7)
+      +adaptiv-valueN("width", 240, 240)
+
+   &-date
+      +adaptiv-valueN("font-size", 8, 8)
+      line-height: 0.75
+      color: $grey93
+      font-weight: 700
+      +adaptiv-valueN("margin-top", 10, 10)
+   &-text
+      color: $grey93
+      +adaptiv-valueN("font-size", 12, 12)
+      line-height: 1.45
+      font-weight: 700
+
+      text-overflow: ellipsis
+      +adaptiv-valueN("height", 34, 34)
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      position: relative
+   
+.bl-pst-smp
+   +adaptiv-valueN("width", 305, 305)
+   +adaptiv-valueN("min-width", 305, 305)
+   +adaptiv-valueN("max-width", 305, 305)
+
+.bl-pst-wimg
+   .bl-pst-img
+      +adaptiv-valueN("max-width", 305, 305)
+      +adaptiv-valueN("border-radius", 7, 7)
+      +adaptiv-valueN("height", 105, 105)
+      +adaptiv-valueN("max-height", 105, 105)
+      overflow: hidden
+      img
+         width: 100%
+         height: 100%
+         object-fit: cover
+
+
+.pp-itms
+   display: flex
+   .pp-itm:not(:last-child)
+      +adaptiv-valueN("margin-right", 20, 20)
+
+.pp-itm
+   +adaptiv-valueN("font-size", 12, 12)
+   line-height: 1.45
+   color: $grey93
+   display: flex
+   align-items: center
+   .svg-icon
+      +adaptiv-valueN("width", 13, 13)
+      +adaptiv-valueN("height", 13, 13)
+      +adaptiv-valueN("min-width", 13, 13)
+      +adaptiv-valueN("min-height", 13, 13)
+      display: flex
+      +adaptiv-valueN("margin-right", 6, 6)
+      fill: $redAb
+   .svg-cmt
+      stroke: $redAb
+      
+.percentVal
+   +adaptiv-valueN("font-size", 12, 12)
+
+.pp-itm-val
+   +adaptiv-valueN("max-width", 38, 38)
+   -webkit-line-clamp: 1
+   display: -webkit-box
+   -webkit-box-orient: vertical
+   overflow: hidden
+   text-overflow: ellipsis
+      
+.tags-itms
+   display: flex
+   +adaptiv-valueN("margin-right", 17, 17)
+   flex-wrap: wrap
+   justify-content: flex-end
+   .tag-itm:not(:last-child)
+      +adaptiv-valueN("margin-right", 11, 11)
+
+.tag-itm
+   font-size: 12px
+   +adaptiv-valueN("font-size", 12, 12)
+   line-height: 1.45
+   color: #FFFFFF
+   background-color: #17202B
+   +adaptiv-valueN("padding-left", 6, 6)
+   +adaptiv-valueN("padding-right", 6, 6)
+   +adaptiv-valueN("border-radius", 3, 3)
+   +adaptiv-valueN("height", 18, 18)
+   display: flex
+   align-items: center
+
+   +adaptiv-valueN("max-width", 70, 70)
+   -webkit-line-clamp: 1
+   display: -webkit-box
+   -webkit-box-orient: vertical
+   overflow: hidden
+   text-overflow: ellipsis
+
+
+//----------------------------------------------------bl-rect вид прямоугольный
+.bl-rect
+   +adaptiv-valueN("padding-top", 15, 15)
+   +adaptiv-valueN("padding-right", 26, 26)
+   +adaptiv-valueN("padding-bottom", 17, 17)
+   +adaptiv-valueN("padding-left", 32, 32)
+   position: relative
+   +adaptiv-valueN("max-height", 147, 147)
+   background-size: contain
+   background-position: center
+   background-repeat: no-repeat
+
+.bl-rect--red
+   background-image: url(../img/icons/borderFrame-red.svg)
+
+.bl-rect--vlt
+   background-image: url(../img/icons/borderFrame-violett.svg)
+
+.bl-rect--blue
+   background-image: url(../img/icons/borderFrame-blue.svg)
+
+.brd
+   position: absolute
+   &-t
+      display: flex
+      width: 100%
+      height: 1px
+      background: red
+
+.bl-rect-sml
+   padding: 0
+   +adaptiv-valueN("width", 304, 304)
+   +adaptiv-valueN("min-width", 304, 304)
+   +adaptiv-valueN("max-width", 304, 304)
+
+.blExc-col-scn
+   align-items: center
+   //&>div:not(:last-child)
+      //margin-bottom: 30px
+   &>div
+      +adaptiv-valueN("padding", 20, 20)
+      width: 100%
+   &>div:not(:last-child)
+      +adaptiv-valueN("margin-bottom", 26, 26)
+
+.blExc-col-thd
+   align-items: center
+   position: relative
+   .bl-pst
+      +adaptiv-valueN("margin", 20, 20)
+      padding: 0!important
+
+   .brdFrameSm
+      position: absolute
+      top: 0
+      right: 0
+      width: 100%
+      height: 100%
+      fill: transparent
+      stroke: $grey35
+      stroke-width: 1
+
+   .blExc-col-thd1
+      +adaptiv-valueN("padding-top", 0, 0)
+      +adaptiv-valueN("padding-right", 0, 0)
+      +adaptiv-valueN("padding-bottom", 16, 16)
+      +adaptiv-valueN("padding-left", 0, 0)
+      
+
+      +adaptiv-valueN("margin-right", 23, 23)
+      +adaptiv-valueN("margin-bottom", 20, 20)
+      +adaptiv-valueN("margin-top", 14, 14)
+      +adaptiv-valueN("margin-left", 14, 14)
+
+   .blExc-col-thd2
+      +adaptiv-valueN("margin-top", 14, 14)
+      +adaptiv-valueN("margin-right", 8, 8)
+      +adaptiv-valueN("margin-bottom", 20, 20)
+      +adaptiv-valueN("margin-left", 14, 14)
+
+.blExc-col-scn>div.bl-rect-bg
+   position: relative
+
+   +adaptiv-valueN("padding-top", 36, 36)
+   +adaptiv-valueN("padding-right", 42, 42)
+   +adaptiv-valueN("padding-bottom", 30, 30)
+   +adaptiv-valueN("padding-left", 33, 33)
+   +adaptiv-valueN("margin-bottom", 20, 20)
+   .svg-icon.brdFrame
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      fill: transparent
+      stroke-width: 1
+      stroke: $grey35
+   .bl-pst-text
+      +adaptiv-valueN("margin-right", 45, 45)
+   .tags-itms
+      margin-right: 0
+   .bl-rect
+      padding: 0
+
+      
+
+//.cornerr
+   //background: transparent
+   //background: linear-gradient(135deg, transparent 15px, $bgcolor 0) top left, linear-gradient(-135deg, transparent 15px, $bgcolor 0) top right, linear-gradient(-45deg, transparent 15px, $bgcolor 0) bottom right, linear-gradient(45deg, transparent 15px, $bgcolor 0) bottom left
+   //background-size: 50% 50%
+   //background-repeat: no-repeat
+   //padding: 30px
+
+//.cornerr-wr
+   //background: #353535
+   //background: linear-gradient(135deg, transparent 15px, #353535 0) top left, linear-gradient(-135deg, transparent 15px, #353535 0) top right, linear-gradient(-45deg, transparent 15px, #353535 0) bottom right, linear-gradient(45deg, transparent 15px, #353535 0) bottom left
+   //background-size: 50% 50%
+   //background-repeat: no-repeat
+   //padding: 2px   
+
+.bl-lr
+   display: flex
+   +adaptiv-valueN("width", 304, 304)
+   +adaptiv-valueN("min-width", 304, 304)
+   +adaptiv-valueN("max-width", 304, 304)
+   +adaptiv-valueN("height", 134, 134)
+   +adaptiv-valueN("min-height", 134, 134)
+   &__l
+      display: flex
+      flex-direction: column
+      +adaptiv-valueN("margin-right", 4, 4)
+      h3.title
+         width: unset!important
+         line-height: 0.8
+         margin-left: 0
+
+         +adaptiv-valueN("height", 16, 16)
+         -webkit-line-clamp: 1
+         margin-right: 0px
+
+      .bl-pst-text
+         +adaptiv-valueN("height", 53, 53)
+         -webkit-line-clamp: 3
+      .bl-pst__cntr
+         +adaptiv-valueN("margin-bottom", 24, 24)
+      .bl-pst__btm .pp-itms:not(:last-child)
+         +adaptiv-valueN("margin-bottom", 10, 10)
+      .pp-itm
+         line-height: 1
+
+   &__r
+      +adaptiv-valueN("min-width", 134, 134)
+      +adaptiv-valueN("max-width", 134, 134)
+   .bl-pst__top
+      +adaptiv-valueN("margin-bottom", 8, 8)
+   .bl-pst__btm
+      flex-direction: column
+      margin-top: auto
+      .pp-itms:not(:last-child)
+         +adaptiv-valueN("margin-bottom", 4, 4)
+
+.bl-lr-img
+   height: 100%
+   width: 100%
+   overflow: hidden
+   img
+      object-fit: cover
+      object-position: center
+      width: 100%
+      height: 100%
+
+
+   
+.cyItm
+   color: $green64
+   +adaptiv-valueN("margin-right", 3, 3)
+
+.percentVal
+   +adaptiv-valueN("padding-left", 10, 10)
+   +adaptiv-valueN("margin-left", -2, -2)
+
+.percentVal--up
+   color: $green64
+   &::after
+      border-color: transparent transparent $green64 transparent
+
+.bl-g3
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+
+
+// ---------------------------------------------------------------trapezoid
+.blExc-fgr-val
+   position: relative
+   &::after, &::before
+      content: ""
+      display: inline-block
+      position: absolute
+      +adaptiv-valueN("top", 14, 14)
+
+      border-bottom: 2px solid #3E5064
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      +adaptiv-valueN("border-top-width", 2, 2)
+      +adaptiv-valueN("border-left-width", 4, 4)
+      +adaptiv-valueN("border-right-width", 4, 4)
+      height: 0px
+      +adaptiv-valueN("width", 26, 26)
+      
+
+   &::after
+      +adaptiv-valueN("left", -10, -10)
+      transform: rotate(90deg)
+   &::before
+      +adaptiv-valueN("right", -10, -10)
+      transform: rotate(-90deg)    
+
+
+//---------------------------------------- right side
+.bl-title
+   display: flex
+   justify-content: space-between
+   align-items: flex-end
+   +adaptiv-valueN("margin-bottom", 20, 20)
+   position: relative
+   &::after
+      content: ""
+      display: inline-block
+      position: absolute
+      left: 0
+      +adaptiv-valueN("top", 19, 19)
+      width: 100%
+      background-image: url(../img/icons/blExc-divide.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      +adaptiv-valueN("height", 50, 50)
+   h3.title
+      text-transform: uppercase
+      line-height: 1.5
+
+      text-overflow: ellipsis
+      +adaptiv-valueN("height", 20, 20)
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      position: relative
+      +adaptiv-valueN("width", 93, 93)
+   .btn-grad
+      text-overflow: ellipsis
+      +adaptiv-valueN("height", 18, 18)
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      position: relative
+      width: 100%
+      +adaptiv-valueN("padding-top", 3, 3)
+      +adaptiv-valueN("padding-right", 3, 3)
+      +adaptiv-valueN("padding-bottom", 3, 3)
+      +adaptiv-valueN("padding-left", 3, 3)
+   .btn-grad-wrap
+      //width: 28.4%
+      +adaptiv-valueN("width", 88, 88)
+
+.bl2col__r
+   .bl-pst-smp
+      +adaptiv-valueN("padding-top", 25, 25)
+      +adaptiv-valueN("padding-bottom", 25, 25)
+      .tags-itms
+         margin-right: 0
+         .tag-itm
+            +adaptiv-valueN("margin-bottom", 10, 10)
+            +adaptiv-valueN("margin-right", 10, 10)
+
+
+   .bl-pst-wimg, .bl-pst-bimg, .bl-pst-video
+      padding-top: 0
+
+
+.half-line
+   position: relative
+   &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 50%
+      background: #E61243
+      height: 1px
+
+.wide-line
+   position: relative
+   +adaptiv-valueN("margin-bottom", 25, 25)
+   &::after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      background: rgb(47,47,48)
+      height: 1px
+
+.bl-pst-bimg
+   h3.title
+      margin-right: 0
+      width: 100%
+   &-wrap
+      width: 100%
+      +adaptiv-valueN("height", 218, 218)
+      +adaptiv-valueN("max-height", 218, 218)
+      +adaptiv-valueN("margin-bottom", 17, 17)
+      img
+         width: 100%
+         height: 100%
+         object-fit: cover
+
+.bl-pst-video
+   display: flex
+   padding-top: 0
+   padding-bottom: 0
+   .img-wrap   
+      +adaptiv-valueN("width", 202, 202)
+      +adaptiv-valueN("max-width", 202, 202)
+      +adaptiv-valueN("height", 110, 110)
+      +adaptiv-valueN("max-height", 110, 110)
+      img
+         width: 100%
+         height: 100%
+         object-fit: cover
+   &-l
+      +adaptiv-valueN("width", 202, 202)
+      +adaptiv-valueN("height", 110, 110)
+      position: relative
+
+   &-r
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      margin-left: auto
+
+   .tags-itms
+      flex-direction: column
+
+   .tag-itm
+      margin-right: 0
+
+      &:not(:last-child)
+         +adaptiv-valueN("margin-bottom", 10, 10)
+      //&:not(:first-child,:nth-child(2))
+         //display: none
+
+   .pp-itms
+      margin-top: auto
+      flex-direction: column
+
+   .pp-itm
+      margin-right: 0
+      &:not(:last-child)
+         +adaptiv-valueN("margin-bottom", 5, 5)
+
+.youtube-btn
+   display: flex
+   justify-content: center
+   align-items: center
+   +adaptiv-valueN("width", 80, 80)
+   +adaptiv-valueN("min-width", 80, 80)
+   +adaptiv-valueN("height", 80, 80)
+   +adaptiv-valueN("min-height", 80, 80)
+   border: 6px solid $bgcolorN
+   +adaptiv-valueN("border-width", 6, 6)
+   background-color: $redAb
+   border-radius: 50%
+   position: absolute
+   +adaptiv-valueN("top", 15, 15)
+   +adaptiv-valueN("right", -40, -40)
+   cursor: pointer
+
+   .svg-icon
+      +adaptiv-valueN("width", 24, 24)
+      +adaptiv-valueN("height", 40, 40)
+      +adaptiv-valueN("margin-left", 10, 10)
+      fill: $greycf
+      
+   &:hover
+      .svg-icon
+         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+      
+.btn-grad
+   +adaptiv-valueN("font-size", 8, 8)
+   font-weight: 700
+   line-height: 1.7
+   text-shadow: 0px 0.75px 0px rgba(0, 0, 0, 0.25)
+   color: #FFFFFF
+   text-transform: uppercase
+   text-align: center
+   
+   +adaptiv-valueN("padding-top", 3, 3)
+   +adaptiv-valueN("padding-bottom", 3, 3)
+   +adaptiv-valueN("padding-left", 27, 27)
+   +adaptiv-valueN("padding-right", 27, 27)
+   border-radius: 0
+   background: linear-gradient(90deg, #A90E35 2.81%, #EF1244 50.09%, #A90E35 93.05%), #D9D9D9
+   position: relative
+
+   position: relative
+   text-decoration: none
+   -webkit-appearance: none
+   border: 0
+   cursor: pointer
+   user-select: none
+   outline: none
+   &:focus, &:active, &.focus, &:hover
+      outline: none
+      box-shadow: none
+      color: inherit
+
+   &::before, &::after
+      content: ""
+      position: absolute
+      left: 0
+      //width: 5px
+      +adaptiv-valueN("width", 5, 5)
+      height: 1px
+      background: #B00F38
+   &::before
+      transform: rotate(45deg) translate(-4px, 2px)
+      top: 0
+   &::after
+      transform: rotate(-45deg) translate(-4px,-2px)
+      top: 100%
+
+   &:active
+      background: linear-gradient(90deg, #5E0018 -0.02%, #EF1244 51.76%, #5E0018 100.02%), #D9D9D9
+
+.btn-grad-wrap
+   background: linear-gradient(90deg, rgba(169, 14, 53, 0.3) 2.81%, rgba(239, 18, 68, 0.3) 50.09%, rgba(169, 14, 53, 0.3) 93.05%)
+   border: 0.1px solid #B00F38
+   //padding: 3px
+   +adaptiv-valueN("padding", 3, 3)
+   position: relative
+
+   &::before, &::after
+      content: ""
+      position: absolute
+      right: 0
+      +adaptiv-valueN("width", 5, 5)
+      height: 1px
+      background: #B00F38
+   &::before
+      transform: rotate(-45deg) translate(0px,1px)
+      top: 0
+   &::after
+      transform: rotate(45deg) translate(-1px,-2px)
+      top: 100%
+
+table.tbl
+   font-family: Eurostile Italic
+   +adaptiv-valueN("font-size", 10, 10)
+   letter-spacing: 0.2em
+   line-height: 1
+   text-transform: uppercase
+   border-collapse: collapse !important
+   border: none
+   color: $fontcolor
+   background-color: transparent
+   width: 100%
+
+   tr:not(:last-child)
+      border-bottom: 1px solid $grey5
+   th, td
+      border: none
+      box-sizing: content-box
+      word-break: break-word
+      line-height: 1.5!important   
+      +adaptiv-valueN("padding-top", 15, 15)
+      +adaptiv-valueN("padding-bottom", 15, 15)
+      +adaptiv-valueN("padding-left", 3, 3)
+      +adaptiv-valueN("padding-right", 3, 3)
+
+
+table.tblExc
+   .num-col
+      color: $redDf
+   .percentVal, .cyItm, .price-col
+      +adaptiv-valueN("font-size", 12, 12)
+   .percentVal
+      +adaptiv-valueN("padding-left", 10, 10)
+      color: $fontcolorN
+   .cyItm
+      +adaptiv-valueN("margin-right", 5, 5)
+   .name-col
+      text-overflow: ellipsis
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      +adaptiv-valueN("width", 110, 110)
+   .price-col
+      text-align: right
+
+//------------------------------------------- blExc-cols
+//.blExc-cols
+   //display: flex
+
+.blExc-col
+   display: flex
+   flex-direction: column
+   &-frst
+      +adaptiv-valueN("margin-right", 34, 34)
+      .bl-pst:not(:last-child)
+         +adaptiv-valueN("margin-bottom", 33, 33)
+
+.line-up
+   position: absolute
+   width: 100%
+   height: 100%
+   top: 0
+
+   &::before, &::after
+      content: ""
+      position: absolute
+      right: 0
+      background-image: url(../img/icons/line_up.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      +adaptiv-valueN("width", 310, 310)
+      +adaptiv-valueN("height", 36, 36)
+      display: inline-block
+   &::before
+      +adaptiv-valueN("top", 6, 6)
+   &::after
+      bottom: 0
+      display: none
+      transform: scaleY(-1)
+      
+.hide-text.excerptN
+   &+.line-up::after
+      display: block
+
+.excerptN+.bg-grad
+   box-shadow: 0 -175px 52px -52px rgb(15 20 26 / 97%) inset
+
+.excerptN 
+   +adaptiv-valueN("height", 1600, 1600)
+   position: relative
+   transition-property: height
+   transition-timing-function: ease
+   transition-duration: 1s
+   overflow: hidden
+   //backdrop-filter: blur(4px)
+   //background: linear-gradient(0deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+
+.hide-text-wrapN
+   position: relative
+   +adaptiv-valueN("margin-bottom", 35, 35)
+   +adaptiv-valueN("margin-top", 25, 25)
+
+.hide-text-wrapN .hide-text:after
+   content: ""
+   display: inline-block
+   width: 100%
+   height: 15%
+   //background: linear-gradient(180deg,rgba(32,32,32,0) 0,#202020 87.83%)
+   //background: linear-gradient(0deg, rgba(49, 17, 22, 0.63) -38.97%, rgba(15, 20, 26, 0) 132.78%)
+   background: linear-gradient(0deg,rgba(49,17,22,.63) -70%,rgba(15,20,26,0) 100%)
+   position: absolute
+   left: 0
+   bottom: 0
+   z-index: 12
+   //box-shadow: 4px 2px 5px #000000
+
+.hide-text-wrapN .hide-text.excerptN:after
+   width: 95%
+
+
+.blGrad
+   position: relative
+   &::after
+      content: ""
+      display: flex
+      border-bottom: 1px solid transparent
+      border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+      border-image: linear-gradient(0.25turn, rgba(169, 14, 53, 0.5), rgba(239, 18, 68, 0.5),rgba(169, 14, 53, 0.5))
+      border-image-slice: 1
+      border-top-width: 0px
+      flex-grow: 1
+      z-index: 11
+      position: relative
+
+.btn--more
+   position: absolute
+   bottom: 0
+   z-index: 100
+
+
+.btnExc-more
+   +adaptiv-valueN("font-size", 20, 20)
+   font-weight: 700
+   line-height: 2
+   color: $redDf
+   display: flex
+   align-items: center
+   border: none
+   background: transparent
+   cursor: pointer
+   position: absolute
+   +adaptiv-valueN("bottom", 10, 10)
+   +adaptiv-valueN("left", 30, 30)
+
+   &::after
+      content: ""
+      width: 0
+      height: 0
+      display: inline-block
+      border-style: solid
+      border-width: 0 4px 4px 4px
+      +adaptiv-valueN("border-top-width", 0, 0)
+      +adaptiv-valueN("border-right-width", 4, 4)
+      +adaptiv-valueN("border-bottom-width", 4, 4)
+      +adaptiv-valueN("border-left-width", 4, 4)
+      border-color: transparent transparent $redDf transparent
+      +adaptiv-valueN("margin-left", 5, 5)
+      +adaptiv-valueN("margin-top", 5, 5)
+
+.blExcAn
+   +adaptiv-valueN("margin-top", 60, 60)
+   +adaptiv-valueN("margin-bottom", 206, 206)
+
+
+//---------------------------------------- SOCIALS
+.social
+   +adaptiv-valueN("width", 12, 12)
+   +adaptiv-valueN("min-width", 12, 12)
+   +adaptiv-valueN("height", 12, 12)
+   +adaptiv-valueN("min-height", 12, 12)
+   +adaptiv-valueN("margin-right", 10, 10)
+   +adaptiv-valueN("margin-bottom", 5, 5)
+   &-wrap
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+   .svg-icon
+      width: 100%
+      height: 100%
+      fill: $grey9e
+
+   &:hover
+      .svg-icon
+         fill: $accentColor
+
+
+//---------------------------------------- 
+.bg-grad
+   position: absolute
+   bottom: 0
+   left: 0
+   height: 20%
+   //box-shadow: 0 -175px 52px -52px rgb(15 20 26 / 97%) inset
+   +adaptiv-valueN("width", 790, 280)
+   z-index: 11
+   &.notactive
+      box-shadow: none
+
+.blExc-col-scn>div.bl-lr-wrap
+   +adaptiv-valueN("padding-top", 0, 0)
+   +adaptiv-valueN("padding-right", 32, 32)
+   +adaptiv-valueN("padding-bottom", 0, 0)
+   +adaptiv-valueN("padding-left", 33, 33)

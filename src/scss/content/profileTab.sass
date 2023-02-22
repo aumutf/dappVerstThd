@@ -1,0 +1,63 @@
+//.profile-tab
+.userN-top-r
+   align-self: flex-start
+
+.userR-top
+   flex-direction: column
+
+.userR-flw
+   &:not(:last-child)
+      +adaptiv-value("margin-right", 10, 10)
+
+.userN-top-l
+   display: flex
+   flex-direction: column
+   align-items: center
+   +adaptiv-value("margin-right", 26, 26)
+
+.userP-photo
+   +adaptiv-value("width", 100, 100)
+   +adaptiv-value("min-width", 100, 100)         
+   +adaptiv-value("height", 100, 100)         
+   +adaptiv-value("min-height", 100, 100) 
+   margin-bottom: 20px
+   img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+
+.userP-name
+   color: #7A797A
+   font-size: 12px
+   line-height: 1.75
+
+.profile-tab
+   .userR-name
+      margin-bottom: 20px
+      margin-right: 0
+   .userR-mail
+      margin-bottom: 16px
+   .btn-edit
+      position: absolute
+      top: 20px
+      right: 0
+   .userN-top
+      position: relative
+      border-bottom-width: 0
+
+//-------------------------------------- COMMENTS
+.cmt-tab-empty
+   font-size: 16px
+   line-height: 1.5
+   text-align: center
+   color: #7A7A7A
+   h2.title
+      font-size: 28px
+      line-height: 1.5
+      text-align: center
+      color: $fontcolorN
+      margin-bottom: 25px
+   
+.cmt-text
+   margin-bottom: 17px
