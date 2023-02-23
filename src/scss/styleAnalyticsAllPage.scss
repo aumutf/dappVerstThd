@@ -11,7 +11,9 @@
 @import "component/pageWithSideBar.sass";      
 @import "component/emoji.sass";      
 @import "component/news-item.sass";      
-@import "component/article-item.sass";      
+@import "component/article-item.sass";    
+
+@import "content/news.sass"; 
 
 @import "content/newsAll.sass"; 
 @import "content/analyticsAll.sass"; 
