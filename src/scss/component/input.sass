@@ -49,6 +49,23 @@ $btnH: 14px
       align-items: center
       height: auto
 
+.inp-img-plus
+   height: 44px
+   min-height: 44px
+   width: 44px
+   min-width: 44px
+   &+.inp-img-label
+      height: 44px
+      min-height: 44px
+      width: 44px
+      min-width: 44px    
+      border: 3px dashed #0D2026  
+      &::after
+         background-image: url("../img/icons/plusLg-icon.svg")
+         background-size: 14px
+         background-position: center
+
+
 .inp-img:lang(en)~.inp-img-label::after
    content: ""
 
@@ -87,3 +104,21 @@ $btnH: 14px
       +adaptiv-value("padding-bottom", 14, 14)
       border: none
       padding: 0
+
+.form-field
+   display: block
+   width: 100%
+   padding: 11px 17px 9px
+   font-size: 8px
+   line-height: 1
+   background-color: transparent
+   background-clip: padding-box
+   border: 1px solid #0D6169
+   border-radius: 0
+   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+   text-transform: uppercase
+   color: #FFF
+   &::placeholder
+      text-transform: uppercase
+      color: #7A797A
+

@@ -60,3 +60,100 @@
 
 .cmt-text
    margin-bottom: 17px
+
+
+//-------------------------------------- form
+
+.profile-in 
+   counter-reset: num
+   background: rgba(0, 0, 0, 0.2)
+   border-radius: 8px
+   padding-top: 40px
+   padding-left: 22px
+   padding-right: 22px
+   padding-bottom: 22px
+   .custom-file
+      width: auto
+
+.pr-row
+   display: flex
+   margin-bottom: 20px
+   align-items: center
+   .form-group:not(:last-child)
+      margin-right: 32px
+   .form-group
+      margin-bottom: 0
+      flex-grow: 1
+   .txtGr
+      margin-left: 10px
+
+.pr-row-col
+   flex-direction: column
+   justify-content: center
+   align-items: flex-start
+
+.pr-row-title
+   color: #FFFFFF
+   text-transform: uppercase
+   font-size: 8px
+   line-height: 1
+   margin-bottom: 5px
+
+.numd
+   display: flex
+   align-items: center
+   width: 100%
+
+.profile-in .numd::before 
+   counter-increment: num
+   content: counter(num)
+   font-size: 8px
+   line-height: 1
+   color: #7A797A
+   text-transform: uppercase
+   margin-right: 10px
+
+.form-in
+   width: 412px
+   background-color: black
+
+.txtGr
+   color: #7A797A
+   font-size: 8px
+   line-height: 1
+
+.desc-txt
+   display: flex
+   flex-direction: column
+   margin-bottom: 10px
+   .txtGr
+      font-size: 6px
+      line-height: 1.6
+      margin-left: 0
+
+.pr-row-sub
+   display: flex
+   align-items: center
+   margin-bottom: 10px
+   .pr-row-title
+      margin-bottom: 0
+
+.soc-wrap
+   .pr-tags
+      margin-left: 20px
+
+.soc-med
+   flex-direction: column
+   .pr-tags
+      margin-right: 10px
+   .form-group:not(:last-child)
+      margin-right: 10px
+   .form-field
+      font-size: 8px
+      color: #4F4F4F
+      text-transform: lowercase
+      padding: 4px 6px
+      &::placeholder
+         font-size: 8px
+         color: #4F4F4F
+         text-transform: lowercase
