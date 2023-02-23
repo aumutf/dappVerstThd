@@ -50,19 +50,19 @@ $btnH: 14px
       height: auto
 
 .inp-img-plus
-   height: 44px
-   min-height: 44px
-   width: 44px
-   min-width: 44px
+   +adaptiv-value("width", 44, 44)
+   +adaptiv-value("min-width", 44, 44)
+   +adaptiv-value("height", 44, 44)
+   +adaptiv-value("min-height", 44, 44)
    &+.inp-img-label
-      height: 44px
-      min-height: 44px
-      width: 44px
-      min-width: 44px    
-      border: 3px dashed #0D2026  
+      +adaptiv-value("width", 44, 44)
+      +adaptiv-value("min-width", 44, 44)
+      +adaptiv-value("height", 44, 44)
+      +adaptiv-value("min-height", 44, 44)  
+      border: 3px dashed $grey0d  
       &::after
          background-image: url("../img/icons/plusLg-icon.svg")
-         background-size: 14px
+         +adaptiv-value("background-size", 14, 14)
          background-position: center
 
 
@@ -108,17 +108,20 @@ $btnH: 14px
 .form-field
    display: block
    width: 100%
-   padding: 11px 17px 9px
-   font-size: 8px
+   +adaptiv-value("padding-top", 11, 11)
+   +adaptiv-value("padding-left", 17, 17)
+   +adaptiv-value("padding-right", 17, 17)
+   +adaptiv-value("padding-bottom", 9, 9)
+   +adaptiv-value("font-size", 8, 8)
    line-height: 1
    background-color: transparent
    background-clip: padding-box
-   border: 1px solid #0D6169
+   border: 1px solid $green0d
    border-radius: 0
    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
    text-transform: uppercase
    color: #FFF
    &::placeholder
       text-transform: uppercase
-      color: #7A797A
+      color: $grey7A
 

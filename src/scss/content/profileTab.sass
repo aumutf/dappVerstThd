@@ -67,25 +67,34 @@
 .profile-in 
    counter-reset: num
    background: rgba(0, 0, 0, 0.2)
-   border-radius: 8px
-   padding-top: 40px
-   padding-left: 22px
-   padding-right: 22px
-   padding-bottom: 22px
+   +adaptiv-value("border-radius", 8, 8)
+   +adaptiv-value("padding-top", 40, 40)
+   +adaptiv-value("padding-left", 22, 22)
+   +adaptiv-value("padding-right", 22, 22)
+   +adaptiv-value("padding-bottom", 22, 22)
    .custom-file
       width: auto
 
 .pr-row
    display: flex
-   margin-bottom: 20px
+   +adaptiv-value("margin-bottom", 20, 20)
    align-items: center
+   flex-direction: column
+   align-items: flex-start
+
+   +tablet
+      flex-direction: row
+
    .form-group:not(:last-child)
-      margin-right: 32px
+      +adaptiv-value("margin-right", 32, 32)
+
    .form-group
-      margin-bottom: 0
+      margin-bottom: 20px
       flex-grow: 1
+      +tablet
+         margin-bottom: 0
    .txtGr
-      margin-left: 10px
+      +adaptiv-value("margin-left", 10, 10)
 
 .pr-row-col
    flex-direction: column
@@ -95,9 +104,9 @@
 .pr-row-title
    color: #FFFFFF
    text-transform: uppercase
-   font-size: 8px
+   +adaptiv-value("font-size", 8, 8)
    line-height: 1
-   margin-bottom: 5px
+   +adaptiv-value("margin-bottom", 5, 5)
 
 .numd
    display: flex
@@ -107,53 +116,56 @@
 .profile-in .numd::before 
    counter-increment: num
    content: counter(num)
-   font-size: 8px
+   +adaptiv-value("font-size", 8, 8)
    line-height: 1
-   color: #7A797A
+   color: $grey7A
    text-transform: uppercase
-   margin-right: 10px
+   +adaptiv-value("margin-right", 10, 10)
 
 .form-in
-   width: 412px
-   background-color: black
+   +adaptiv-value("width", 412, 280)
 
 .txtGr
-   color: #7A797A
-   font-size: 8px
+   color: $grey7A
+   +adaptiv-value("font-size", 8, 8)
    line-height: 1
 
 .desc-txt
    display: flex
    flex-direction: column
-   margin-bottom: 10px
+   +adaptiv-value("margin-bottom", 10, 10)
    .txtGr
-      font-size: 6px
+      +adaptiv-value("font-size", 6, 6)
       line-height: 1.6
       margin-left: 0
 
 .pr-row-sub
    display: flex
    align-items: center
-   margin-bottom: 10px
+   +adaptiv-value("margin-bottom", 10, 10)
    .pr-row-title
       margin-bottom: 0
 
 .soc-wrap
    .pr-tags
-      margin-left: 20px
+      +adaptiv-value("margin-right", 20, 20)
 
 .soc-med
    flex-direction: column
    .pr-tags
-      margin-right: 10px
+      +adaptiv-value("margin-right", 10, 10)
    .form-group:not(:last-child)
-      margin-right: 10px
+      +adaptiv-value("margin-right", 10, 10)
    .form-field
-      font-size: 8px
-      color: #4F4F4F
+      +adaptiv-value("font-size", 8, 8)
+      color: $grey4f
       text-transform: lowercase
-      padding: 4px 6px
+      +adaptiv-value("padding-top", 4, 4)
+      +adaptiv-value("padding-left", 6, 6)
+      +adaptiv-value("padding-right", 6, 6)
+      +adaptiv-value("padding-bottom", 4, 4)
+
       &::placeholder
-         font-size: 8px
-         color: #4F4F4F
+         +adaptiv-value("font-size", 8, 8)
+         color: $grey4f
          text-transform: lowercase

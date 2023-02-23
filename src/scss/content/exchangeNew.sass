@@ -58,57 +58,6 @@ body
          flex-grow: 1
 
 //---------------------------------------- page style
-.bl2col
-   &-wrap
-      display: flex
-      align-items: flex-start
-      justify-content: space-between
-      margin-top: 30px
-      +adaptiv-value("margin-top", 30, 30)
-      +adaptiv-value("padding-top", 33, 33)
-      padding-top: 33px
-
-   &__l
-      +adaptiv-value("width", 790, 280)
-      padding-left: 32px
-      +adaptiv-value("padding-left", 32, 32)
-      z-index: 10
-
-   &__r
-      +adaptiv-value("width", 305, 305)
-      +adaptiv-value("min-width", 305, 305)
-      z-index: 12
-      position: relative
-
-.bl2col-wrap-blur
-   position: relative
-   &::before
-      content: ""
-      position: absolute
-      top: 0
-      left: 0
-      display: inline-block
-      background: linear-gradient(148.18deg,rgba(49,17,22,.63) -38.64%,rgba(15,20,26,0) 60.18%)
-      border-top-left-radius: 40px
-      width: 100%
-      height: 700px
-      +adaptiv-value("height", 700, 700)
-      z-index: 2
-
-   &::after
-      content: ""
-      position: absolute
-      top: 0
-      left: 0
-      display: inline-block
-      background-image: url(../img/icons/frameBl.svg)
-      background-repeat: no-repeat
-      background-size: cover
-      width: 80%
-      height: 600px
-      +adaptiv-value("height", 600, 600)
-      z-index: 3
-
 .blHotN
    .bl-pst:not(:last-child)
       position: relative

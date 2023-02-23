@@ -280,21 +280,24 @@
    &.dd-brd
       .btn
          background: linear-gradient(90deg, rgba(169, 14, 53, 0.04) 2.81%, rgba(239, 18, 68, 0.04) 50.09%, rgba(169, 14, 53, 0.04) 93.05%)
-         font-size: 8px
+         +adaptiv-value("font-size", 8, 8)
          line-height: 1
          color: #FFFFFF
-         padding: 6px 10px 5px 7px
-         border: 1px solid #D61446
+         +adaptiv-value("padding-top", 6, 6)
+         +adaptiv-value("padding-left", 10, 10)
+         +adaptiv-value("padding-right", 5, 5)
+         +adaptiv-value("padding-bottom", 7, 7)
+         border: 1px solid $redD6
       .dropdown-toggle::after
          width: 0
          height: 0
          border-style: solid
          border-width: 3px 3px 0 3px
-         border-color: #D61446 transparent transparent transparent
-         margin-left: 12px
+         border-color: $redD6 transparent transparent transparent
+         +adaptiv-value("margin-left", 12, 12)
 
       .dropdown-menu
-         background: #0C1015
+         background: $grey0c
          border-radius: 0
       .dropdown-item
          font-size: 8px
