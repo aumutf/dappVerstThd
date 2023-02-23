@@ -1,11 +1,9 @@
 .modal
-   
-
    .modal-body
-      padding-top: 70px
-      padding-bottom: 85px
-      padding-left: 120px
-      padding-right: 120px
+      +adaptiv-value("padding-top", 70, 35)
+      +adaptiv-value("padding-bottom", 85, 40)
+      +adaptiv-value("padding-left", 120, 60)
+      +adaptiv-value("padding-right", 120, 60)
       color: #FFF
    .modal-content
       background: rgba(2, 3, 3, 0.5)
@@ -16,7 +14,7 @@
 
 
 .carousel-indicators 
-   bottom: -17px
+   +adaptiv-value("bottom", -17, -17)
    li
       background: $greyD9
       border-radius: 50%
@@ -38,7 +36,7 @@
    transform: rotate(90deg)
 
 .carousel-control-next
-   right: -46px
+   +adaptiv-value("right", -46, -46)
 
 .carousel-control-prev
-   left: -46px
+   +adaptiv-value("left", -46, -46)

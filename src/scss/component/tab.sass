@@ -12,8 +12,7 @@
 .nav-tabs
    border-bottom: none
 
-
-   .nav-link 
+   .nav-link
       display: flex
       align-items: center
       text-align: center
@@ -31,7 +30,7 @@
       line-height: 1
       color: $grey8D
       justify-content: center
-      
+
       //position: relative
       //&::after
          //content: ""
@@ -49,7 +48,7 @@
       border-color: transparent
       opacity: 0.9
 
-   .nav-item.show .nav-link, 
+   .nav-item.show .nav-link,
    .nav-link.active
       color: $redD6
       background: linear-gradient(0deg, #100E1B, #100E1B), #1E2730
@@ -64,16 +63,16 @@
    margin-bottom: 0
 
 .ttc
-   .nav-link 
+   .nav-link
       text-transform: capitalize
 
 .tab-gen
    //overflow: hidden
    width: 100%
    position: absolute
-   overflow-x: auto 
-   flex-wrap: nowrap 
-   
+   overflow-x: auto
+   flex-wrap: nowrap
+
    &-in
       +adaptiv-value("padding-top", 30, 38)
 
@@ -86,5 +85,3 @@
    +tablet
       width: 100%
       margin-left: unset
-
-
