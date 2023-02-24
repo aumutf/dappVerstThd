@@ -1,6 +1,6 @@
 <form>
-   Стр Дапп/Крипта
-   <div class="profile-in">
+   Стр Новость/Артикл
+   <div class="profile-in pr-addnews">
 
       <div class="form-in">
          <div class="pr-row">
@@ -18,6 +18,36 @@
             <span class="txtGr">
                *blockchain, dapp...
             </span>
+            <div class="pr-row pr-row-mob">
+               <div class="dropdown dd-brd">
+                  <button class="btn dropdown-toggle" type="button" id="dd10" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">
+                     Language
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dd10" x-placement="bottom-start">
+                     <a class="dropdown-item" href="#">EN</a>
+                     <a class="dropdown-item" href="#">RU</a>
+                  </div>
+               </div>
+               <div class="pr-tags ml10">
+                  <div class="pr-tag">
+                     <span>Blockchain</span>
+                     <a href="#" class="btn-round">
+                        <svg class="svg-ic ff-close-icon">
+                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="pr-tag">
+                     <span>Blockchain</span>
+                     <a href="#" class="btn-round">
+                        <svg class="svg-ic ff-close-icon">
+                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
          </div>
          <div class="pr-row">
             <div class="form-group numd">
@@ -25,76 +55,78 @@
                <span class="error__text"></span>
             </div>
             <div class="form-group numd">
-               <input type="text" class="form-control form-field" placeholder="Keywords" value="" required="">
-               <span class="error__text"></span>
-            </div>
-         </div>
-         <h4 class="pr-row-title">DAPP reference:</h4>
-         <div class="pr-row">
-            <div class="form-group numd">
                <input type="text" class="form-control form-field" placeholder="Title" value="" required="">
                <span class="error__text"></span>
             </div>
-            <div class="form-group numd">
-               <input type="text" class="form-control form-field" placeholder="Name" value="" required="">
-               <span class="error__text"></span>
-            </div>
          </div>
-         <div class="pr-row pr-row-mob">
-            <div class="dropdown dd-brd">
-               <button class="btn dropdown-toggle" type="button" id="dd10" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  Language
-               </button>
-               <div class="dropdown-menu" aria-labelledby="dd10" x-placement="bottom-start">
-                  <a class="dropdown-item" href="#">EN</a>
-                  <a class="dropdown-item" href="#">RU</a>
-               </div>
-            </div>
-            <div class="pr-tags ml10">
-               <div class="pr-tag">
-                  <span>Blockchain</span>
-                  <a href="#" class="btn-round">
-                     <svg class="svg-ic ff-close-icon">
-                        <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
-                     </svg>
-                  </a>
-               </div>
-               <div class="pr-tag">
-                  <span>Blockchain</span>
-                  <a href="#" class="btn-round">
-                     <svg class="svg-ic ff-close-icon">
-                        <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
-                     </svg>
-                  </a>
-               </div>
-            </div>
-         </div>
-         <h4 class="pr-row-title">additional:</h4>
          <div class="pr-row">
             <div class="form-group numd">
-               <input type="text" class="form-control form-field" placeholder="Whitepapers" value="" required="">
+               <input type="text" class="form-control form-field" placeholder="Keywords" value="" required="">
                <span class="error__text"></span>
             </div>
             <div class="form-group numd">
-               <input type="text" class="form-control form-field" placeholder="Price, USD" value="" required="">
+               <input type="text" class="form-control form-field" placeholder="Slug" value="" required="">
                <span class="error__text"></span>
             </div>
          </div>
          <div class="pr-row">
             <div class="form-group numd">
-               <input type="text" class="form-control form-field" placeholder="Website" value="" required="">
+               <input type="text" class="form-control form-field" placeholder="Optional URL" value="" required="">
                <span class="error__text"></span>
             </div>
             <div class="form-group numd">
-               <input type="text" class="form-control form-field" placeholder="Short Description" value="" required="">
+               <input type="text" class="form-control form-field" placeholder="Summary & Description" value=""
+                  required="">
                <span class="error__text"></span>
             </div>
          </div>
          <div class="pr-row">
-            <div class="form-group numd">
-               <input type="text" class="form-control form-field" placeholder="Source code" value="" required="">
-               <span class="error__text"></span>
+            <div class="numd">
+               <div class="dropdown dd-brd">
+                  <button class="btn dropdown-toggle" type="button" id="dd10" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">
+                     Category
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dd10" x-placement="bottom-start">
+                     <a class="dropdown-item" href="#">Category</a>
+                     <a class="dropdown-item" href="#">Category</a>
+                     <a class="dropdown-item" href="#">Category</a>
+                  </div>
+               </div>
+               <div class="pr-tags ml10">
+                  <div class="pr-tag">
+                     <span>Blockchain</span>
+                     <a href="#" class="btn-round">
+                        <svg class="svg-ic ff-close-icon">
+                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
+                        </svg>
+                     </a>
+                  </div>
+
+               </div>
+            </div>
+            <div class="numd">
+               <div class="dropdown dd-brd">
+                  <button class="btn dropdown-toggle" type="button" id="dd10" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">
+                     Subcategory
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dd10" x-placement="bottom-start">
+                     <a class="dropdown-item" href="#">Subcategory</a>
+                     <a class="dropdown-item" href="#">Subcategory</a>
+                     <a class="dropdown-item" href="#">Subcategory</a>
+                  </div>
+               </div>
+               <div class="pr-tags ml10">
+                  <div class="pr-tag">
+                     <span>Blockchain</span>
+                     <a href="#" class="btn-round">
+                        <svg class="svg-ic ff-close-icon">
+                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
             </div>
          </div>
          <h4 class="pr-row-title">Tags:</h4>
@@ -128,72 +160,118 @@
                </div>
             </div>
          </div>
-         <div class="pr-row">
-            <div class="numd">
-               <div class="dropdown dd-brd">
-                  <button class="btn dropdown-toggle" type="button" id="dd10" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">
-                     Blockchain
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dd10" x-placement="bottom-start">
-                     <a class="dropdown-item" href="#">Blockchain</a>
-                     <a class="dropdown-item" href="#">Blockchain</a>
-                     <a class="dropdown-item" href="#">Blockchain</a>
-                  </div>
-               </div>
-               <div class="pr-tags ml10">
-                  <div class="pr-tag">
-                     <span>Blockchain</span>
-                     <a href="#" class="btn-round">
-                        <svg class="svg-ic ff-close-icon">
-                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
-                        </svg>
-                     </a>
-                  </div>
-                  <div class="pr-tag">
-                     <span>Blockchain</span>
-                     <a href="#" class="btn-round">
-                        <svg class="svg-ic ff-close-icon">
-                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
-                        </svg>
-                     </a>
-                  </div>
-               </div>
+         <div class="pr-row numd pr-row-vis">
+            <h4 class="pr-row-title">Visibility</h4>
+            <div class="chks-row">
+               <label class="chk-wrap chk-wrap-ord">
+                  <span>Show</span>
+                  <input type="radio" name="vis">
+                  <span class="chk"></span>
+               </label>
+
+               <label class="chk-wrap chk-wrap-ord">
+                  <span>Hide</span>
+                  <input type="radio" name="vis">
+                  <span class="chk"></span>
+               </label>
             </div>
          </div>
-         <div class="pr-row">
-            <div class="numd">
-               <div class="dropdown dd-brd">
-                  <button class="btn dropdown-toggle" type="button" id="dd10" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">
-                     Contracts
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dd10" x-placement="bottom-start">
-                     <a class="dropdown-item" href="#">Contracts</a>
-                     <a class="dropdown-item" href="#">Contracts</a>
-                     <a class="dropdown-item" href="#">Contracts</a>
-                  </div>
-               </div>
-               <div class="pr-tags ml10">
-                  <div class="pr-tag">
-                     <span>Blockchain</span>
-                     <a href="#" class="btn-round">
-                        <svg class="svg-ic ff-close-icon">
-                           <use xlink:href="@img/sprite/symbol/sprite.svg#close-icon" />
-                        </svg>
-                     </a>
-                  </div>
-               </div>
+         <div class="pr-row numd pr-row-shr">
+            <h4 class="pr-row-title">Show Right Column</h4>
+            <div class="chks-row">
+               <label class="chk-wrap chk-wrap-ord">
+                  <span>Yes</span>
+                  <input type="checkbox">
+                  <span class="chk"></span>
+               </label>
+
+               <label class="chk-wrap chk-wrap-ord">
+                  <span>No</span>
+                  <input type="checkbox">
+                  <span class="chk"></span>
+               </label>
             </div>
          </div>
-         <div class="pr-row numd">
-            <div class="custom-file inp-img-wrap">
-               <input type="file" class="custom-file-input inp-img inp-img-plus" id="loadImg1">
-               <label class="custom-file-label inp-img-label" for="loadImg1"></label>
+         <div class="pr-row  pr-row-shMore">
+            <div class="numd pr-row-title-wrap">
+               <h4 class="pr-row-title ">Show more</h4>
+               <label class="el-switch">
+                  <input type="checkbox" name="switch">
+                  <span class="el-switch-style"></span>
+               </label>
             </div>
-            <span class="txtGr">
-               *upload your logo
-            </span>
+
+            <ol class="showMore-wrap">
+               <li class="showMoreItm">
+                  <label class="chk-wrap chk-wrap-ord">
+                     <span>Add to Featured</span>
+                     <input type="checkbox">
+                     <span class="chk"></span>
+                  </label>
+               </li>
+               <li class="showMoreItm">
+                  <label class="chk-wrap chk-wrap-ord">
+                     <span>Add to Breaking</span>
+                     <input type="checkbox">
+                     <span class="chk"></span>
+                  </label>
+               </li>
+               <li class="showMoreItm">
+                  <label class="chk-wrap chk-wrap-ord">
+                     <span>Add to Slider</span>
+                     <input type="checkbox">
+                     <span class="chk"></span>
+                  </label>
+               </li>
+               <li class="showMoreItm">
+                  <label class="chk-wrap chk-wrap-ord">
+                     <span>Add to Recommended</span>
+                     <input type="checkbox">
+                     <span class="chk"></span>
+                  </label>
+               </li>
+               <li class="showMoreItm">
+                  <label class="chk-wrap chk-wrap-ord">
+                     <span>Show Only to Registered Users</span>
+                     <input type="checkbox">
+                     <span class="chk"></span>
+                  </label>
+               </li>
+               <li class="showMoreItm">
+                  <label class="chk-wrap chk-wrap-ord">
+                     <span>Send Post to All Subscribers</span>
+                     <input type="checkbox">
+                     <span class="chk"></span>
+                  </label>
+               </li>
+            </ol>
+         </div>
+
+
+         <div class="pr-row ">
+            <div class="numd">
+               <div class="custom-file inp-img-wrap">
+                  <input type="file" class="custom-file-input inp-img inp-img-plus" id="loadImg1">
+                  <label class="custom-file-label inp-img-label" for="loadImg1"></label>
+               </div>
+               <span class="txtGr">
+                  *main post image
+               </span>
+            </div>
+            <div class="numd">
+               <div class="custom-file inp-img-wrap">
+                  <input type="file" class="custom-file-input inp-img inp-img-plus" id="loadImg1">
+                  <label class="custom-file-label inp-img-label" for="loadImg1"></label>
+               </div>
+               <span class="txtGr">
+                  *additional Images
+
+                  More main images
+                  (slider will be active)
+
+               </span>
+            </div>
+
          </div>
          <h4 class="pr-row-title numd">Full description:</h4>
          <div class="pr-row">
@@ -330,7 +408,27 @@
                <span class="error__text"></span>
             </div>
          </div>
+         <div class="pr-row">
+            <div class="numd pr-row-title-wrap">
+               <h4 class="pr-row-title ">Scheduled Post</h4>
+               <label class="el-switch">
+                  <input type="checkbox" name="switch">
+                  <span class="el-switch-style"></span>
+               </label>
+            </div>
+         </div>
+         <div class="pr-row">
+            <div class="btn-grad-wrap">
+               <button class="btn-grad">View all</button>
+            </div>
+            <button class="btn brd-red btn-post">
+               <span>Post</span>
+            </button>
+         </div>
+
       </div>
+
+
    </div>
    <div class="bl-addnews-btm bl-addnews-itm">
       <div class="lft">

@@ -230,3 +230,80 @@
    +tablet
       display: block
 
+
+.chks-row
+   display: flex
+   flex-direction: column
+   align-items: flex-start
+   +tablet
+      flex-direction: row
+      align-items: center
+   .chk-wrap
+      &:not(:last-child)
+         margin-right: 20px
+
+.pr-row-vis, .pr-row-shr
+   align-items: flex-start
+   +tablet
+      align-items: center
+   .pr-row-title
+      +adaptiv-value("margin-bottom", 0, 0)
+
+
+.showMoreItm
+   
+   &:not(:last-child)
+      margin-bottom: 10px
+   .chk-wrap
+      font-size: 6px
+      line-height: 1
+      color: #FFF
+      text-transform: uppercase
+      margin-left: 10px
+   &::marker
+      color: red
+      font-size: 6px
+      line-height: 1
+      color: #7A797A
+      opacity: 0.9
+      text-transform: uppercase
+      
+
+.showMore-wrap
+   margin-left: 25px
+
+.pr-row-shMore
+
+   +tablet
+      flex-direction: column
+      width: 160px
+
+
+   .pr-row-title-wrap
+      +tablet
+         width: 100%
+
+   .el-switch
+      +tablet
+         margin-left: auto
+
+
+.pr-row-title-wrap
+   display: flex
+   align-items: center
+
+.pr-addnews
+   .chk-wrap
+      padding-left: calc(10px + 10px)
+      padding-right: unset
+      margin-bottom: 10px
+      +tablet
+         padding-left: unset
+         padding-right: calc(10px + 10px)
+         margin-bottom: 0px
+      .chk
+         left: 0
+         right: unset
+         +tablet
+            left: unset
+            right: 0

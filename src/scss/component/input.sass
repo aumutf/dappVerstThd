@@ -132,4 +132,87 @@ $btnH: 14px
       outline: none
       box-shadow: none
 
+/********************************** The chk-wrap */
+.chk-wrap 
+   display: flex
+   align-items: center
+   position: relative
+   padding-left: calc(10px + 10px)
+   margin-bottom: 0px
+   cursor: pointer
+   +adaptiv-value("font-size", 8, 10)
+   +adaptiv-value("line-height", 10, 16)
+   user-select: none
+   text-transform: uppercase
+   +adaptiv-value("height", 10, 16)
+
+
+/* Hide the browser's default checkbox */
+.chk-wrap input 
+   position: absolute
+   opacity: 0
+   cursor: pointer
+   height: 0
+   width: 0
+
+
+/* Create a custom checkbox */
+.chk 
+   position: absolute
+   top: 0
+   left: 0
+   +adaptiv-value("width", 10, 16)
+   +adaptiv-value("height", 10, 16)
+   background-color: transparent
+   border: 1px solid $green0d
+   display: flex
+   justify-content: center
+   align-items: center
+
+
+/* On mouse-over, add a grey background color */
+//.chk-wrap:hover input ~ .chk 
+   //background-color: $green0d
+
+
+/* When the checkbox is checked, add a blue background */
+.chk-wrap input:checked ~ .chk 
+   background-color:  $green0d
+
+
+/* Create the chk/indicator (hidden when not checked) */
+.chk:after 
+   content: ""
+   position: absolute
+   display: none
+
+
+/* Show the chk when checked */
+.chk-wrap input:checked ~ .chk:after 
+   display: block
+
+
+/* Style the chk/indicator */
+.chk-wrap input:checked ~ .chk:after 
+   content: ""
+   display: inline-block
+   //width: 5px
+   //height: 4px
+   width: 100%
+   height: 100%
+   background:
+      color: transparent
+      image: url("../img/icons/check-icon.svg")
+      repeat: no-repeat
+      size: contain
+      position: center
+
+
+.chk-wrap-ord
+   background: red
+   padding-left: 0
+   padding-right: calc(10px + 10px)
+   .chk
+      left: unset
+      right: 0
 

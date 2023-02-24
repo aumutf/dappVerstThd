@@ -1,0 +1,50 @@
+
+/*switch component*/
+.el-switch,
+.el-switch-style,
+.el-switch-style:before
+   box-sizing: border-box
+
+.el-switch 
+   display: inline-block
+   font-size: 8px
+   height: 10px
+   position: relative
+   .el-switch-style 
+      height: 10px
+      left: 0
+      background: transparent
+      border: 1px solid #0D6169
+      border-radius: 10px
+      display: inline-block
+      position: relative
+      top: 0
+      transition: all .3s ease-in-out
+      width: 20px
+      cursor: pointer
+      &:before
+         display: block
+         content: ''
+         height: 5px
+         position: absolute
+         width: 5px
+         background-color: #fff
+         border-radius: 50%
+         left: 2px
+         top: 1.5px
+         transition: all .3s ease-in-out
+         z-index: 1
+
+   &>input[type="checkbox"]
+      display: none
+      &[disabled] + .el-switch-style
+         cursor: not-allowed
+         background-color: grey
+
+      &:checked + .el-switch-style
+         background-color: #0D6169
+      &:checked + .el-switch-style:before
+         left: calc(50% + 3px)
+      
+      &:checked[disabled] + .el-switch-style
+         background-color: grey
