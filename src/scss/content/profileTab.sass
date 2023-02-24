@@ -66,12 +66,14 @@
 
 .profile-in 
    counter-reset: num
-   background: rgba(0, 0, 0, 0.2)
    +adaptiv-value("border-radius", 8, 8)
-   +adaptiv-value("padding-top", 40, 40)
-   +adaptiv-value("padding-left", 22, 22)
-   +adaptiv-value("padding-right", 22, 22)
-   +adaptiv-value("padding-bottom", 22, 22)
+   padding: 30px 0
+   +tablet
+      background: rgba(0, 0, 0, 0.2)
+      +adaptiv-value("padding-top", 40, 40)
+      +adaptiv-value("padding-left", 22, 22)
+      +adaptiv-value("padding-right", 22, 22)
+      +adaptiv-value("padding-bottom", 22, 22)
    .custom-file
       width: auto
 
@@ -86,7 +88,8 @@
       flex-direction: row
 
    .form-group:not(:last-child)
-      +adaptiv-value("margin-right", 32, 32)
+      +tablet
+         +adaptiv-value("margin-right", 32, 32)
 
    .form-group
       margin-bottom: 20px
@@ -100,6 +103,8 @@
    flex-direction: column
    justify-content: center
    align-items: flex-start
+   +tablet
+      flex-direction: column
 
 .pr-row-title
    color: #FFFFFF
@@ -116,11 +121,21 @@
 .profile-in .numd::before 
    counter-increment: num
    content: counter(num)
-   +adaptiv-value("font-size", 8, 8)
    line-height: 1
-   color: $grey7A
+   color: #FFF
    text-transform: uppercase
-   +adaptiv-value("margin-right", 10, 10)
+   order: 1
+   display: flex
+   margin-left: 10px
+   +adaptiv-value("font-size", 12, 12)
+   font-family: $EurostileBol
+   +tablet
+      order: 0
+      margin-left: 0px
+      +adaptiv-value("margin-right", 10, 10)
+      font-family: $EurostileReg
+      color: $grey7A
+      +adaptiv-value("font-size", 8, 8)
 
 .form-in
    +adaptiv-value("width", 412, 280)
@@ -140,32 +155,78 @@
       margin-left: 0
 
 .pr-row-sub
-   display: flex
-   align-items: center
+   display: grid
+   grid-template-columns: 1fr auto
    +adaptiv-value("margin-bottom", 10, 10)
+   row-gap: 10px
+   +tablet
+      display: flex
+      align-items: center
+      row-gap: unset
+
    .pr-row-title
       margin-bottom: 0
+   .pr-tags
+      grid-column: span 2
 
 .soc-wrap
    .pr-tags
-      +adaptiv-value("margin-right", 20, 20)
+      +tablet
+         +adaptiv-value("margin-right", 20, 20)
+
+.numd.numd-mob::before
+   align-self: flex-start
+   margin-top: -30px
+   +tablet
+      align-self: unset
+      margin-top: 0
 
 .soc-med
    flex-direction: column
+   width: 100%
+   +tablet
+      width: auto
    .pr-tags
-      +adaptiv-value("margin-right", 10, 10)
+      margin-top: 10px
+      +tablet
+         +adaptiv-value("margin-right", 10, 10)
+         margin-top: 0
+
+   .form-group
+      margin-bottom: 0
+      margin-right: 25px
+      //+tablet
+         //+adaptiv-value("margin-bottom", 20, 20)
+
    .form-group:not(:last-child)
-      +adaptiv-value("margin-right", 10, 10)
+      +tablet
+         +adaptiv-value("margin-right", 10, 10)
+
    .form-field
       +adaptiv-value("font-size", 8, 8)
       color: $grey4f
       text-transform: lowercase
-      +adaptiv-value("padding-top", 4, 4)
+      +adaptiv-value("padding-top", 4, 7)
       +adaptiv-value("padding-left", 6, 6)
       +adaptiv-value("padding-right", 6, 6)
-      +adaptiv-value("padding-bottom", 4, 4)
+      +adaptiv-value("padding-bottom", 4, 7)
 
       &::placeholder
          +adaptiv-value("font-size", 8, 8)
          color: $grey4f
          text-transform: lowercase
+
+   .paste-btn
+      display: flex
+      +tablet
+         display: none
+
+.pr-row-mob
+   flex-direction: row
+   align-items: center
+
+.bl2col__r
+   display: none
+   +tablet
+      display: block
+

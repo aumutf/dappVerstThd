@@ -507,3 +507,22 @@ ul.ulN, .tcpp ul.ulN
 
 .ml10
   margin-left: 10px
+
+.paste-btn
+  display: flex
+  position: relative
+  align-items: center
+  +adaptiv-value("font-size", 8, 8)
+  line-height: 1
+  text-transform: uppercase
+  &::before
+    content: ""
+    margin-right: 5px
+    width: 10px
+    height: 10px
+    background:
+      color: transparent
+      image: url("../img/icons/paste-icon.svg")
+      size: contain
+      position: center
+      repeat: no-repeat
